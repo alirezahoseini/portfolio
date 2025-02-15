@@ -1,3 +1,4 @@
+"use client"
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -5,12 +6,13 @@ import { routing } from "@/i18n/routing";
 import { ILocales, IReactNode } from "../../../@types/Global";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import LocaleProvider from "@/providers/LocaleProvider";
+import React from "react";
 const myFont = Inter({ subsets: ["latin"] });
 const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" });
 
 type Props = {
-  children: IReactNode;
-  params: { locale: ILocales };
+  children: React.ReactNode;
+  params: Promise<{ locale: ILocales }>; 
 };
 
 export default async function RootLayout({ children, params }: Props) {

@@ -1,8 +1,9 @@
+import React from 'react';
 import { IReactNode } from '../../@types/Global';
 import "./globals.css"
 
 type Props = {
-  children: IReactNode;
+  children: React.ReactNode;
 };
 
 // Since we have a `not-found.tsx` page on the root, a layout file
