@@ -1,5 +1,7 @@
+"use client"
 import { routing } from "@/i18n/routing";
 import { ILocales, IReactNode } from "../../@types/Global";
+import { ThemeProvider } from "./ThemeProvider";
 
 type Props = {
   children: IReactNode;
@@ -11,7 +13,16 @@ export default function BaseLayout({ children, locale }: Props) {
 
   return (
     <html dir={dir} lang={locale ? locale : routing.defaultLocale}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
