@@ -1,8 +1,12 @@
+import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ILocales, IReactNode } from "../../../@types/Global";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import LocaleProvider from "@/providers/LocaleProvider";
+const myFont = Inter({ subsets: ["latin"] });
+const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" });
 
 type Props = {
   children: IReactNode;
@@ -20,7 +24,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning >
-      <body>
+      <body className={locale === "en" ? myFont.className : FaFont.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
