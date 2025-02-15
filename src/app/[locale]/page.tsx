@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { usePathname, useParams, useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -19,8 +20,8 @@ export default function HomePage() {
       <h1>{t("title")}</h1>
       <Link href="/about">{t("about")}</Link>
       <div>
-        <button onClick={() => switchLanguage("en")}>English</button>
-        <button onClick={() => switchLanguage("fa")}>Persian</button>
+        <Button onClick={() => switchLanguage("en")}>English</Button>
+        <Button onClick={() => switchLanguage("fa")}>Persian</Button>
       </div>
     </div>
   );

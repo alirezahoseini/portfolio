@@ -1,4 +1,5 @@
 import { IReactNode } from '../../@types/Global';
+import "./globals.css"
 
 type Props = {
   children: IReactNode;
