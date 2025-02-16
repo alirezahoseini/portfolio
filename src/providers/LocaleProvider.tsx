@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { ILocales, IReactNode } from "../../@types/Global";
+import { ILocales } from "../../@types/Global";
 import React from "react";
 
 type Props = {

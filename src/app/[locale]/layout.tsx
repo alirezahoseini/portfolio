@@ -6,6 +6,8 @@ import { ILocales } from "../../../@types/Global";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import LocaleProvider from "@/providers/LocaleProvider";
 import React from "react";
+import Header from "@/components/Header";
+import clsx from "clsx";
 const myFont = Inter({ subsets: ["latin"] });
 const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" });
 
@@ -25,9 +27,15 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
-      <body className={locale === "en" ? myFont.className : FaFont.className}>
+      <body
+        className={clsx(
+          "px-2",
+          locale === "en" ? myFont.className : FaFont.className
+        )}
+      >
         <LocaleProvider locale={locale}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
             {children}
           </ThemeProvider>
         </LocaleProvider>
