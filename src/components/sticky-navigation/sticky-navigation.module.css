@@ -1,0 +1,156 @@
+#nav {
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  pointer-events: all;
+  font-size: 16px;
+  padding: 2px 0;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.dark #nav ul{
+  background-color: rgb(0, 0, 0) !important;
+} 
+.navItem {
+  padding: 15px;
+  width: calc(100% - 8px);
+  margin: 0 5px;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  height: calc(100% - 4px);
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  position: relative;
+}
+
+#navSlider {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: calc(100% / 4);
+  height: calc(100% - 6px);
+  z-index: 0;
+  border-radius: 100px;
+  background-color: #F5F5F5;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+}
+html.dark{
+
+}
+
+/***** LTR Stayles *****/
+[dir="ltr"] #navSlider {
+  left: 4px;
+}
+
+/* Active */
+[dir="ltr"] .navItem[aria-current="page"]:nth-child(1) ~ #navSlider {
+  left: 4px;
+}
+
+[dir="ltr"] .navItem[aria-current="page"]:nth-child(2) ~ #navSlider {
+  left: calc(4px + 100% / 4);
+}
+
+[dir="ltr"] .navItem[aria-current="page"]:nth-child(3) ~ #navSlider {
+  left: calc(4px + 2 * (100% / 4));
+}
+
+[dir="ltr"] .navItem[aria-current="page"]:nth-child(4) ~ #navSlider {
+  left: calc((3 * (100% / 4)) - 4px);
+}
+
+/* Hover */
+[dir="ltr"] .navItem:nth-child(1):hover ~ #navSlider {
+  left: 4px;
+}
+
+[dir="ltr"] .navItem:nth-child(2):hover ~ #navSlider {
+  left: calc(4px + 100% / 4);
+}
+
+[dir="ltr"] .navItem:nth-child(3):hover ~ #navSlider {
+  left: calc(4px + 2 * (100% / 4));
+}
+
+[dir="ltr"] .navItem:nth-child(4):hover ~ #navSlider {
+  left: calc((3 * (100% / 4)) - 4px);
+}
+
+/***** RTL Styles *****/
+[dir="rtl"] #navSlider {
+  right: 4px;
+}
+
+/* Active */
+[dir="rtl"] .navItem[aria-current="page"]:nth-child(1) ~ #navSlider {
+  right: 4px;
+}
+
+[dir="rtl"] .navItem[aria-current="page"]:nth-child(2) ~ #navSlider {
+  right: calc(4px + 100% / 4);
+}
+
+[dir="rtl"] .navItem[aria-current="page"]:nth-child(3) ~ #navSlider {
+  right: calc(4px + 2 * (100% / 4));
+}
+
+[dir="rtl"] .navItem[aria-current="page"]:nth-child(4) ~ #navSlider {
+  right: calc((3 * (100% / 4)) - 4px);
+}
+
+/* Hover */
+[dir="rtl"] .navItem:nth-child(1):hover ~ #navSlider {
+  right: 4px;
+}
+
+[dir="rtl"] .navItem:nth-child(2):hover ~ #navSlider {
+  right: calc(4px + 100% / 4);
+}
+
+[dir="rtl"] .navItem:nth-child(3):hover ~ #navSlider {
+  right: calc(4px + 2 * (100% / 4));
+}
+
+[dir="rtl"] .navItem:nth-child(4):hover ~ #navSlider {
+  right: calc((3 * (100% / 4)) - 4px);
+}
+
+@media screen and (max-width: 40rem) {
+  #nav ul {
+    font-size: 11px;
+    width: 95%;
+  }
+}

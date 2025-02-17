@@ -8,6 +8,7 @@ import LocaleProvider from "@/providers/LocaleProvider";
 import React from "react";
 import Header from "@/components/Header";
 import clsx from "clsx";
+import StickyNavigation from "@/components/sticky-navigation/StickyNavigation";
 const myFont = Inter({ subsets: ["latin"] });
 const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" });
 
@@ -36,6 +37,7 @@ export default async function RootLayout({ children, params }: Props) {
         <LocaleProvider locale={locale}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Header />
+            <StickyNavigation />
             {children}
           </ThemeProvider>
         </LocaleProvider>

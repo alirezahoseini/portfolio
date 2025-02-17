@@ -2,5 +2,11 @@
     "HomePage": {
       "title": "سلام دنیا!",
       "about": "رفتن به صفحه درباره ما"
+    },
+    "Navigation":{
+      "home": "خانه",
+      "about": "درباره",
+      "projects": "پروژه ها",
+      "connect": "تماس"
     }
   }
