@@ -38,7 +38,9 @@ export default async function RootLayout({ children, params }: Props) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Header />
             <StickyNavigation />
+            <div className="mb-[100px] container mx-auto">
             {children}
+            </div>
           </ThemeProvider>
         </LocaleProvider>
       </body>

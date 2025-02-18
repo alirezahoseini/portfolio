@@ -12,12 +12,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  width: fit-content;
+  min-width: fit-content;
+  width:400px;
   pointer-events: all;
   font-size: 16px;
   padding: 2px 0;
-  border: 1px solid #e5e5e5;
   position: relative;
   border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -26,14 +25,11 @@
   -o-border-radius: 100px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-.dark #nav ul{
-  background-color: rgb(0, 0, 0) !important;
-} 
+
 .navItem {
   padding: 15px;
   width: calc(100% - 8px);
   margin: 0 5px;
-  color: #757575;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,6 +41,7 @@
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
   position: relative;
+  font-size: 14px;
 }
 
 #navSlider {
@@ -55,7 +52,6 @@
   height: calc(100% - 6px);
   z-index: 0;
   border-radius: 100px;
-  background-color: #F5F5F5;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
@@ -65,9 +61,6 @@
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
-}
-html.dark{
-
 }
 
 /***** LTR Stayles *****/
@@ -85,7 +78,7 @@ html.dark{
 }
 
 [dir="ltr"] .navItem[aria-current="page"]:nth-child(3) ~ #navSlider {
-  left: calc(4px + 2 * (100% / 4));
+  left: calc(0px + 2 * (100% / 4));
 }
 
 [dir="ltr"] .navItem[aria-current="page"]:nth-child(4) ~ #navSlider {
@@ -102,7 +95,7 @@ html.dark{
 }
 
 [dir="ltr"] .navItem:nth-child(3):hover ~ #navSlider {
-  left: calc(4px + 2 * (100% / 4));
+  left: calc(0px + 2 * (100% / 4));
 }
 
 [dir="ltr"] .navItem:nth-child(4):hover ~ #navSlider {
@@ -124,7 +117,7 @@ html.dark{
 }
 
 [dir="rtl"] .navItem[aria-current="page"]:nth-child(3) ~ #navSlider {
-  right: calc(4px + 2 * (100% / 4));
+  right: calc(0px + 2 * (100% / 4));
 }
 
 [dir="rtl"] .navItem[aria-current="page"]:nth-child(4) ~ #navSlider {
@@ -141,16 +134,17 @@ html.dark{
 }
 
 [dir="rtl"] .navItem:nth-child(3):hover ~ #navSlider {
-  right: calc(4px + 2 * (100% / 4));
+  right: calc(0px + 2 * (100% / 4));
 }
 
 [dir="rtl"] .navItem:nth-child(4):hover ~ #navSlider {
   right: calc((3 * (100% / 4)) - 4px);
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 768px) {
   #nav ul {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     width: 95%;
   }
 }

@@ -7,7 +7,11 @@ const StickyNavigation = () => {
   const t = useTranslations("Navigation");
   return (
     <nav id={styles.nav}>
-      <ul>
+      <ul
+        className="bg-white dark:bg-zinc-900
+       border-slate-200 border-solid border dark:border-zinc-700
+       text-zinc-600 dark:text-zinc-100"
+      >
         <NavigationLink href="/" className={styles.navItem}>
           {t("home")}
         </NavigationLink>
@@ -24,7 +28,10 @@ const StickyNavigation = () => {
           {t("connect")}
         </NavigationLink>
 
-        <span id={styles.navSlider}></span>
+        <span 
+        id={styles.navSlider}
+        className="bg-zinc-200 dark:bg-zinc-800 "
+        ></span>
       </ul>
     </nav>
   );
