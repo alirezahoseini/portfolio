@@ -1,10 +1,10 @@
-import React from "react";
-import { useTranslations } from "next-intl";
-import styles from "./sticky-navigation.module.css";
-import NavigationLink from "./NavigationLink";
+import React from "react"
+import { useTranslations } from "next-intl"
+import styles from "./sticky-navigation.module.css"
+import NavigationLink from "./NavigationLink"
 
 const StickyNavigation = () => {
-  const t = useTranslations("Navigation");
+  const t = useTranslations("Navigation")
   return (
     <nav id={styles.nav}>
       <ul
@@ -16,25 +16,26 @@ const StickyNavigation = () => {
           {t("home")}
         </NavigationLink>
 
-        <NavigationLink href={"/about"} className={styles.navItem}>
+        <NavigationLink href="/about" className={styles.navItem}>
           {t("about")}
         </NavigationLink>
 
-        <NavigationLink href={"/projects"} className={styles.navItem}>
+        <NavigationLink href="/projects" className={styles.navItem}>
           {t("projects")}
         </NavigationLink>
 
-        <NavigationLink href={"/connect"} className={styles.navItem}>
+        <NavigationLink href="/connect" className={styles.navItem}>
           {t("connect")}
         </NavigationLink>
 
         <span 
-        id={styles.navSlider}
-        className="bg-zinc-200 dark:bg-zinc-800 "
-        ></span>
+          id={styles.navSlider}
+          className="bg-zinc-200 dark:bg-zinc-800 "
+        >
+        </span>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default StickyNavigation;
+export default StickyNavigation

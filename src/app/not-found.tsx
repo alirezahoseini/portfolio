@@ -1,5 +1,3 @@
-import { routing } from "@/i18n/routing";
-
 export default function GlobalNotFound() {
   return (
     <html>
@@ -7,5 +5,5 @@ export default function GlobalNotFound() {
         <p>Not found</p>
       </body>
     </html>
-  );
+  )
 }

@@ -6,10 +6,15 @@ import importPlugin from "eslint-plugin-import"
 import react from "eslint-plugin-react"
 import stylistic from "@stylistic/eslint-plugin"
 import destructing from "eslint-plugin-newline-destructuring"
+import unusedImports from "eslint-plugin-unused-imports"
+
+
 
 export default tseslint.config({
   ignores: [".next", "node_modules", ".idea", ".vscode"],
-  extends: [js.configs.recommended, tseslint.configs.recommended],
+  extends: [
+    js.configs.recommended, 
+    tseslint.configs.recommended],
   files: ["**/*.{ts,tsx}"],
   languageOptions: {
     globals: {
@@ -22,9 +27,11 @@ export default tseslint.config({
     "@stylistic": stylistic,
     "react-hooks": reactHooks,
     "newline-destructuring": destructing,
+    "unused-imports": unusedImports,
     import: importPlugin
   },
   rules: {
+    "unused-imports/no-unused-imports": "error",
     "@stylistic/indent": ["warn", 2],
     "@stylistic/array-bracket-spacing": ["warn", "never"],
     "@stylistic/array-element-newline": ["warn", "consistent"],

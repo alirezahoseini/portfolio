@@ -1,30 +1,31 @@
-"use client";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { usePathname, useRouter } from "@/i18n/routing";
-import { useTheme } from "next-themes";
-import { Moon, Sun } from "lucide-react";
-import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
-import { useLocale } from "next-intl";
+"use client"
+import React from "react"
+import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
+import Image from "next/image"
+import { useLocale } from "next-intl"
+import { Separator } from "@/components/ui/separator"
+import { usePathname, useRouter } from "@/i18n/routing"
+import { Button } from "@/components/ui/button"
 
 function Header() {
-  const { setTheme, theme } = useTheme();
-  const pathname = usePathname();
-  const router = useRouter();
-  const locale = useLocale();
+  const { setTheme, theme } = useTheme()
+  const pathname = usePathname()
+  const router = useRouter()
+  const locale = useLocale()
 
   const themeChangeHandler = () => {
     if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
+      setTheme("dark")
     }
-  };
+    else {
+      setTheme("light")
+    }
+  }
 
   const switchLanguage = () => {
-    router.replace(pathname, { locale: `${locale === "en" ? "fa" : "en"}` });
-  };
+    router.replace(pathname, { locale: `${locale === "en" ? "fa" : "en"}` })
+  }
 
   return (
     <header className="sticky top-0 mb-6 pt-2 container mx-auto">
@@ -36,16 +37,19 @@ function Header() {
        bg-opacity-60 dark:bg-opacity-60 shadow-sm"
       >
         <h1>AH</h1>
+
         <div className="flex items-center gap-2">
           <Button
             variant="ghost"
-            size={"icon"}
+            size="icon"
             className="text-2xl"
             onClick={themeChangeHandler}
           >
             {theme === "dark" ? <Sun size="40px" /> : <Moon size="40px" />}
           </Button>
+
           <Separator orientation="vertical" className="h-5" />
+
           <Button variant="ghost" size="icon" onClick={switchLanguage}>
             <Image
               src={`/${locale == "fa" ? "en" : "ir"}-flag.png`}
@@ -58,7 +62,7 @@ function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
