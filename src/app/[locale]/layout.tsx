@@ -32,7 +32,7 @@ export default async function RootLayout({ children, params }: Props) {
       <body
         className={
           clsx(
-            "px-2",
+            "px-2 max-w-screen-xl mx-auto",
             locale === "en" ? myFont.className : FaFont.className
           )
         }
@@ -43,7 +43,7 @@ export default async function RootLayout({ children, params }: Props) {
 
             <StickyNavigation />
 
-            <div className="mb-[100px] container mx-auto">
+            <div className="mb-[100px] container mx-auto px-4">
               {children}
             </div>
           </ThemeProvider>

@@ -4,9 +4,9 @@ import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
 import Image from "next/image"
 import { useLocale } from "next-intl"
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/Separator"
 import { usePathname, useRouter } from "@/i18n/routing"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/Button"
 
 function Header() {
   const { setTheme, theme } = useTheme()
@@ -30,7 +30,7 @@ function Header() {
   return (
     <header className="sticky top-0 mb-6 pt-2 container mx-auto">
       <div
-        className="flex w-[95%] mx-auto justify-between 
+        className="flex w-[95%] lg:w-full mx-auto justify-between 
       items-center bg-white dark:bg-zinc-900 backdrop-blur-md
        border-slate-200 border-solid border dark:border-zinc-700
        text-zinc-600 dark:text-zinc-100 py-2 px-4 rounded-full 

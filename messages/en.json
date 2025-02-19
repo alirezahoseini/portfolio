@@ -1,12 +1,12 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    },
-    "Navigation":{
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects",
-      "connect": "Connect"
-    }
+  "HomePage": {
+    "title": "Alireza Hosseini",
+    "description": "I'm an unstoppable front-end developer who loves creating simple and awesome user experiences."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "connect": "Connect"
   }
+}
