@@ -4,9 +4,9 @@ import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
 import Image from "next/image"
 import { useLocale } from "next-intl"
-import { Separator } from "@/components/ui/Separator"
+import { Separator } from "@/components/ui/separator"
 import { usePathname, useRouter } from "@/i18n/routing"
-import { Button } from "@/components/ui/Button"
+import { Button } from "@/components/ui/button"
 
 function Header() {
   const { setTheme, theme } = useTheme()
