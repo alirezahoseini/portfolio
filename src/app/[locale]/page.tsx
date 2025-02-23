@@ -10,7 +10,7 @@ export default async function HomePage({ params }: {
 }) {
   const  locale  = (await params).locale
 
-  const res = await fetch(`http://localhost:3000/api/projects?lang=${locale}`)
+  const res = await fetch(`/api/projects?lang=${locale}`)
   const projects = await res.json()
 
   const messages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
