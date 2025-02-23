@@ -1,15 +1,18 @@
 import { ArrowUpRight } from "lucide-react"
-import { useTranslations } from "next-intl"
 import React from "react"
+import { IProject } from "@/app/api/types"
 
-const GridCard = () => {
-  const t = useTranslations("HomePage")
+type Props = {
+  project: IProject 
+}
+
+const GridCard = ({ project }: Props) => {
 
   return (
     <div
       className="bg-gray-light dark:bg-gray-dark 
         w-full p-8 rounded-[32px] border-[1px] border-solid 
-      border-br-gray-light dark:border-br-gray-dark
+      border-br-gray-light dark:border-br-gray-dark my-3
       "
     >
       {/* Card Header  */}
@@ -28,7 +31,7 @@ const GridCard = () => {
         </div>
 
         <h2 className="text-3xl font-black">
-          {t("cardtitle")}
+          {project.title}
         </h2>
       </div>
       
