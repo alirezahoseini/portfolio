@@ -1,25 +1,17 @@
+import { NextRequest, NextResponse } from "next/server"
 import { IProject } from "../types"
 import { projects } from "./projects"
 
-interface Request {
-  url: string
-}
-
 type ResponseData = IProject[]
 
-
-export async function GET(req: Request): Promise<Response> {
-  // گرفتن پارامتر lang از URL
+export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
-  const lang = url.searchParams.get("lang") || "fa" // مقدار پیش‌فرض fa
+  const lang = url.searchParams.get("lang") || "fa" 
 
-  // انتخاب فایل JSON متناسب با زبان
+
   const data: ResponseData = lang === "en"
-    ?  projects.en
-    :  projects.fa
+    ? projects.en
+    : projects.fa
 
-  return new Response(JSON.stringify(data), {
-    status: 200,
-    headers: { "Content-Type": "application/json" }
-  })
+  return NextResponse.json(data)
 }

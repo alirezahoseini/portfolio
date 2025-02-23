@@ -4,10 +4,11 @@ import { IHomePageMessages } from "./types"
 import PageHeading from "@/components/page-heading/PageHeading"
 import GridCard from "@/components/grid-card/GridCard"
 
-type Params = { params: { locale: string } }
 
-export default async function HomePage({ params }: Params) {
-  const { locale } = params
+export default async function HomePage({ params }: {
+  params: Promise<{ locale: string }>
+}) {
+  const  locale  = (await params).locale
 
   const res = await fetch(`http://localhost:3000/api/projects?lang=${locale}`)
   const projects = await res.json()
