@@ -27,7 +27,7 @@
 }
 
 .navItem {
-  padding: 15px;
+  padding: 20px 15px;
   width: calc(100% - 8px);
   margin: 0 5px;
   display: flex;
