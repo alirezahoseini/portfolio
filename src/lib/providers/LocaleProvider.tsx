@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
 import React from "react"
-import { ILocales } from "../../@types/Global"
+import { ILocales } from "@/i18n/routing"
 
 type Props = {
   children: React.ReactNode
