@@ -3,20 +3,28 @@ import { Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import React from "react"
 import clsx from "clsx"
-import { ILocales } from "../../../@types/Global"
-import { routing } from "@/i18n/routing"
+import {
+  QueryClient,
+  QueryClientProvider
+} from "@tanstack/react-query"
+import { routing, ILocales } from "@/i18n/routing"
 import { ThemeProvider } from "@/lib/providers/ThemeProvider"
 import LocaleProvider from "@/lib/providers/LocaleProvider"
 import Header from "@/components/Header"
 import StickyNavigation from "@/components/sticky-navigation/StickyNavigation"
 
+// Fonts
 const myFont = Inter({ subsets: ["latin"] })
 const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" })
+
+// Create a client
+const queryClient = new QueryClient()
 
 type Props = {
   children: React.ReactNode
   params: Promise<{ locale: ILocales }>
 }
+
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params
@@ -37,17 +45,19 @@ export default async function RootLayout({ children, params }: Props) {
           )
         }
       >
-        <LocaleProvider locale={locale}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Header />
+        <QueryClientProvider client={queryClient}>
+          <LocaleProvider locale={locale}>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <Header />
 
-            <StickyNavigation />
+              <StickyNavigation />
 
-            <div className="mb-[100px] container mx-auto px-4">
-              {children}
-            </div>
-          </ThemeProvider>
-        </LocaleProvider>
+              <div className="mb-[100px] container mx-auto px-4">
+                {children}
+              </div>
+            </ThemeProvider>
+          </LocaleProvider>
+        </QueryClientProvider>
       </body>
     </html>
   )

@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server"
 import { IHomePageMessages } from "./types"
 import PageHeading from "@/components/page-heading/PageHeading"
 import GridCard from "@/components/grid-card/GridCard"
+// import { getProjects } from "@/lib/services"
 
 
 export default async function HomePage({ params }: {
@@ -10,7 +11,7 @@ export default async function HomePage({ params }: {
 }) {
   const  locale  = (await params).locale
 
-  const res = await fetch(`http://localhost:3000/api/projects?lang=${locale}`)
+  const res = await fetch(`https://portfolio-pearl-six-12.vercel.app/api/projects?lang=${locale}`)
   const projects = await res.json()
 
   const messages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
@@ -18,6 +19,8 @@ export default async function HomePage({ params }: {
   const seoTitle = messages.HomePage["seo_title"]
   const seoDesc = messages.HomePage["seo_desc"]
 
+
+  
   return (
     <>
       <head>
