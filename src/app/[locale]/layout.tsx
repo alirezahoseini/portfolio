@@ -3,10 +3,9 @@ import { Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import React from "react"
 import clsx from "clsx"
-import {
-  QueryClient,
-  QueryClientProvider
-} from "@tanstack/react-query"
+// import {
+//   QueryClient
+// } from "@tanstack/react-query"
 import { routing, ILocales } from "@/i18n/routing"
 import { ThemeProvider } from "@/lib/providers/ThemeProvider"
 import LocaleProvider from "@/lib/providers/LocaleProvider"
@@ -18,7 +17,7 @@ const myFont = Inter({ subsets: ["latin"] })
 const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" })
 
 // Create a client
-const queryClient = new QueryClient()
+// const queryClient = new QueryClient()
 
 type Props = {
   children: React.ReactNode
@@ -45,19 +44,20 @@ export default async function RootLayout({ children, params }: Props) {
           )
         }
       >
-        <QueryClientProvider client={queryClient}>
-          <LocaleProvider locale={locale}>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <Header />
+        {/* <QueryClientProvider client={queryClient}> */}
+        <LocaleProvider locale={locale}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
 
-              <StickyNavigation />
+            <StickyNavigation />
 
-              <div className="mb-[100px] container mx-auto px-4">
-                {children}
-              </div>
-            </ThemeProvider>
-          </LocaleProvider>
-        </QueryClientProvider>
+            <div className="mb-[100px] container mx-auto px-4">
+              {children}
+            </div>
+          </ThemeProvider>
+        </LocaleProvider>
+
+        {/* </QueryClientProvider> */}
       </body>
     </html>
   )

@@ -1,9 +1,9 @@
-import Image from "next/image"
 import { getMessages } from "next-intl/server"
-import { IHomePageMessages } from "./types"
+import Image from "next/image"
+import { IHomePageMessages, IProject } from "./types"
 import PageHeading from "@/components/page-heading/PageHeading"
 import GridCard from "@/components/grid-card/GridCard"
-// import { getProjects } from "@/lib/services"
+import API from "@/lib/axiosConfig"
 
 
 export default async function HomePage({ params }: {
@@ -11,14 +11,13 @@ export default async function HomePage({ params }: {
 }) {
   const  locale  = (await params).locale
 
-  const res = await fetch(`https://portfolio-pearl-six-12.vercel.app/api/projects?lang=${locale}`)
-  const projects = await res.json()
+  const { data } = await API.get(`projects?lang=${locale}`)
+  const projects = await data
 
   const messages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
 
   const seoTitle = messages.HomePage["seo_title"]
   const seoDesc = messages.HomePage["seo_desc"]
-
 
   
   return (
@@ -34,13 +33,21 @@ export default async function HomePage({ params }: {
           className="bg-[#FFDCAB] pt-2 dark:bg-opacity-50
           rounded-full flex items-center justify-center pr-2 mt-16 mb-3"
         >
-          <Image src="/main-memoji.png" width={120} height={120} alt="alireza hosseini" />
+          <Image 
+            src="/main-memoji.png" 
+            width={120}
+            height={120} 
+            alt="alireza hosseini"
+          />
         </div>
 
-        <PageHeading title={messages.HomePage["title"]} description={messages.HomePage["bio"]} />
+        <PageHeading 
+          title={messages.HomePage["title"]} 
+          description={messages.HomePage["bio"]}
+        />
 
         {
-          projects.map((project: any) => (
+          projects.map((project: IProject) => (
             <GridCard key={project.id} project={project} />
           ))
         }

@@ -4,3 +4,10 @@ export type IHomePageMessages =  {
   title: string
   bio: string
 } 
+
+export type IProject = {
+  id: number
+  title: string
+  description: string
+  img: string
+}
