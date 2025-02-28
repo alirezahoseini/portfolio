@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react"
 import React from "react"
-import { IProject } from "@/app/api/types"
+import { IProject } from "@/app/[locale]/types"
 
 type Props = {
   project: IProject 

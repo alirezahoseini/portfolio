@@ -1,32 +1,29 @@
 import { getMessages } from "next-intl/server"
 import Image from "next/image"
-import { IHomePageMessages, IProject } from "./types"
-import PageHeading from "@/components/page-heading/PageHeading"
-import GridCard from "@/components/grid-card/GridCard"
-import API from "@/lib/axiosConfig"
+import { IHomePageMessages } from "./types"
+import PageHeading from "@/components/PageHeading"
+import ProjectsWrapper from "@/components/projects-wrapper/ProjectsWrapper"
 
 
 export default async function HomePage({ params }: {
   params: Promise<{ locale: string }>
 }) {
-  const  locale  = (await params).locale
+  const locale = (await params).locale
 
-  const { data } = await API.get(`projects?lang=${locale}`)
-  const projects = await data
-
+  
   const messages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
 
-  const seoTitle = messages.HomePage["seo_title"]
-  const seoDesc = messages.HomePage["seo_desc"]
+  // const seoTitle = messages.HomePage["seo_title"]
+  // const seoDesc = messages.HomePage["seo_desc"]
 
   
   return (
     <>
-      <head>
+      {/* <head>
         <title>{seoTitle}</title>
 
         <meta name="description" content={seoDesc} />
-      </head>
+      </head> */}
       
       <div className="flex flex-col items-center">
         <div
@@ -46,11 +43,7 @@ export default async function HomePage({ params }: {
           description={messages.HomePage["bio"]}
         />
 
-        {
-          projects.map((project: IProject) => (
-            <GridCard key={project.id} project={project} />
-          ))
-        }
+        <ProjectsWrapper locale={locale} />
       </div>
     </>
   )
