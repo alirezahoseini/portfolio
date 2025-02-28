@@ -1,5 +1,5 @@
 import React from "react"
-import GridCard from "../GridCard"
+import ProjectCard from "./ProjectCard"
 import { ILang } from "@/lib/types"
 import { IProject } from "@/app/[locale]/types"
 import { getProjects } from "@/lib/services"
@@ -15,7 +15,7 @@ const ProjectsWrapper = async ({ locale, limit }: Props) => {
   return (
     projects && (
       projects.map((project: IProject) => (
-        <GridCard 
+        <ProjectCard 
           project={project} 
           key={project.id}
         />

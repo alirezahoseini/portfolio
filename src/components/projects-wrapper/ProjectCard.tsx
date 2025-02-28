@@ -6,7 +6,7 @@ type Props = {
   project: IProject 
 }
 
-const GridCard = ({ project }: Props) => {
+const ProjectCard = ({ project }: Props) => {
 
   return (
     <div
@@ -40,4 +40,4 @@ const GridCard = ({ project }: Props) => {
   )
 }
 
-export default GridCard
+export default ProjectCard
