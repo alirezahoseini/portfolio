@@ -43,7 +43,7 @@ export default async function HomePage({ params }: {
           description={messages.HomePage["bio"]}
         />
 
-        <ProjectsWrapper locale={locale} />
+        <ProjectsWrapper locale={locale} limit={3} />
       </div>
     </>
   )

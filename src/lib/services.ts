@@ -1,9 +1,15 @@
 import API from "./axiosConfig"
 import { ILang } from "./types"
 
-const getProjects = async (lang: ILang) => {
+type Props = {
+  locale: ILang
+  limit?: number
+}
+
+const getProjects = async ({ locale, limit }: Props) => {
   try {
-    const { status, data: projects } = await API.get(`projects?lang=${lang}`)
+    const url = `projects?lang=${locale}${limit ? `&limit=${limit}`: ""}`
+    const { status, data: projects } = await API.get(url)
 
     if (status === 200) {
       return projects
