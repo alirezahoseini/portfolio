@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: Props) => {
     <Link 
       href={`/projects/${project.id}`}
       className="group bg-gray-light dark:bg-gray-dark 
-        w-full p-8 rounded-[32px] border-[1px] border-solid 
+      w-full lg:w-[49%] p-8 rounded-[32px] border-[1px] border-solid 
       border-br-gray-light dark:border-br-gray-dark my-3
       hover:border-blue-600 dark:hover:border-blue-800
       transition-all

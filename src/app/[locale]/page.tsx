@@ -1,8 +1,7 @@
 import { getMessages } from "next-intl/server"
 import Image from "next/image"
-import { IHomePageMessages } from "./types"
+import { IButtonsMessages, IHomePageMessages } from "./types"
 import PageHeading from "@/components/templates/home/PageHeading"
-import ProjectsWrapper from "@/components/projects-wrapper/ProjectsWrapper"
 
 
 export default async function HomePage({ params }: {
@@ -11,7 +10,8 @@ export default async function HomePage({ params }: {
   const locale = (await params).locale
 
   
-  const messages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
+  const contentMessages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
+  const buttonsMessages = await getMessages({ locale }) as { Buttons: IButtonsMessages }
 
   // const seoTitle = messages.HomePage["seo_title"]
   // const seoDesc = messages.HomePage["seo_desc"]
@@ -40,11 +40,13 @@ export default async function HomePage({ params }: {
         </div>
 
         <PageHeading 
-          title={messages.HomePage["title"]} 
-          description={messages.HomePage["bio"]}
+          name={contentMessages.HomePage["name"]} 
+          job_title={contentMessages.HomePage["job_title"]}
+          download_resume={buttonsMessages.Buttons["download_resume"]}
+         github={buttonsMessages.Buttons["github"]}
         />
+        
 
-        <ProjectsWrapper locale={locale} limit={3} />
       </div>
     </>
   )

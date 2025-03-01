@@ -14,12 +14,18 @@ const ProjectsWrapper = async ({ locale, limit }: Props) => {
 
   return (
     projects && (
-      projects.map((project: IProject) => (
-        <ProjectCard 
-          project={project} 
-          key={project.id}
-        />
-      ))
+      <div 
+        className="flex items-center justify-between flex-wrap w-full gap-2"
+      >
+        {
+          projects.map((project: IProject) => (
+            <ProjectCard 
+              project={project} 
+              key={project.id}
+            />
+          ))
+        }
+      </div>
     )
   )
 }

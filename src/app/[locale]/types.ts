@@ -1,8 +1,8 @@
 export type IHomePageMessages =  {
   seo_title: string
   seo_desc: string
-  title: string
-  bio: string
+  name: string
+  job_title: string
 } 
 
 export type IProject = {
@@ -10,4 +10,9 @@ export type IProject = {
   title: string
   description: string
   img: string
+}
+
+export type IButtonsMessages = {
+  download_resume: string
+  github: string
 }
