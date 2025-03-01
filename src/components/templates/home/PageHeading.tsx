@@ -8,7 +8,7 @@ type Props = {
 const PageHeading: React.FC<Props> = props => {
   const { title, description } = props
   return (
-    <div className="flex flex-col gap-3 items-center">
+    <div className="flex flex-col gap-3 items-center mb-8">
       <h1 className="text-3xl font-bold">
         {title}
       </h1>
