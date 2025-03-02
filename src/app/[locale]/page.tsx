@@ -1,6 +1,6 @@
 import { getMessages } from "next-intl/server"
 import Image from "next/image"
-import { IButtonsMessages, IHomePageMessages } from "./types"
+import { IAboutPageMessages, IButtonsMessages, IHomePageMessages } from "./types"
 import PageHeading from "@/components/templates/home/PageHeading"
 
 
@@ -10,8 +10,9 @@ export default async function HomePage({ params }: {
   const locale = (await params).locale
 
   
-  const contentMessages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
+  const homePageMessages = await getMessages({ locale }) as { HomePage: IHomePageMessages }
   const buttonsMessages = await getMessages({ locale }) as { Buttons: IButtonsMessages }
+  const aboutPageMessages = await getMessages({ locale }) as { AboutPage: IAboutPageMessages }
 
   // const seoTitle = messages.HomePage["seo_title"]
   // const seoDesc = messages.HomePage["seo_desc"]
@@ -40,13 +41,31 @@ export default async function HomePage({ params }: {
         </div>
 
         <PageHeading 
-          name={contentMessages.HomePage["name"]} 
-          job_title={contentMessages.HomePage["job_title"]}
+          name={homePageMessages.HomePage["name"]} 
+          job_title={homePageMessages.HomePage["job_title"]}
           download_resume={buttonsMessages.Buttons["download_resume"]}
-         github={buttonsMessages.Buttons["github"]}
+          github={buttonsMessages.Buttons["github"]}
         />
-        
 
+        <div className="mt-10 flex items-center flex-col">
+          <h2 
+            className="font-bold text-xl"
+          >
+            {aboutPageMessages.AboutPage["page_title"]}
+          </h2>
+
+          <div
+            className="lg:max-w-screen-md leading-7 mt-3"
+          >
+            {
+              aboutPageMessages.AboutPage["about_me_description"].split("<br />").map(pText => (
+                <p>{pText}</p>
+              ))
+            }
+          </div>
+        </div>
+        
+        
       </div>
     </>
   )

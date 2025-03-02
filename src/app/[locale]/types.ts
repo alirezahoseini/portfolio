@@ -16,3 +16,8 @@ export type IButtonsMessages = {
   download_resume: string
   github: string
 }
+
+export type IAboutPageMessages = {
+  page_title: string
+  about_me_description: string
+}
