@@ -31,16 +31,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           cv_link={aboutPageMessages.AboutPage["cv_link"]}
         />
 
+        <div className="mt-10 flex items-center flex-col lg:max-w-screen-md">
+          <h2 className="font-bold text-xl">
+            {aboutPageMessages.AboutPage["page_title"]}
+          </h2>
+
+          <ReadMoreWrapper more_text={buttonsMessages.Buttons["more"]}>
+            <Paragraph text={aboutPageMessages.AboutPage["about_me_description"]} />
+          </ReadMoreWrapper>
+        </div>
+
         <div className="mt-10 flex items-center flex-col">
           <h2 className="font-bold text-xl">
             {aboutPageMessages.AboutPage["page_title"]}
           </h2>
-        </div>
-
-        <div className="lg:max-w-screen-md">
-          <ReadMoreWrapper>
-            <Paragraph text={aboutPageMessages.AboutPage["about_me_description"]} />
-          </ReadMoreWrapper>
         </div>
       </div>
     </>

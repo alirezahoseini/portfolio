@@ -15,6 +15,7 @@ export type IProject = {
 export type IButtonsMessages = {
   download_resume: string
   github: string
+  more: string
 }
 
 export type IAboutPageMessages = {

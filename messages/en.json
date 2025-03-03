@@ -13,7 +13,8 @@
   },
   "Buttons": {
     "download_resume": "Download CV",
-    "github": "Github"
+    "github": "Github",
+    "more": "More"
   },
   "AboutPage": {
     "page_title": "About me",
