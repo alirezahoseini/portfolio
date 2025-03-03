@@ -7,7 +7,7 @@ import { routing, ILocales } from "@/i18n/routing"
 import { ThemeProvider } from "@/lib/providers/ThemeProvider"
 import LocaleProvider from "@/lib/providers/LocaleProvider"
 import Header from "@/components/modules/Header"
-import StickyNavigation from "@/components/templates/sticky-navigation/StickyNavigation"
+import StickyNavigation from "@/components/modules/sticky-navigation/StickyNavigation"
 import ReactQueryProvider from "@/lib/providers/ReactQueryProvider"
 
 // Fonts

@@ -1,8 +1,8 @@
 import { getMessages } from "next-intl/server"
 import { IAboutPageMessages, IButtonsMessages, IHomePageMessages } from "./types"
 import PageHeading from "@/components/templates/home-page/PageHeading"
-import LogosSlider from "@/components/modules/logos-slider/LogosSlider"
 import Paragraph from "@/components/modules/Paragraph"
+import ReadMoreWrapper from "@/components/modules/ReadMoreWrapper"
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale
@@ -38,10 +38,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
 
         <div className="lg:max-w-screen-md">
-          <Paragraph text={aboutPageMessages.AboutPage["about_me_description"]} />
+          <ReadMoreWrapper>
+            <Paragraph text={aboutPageMessages.AboutPage["about_me_description"]} />
+          </ReadMoreWrapper>
         </div>
-
-        <LogosSlider />
       </div>
     </>
   )
