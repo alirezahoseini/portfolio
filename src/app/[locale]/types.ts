@@ -20,4 +20,5 @@ export type IButtonsMessages = {
 export type IAboutPageMessages = {
   page_title: string
   about_me_description: string
+  cv_link: string
 }

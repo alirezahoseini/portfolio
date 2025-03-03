@@ -1,5 +1,5 @@
 import React from "react"
-import ProjectsWrapper from "@/components/projects-wrapper/ProjectsWrapper"
+import ProjectsWrapper from "@/components/modules/projects-wrapper/ProjectsWrapper"
 
 const ProjetsPage = async ({ params }: {
   params: Promise<{ locale: string }>
