@@ -3,6 +3,7 @@ export type IHomePageMessages =  {
   seo_desc: string
   name: string
   job_title: string
+  latest_projects: string
 } 
 
 export type IProject = {

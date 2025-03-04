@@ -3,6 +3,7 @@ import { IAboutPageMessages, IButtonsMessages, IHomePageMessages } from "./types
 import PageHeading from "@/components/templates/home-page/PageHeading"
 import Paragraph from "@/components/modules/Paragraph"
 import ReadMoreWrapper from "@/components/modules/ReadMoreWrapper"
+import ProjectsWrapper from "@/components/modules/projects-wrapper/ProjectsWrapper"
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale
@@ -41,11 +42,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </ReadMoreWrapper>
         </div>
 
-        <div className="mt-10 flex items-center flex-col">
+        <div className="mt-10 flex items-center flex-col max-w-screen-lg">
           <h2 className="font-bold text-xl">
-            {aboutPageMessages.AboutPage["page_title"]}
+            {homePageMessages.HomePage["latest_projects"]}
           </h2>
+
+          <ProjectsWrapper locale={locale} limit={4} />
         </div>
+
       </div>
     </>
   )
