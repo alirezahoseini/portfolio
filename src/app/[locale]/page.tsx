@@ -43,7 +43,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
 
         <div className="mt-10 flex items-center flex-col max-w-screen-lg">
-          <h2 className="font-bold text-xl">
+          <h2 className="font-bold text-xl mb-8">
             {homePageMessages.HomePage["latest_projects"]}
           </h2>
 

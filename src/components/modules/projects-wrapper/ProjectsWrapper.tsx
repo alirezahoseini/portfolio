@@ -15,7 +15,8 @@ const ProjectsWrapper = async ({ locale, limit }: Props) => {
   return (
     projects && (
       <div 
-        className="flex items-start justify-between flex-wrap w-full gap-2"
+        className="flex items-start justify-between 
+        max-w-screen-lg flex-wrap w-full gap-2"
       >
         {
           projects.map((project: IProject) => (

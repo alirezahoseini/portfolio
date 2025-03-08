@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react"
 import React from "react"
 import Image from "next/image"
+import TechsLoop from "./TechsLoop"
 import { IProject } from "@/app/[locale]/types"
 import { Link } from "@/i18n/routing"
 
@@ -41,12 +42,13 @@ const ProjectCard = ({ project }: Props) => {
         </h2>
       </div>
 
+
       {/* Card Body */}
       <div>
-        <p
-          className="my-3"
-        >
-          {project.description}
+        <TechsLoop techs={project.techs} />
+
+        <p className="mb-3 font-light">
+          {project.description.slice(0, 100)}...
         </p>
 
         <Image 
