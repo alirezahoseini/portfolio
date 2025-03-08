@@ -45,7 +45,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
         <div className="mt-10 flex items-center flex-col max-w-screen-lg">
           <h2 className="font-bold text-xl mb-8">
-            Experience
+            {locale === "en"? "Experiences": "تجربه ها"}
           </h2>
 
           <ExperienceWrapper locale={locale} /> 
