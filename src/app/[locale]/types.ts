@@ -25,3 +25,12 @@ export type IAboutPageMessages = {
   about_me_description: string
   cv_link: string
 }
+
+export type IExperience = {
+  id: number
+  title: string
+  isActive: boolean
+  date: string
+  description: string
+  link: string
+}

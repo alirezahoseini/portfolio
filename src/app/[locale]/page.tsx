@@ -4,6 +4,7 @@ import PageHeading from "@/components/templates/home-page/PageHeading"
 import Paragraph from "@/components/modules/Paragraph"
 import ReadMoreWrapper from "@/components/modules/ReadMoreWrapper"
 import ProjectsWrapper from "@/components/modules/projects-wrapper/ProjectsWrapper"
+import ExperienceWrapper from "@/components/modules/experience-wrapper/ExperienceWrapper"
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale
@@ -40,6 +41,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <ReadMoreWrapper more_text={buttonsMessages.Buttons["more"]}>
             <Paragraph text={aboutPageMessages.AboutPage["about_me_description"]} />
           </ReadMoreWrapper>
+        </div>
+
+        <div className="mt-10 flex items-center flex-col max-w-screen-lg">
+          <h2 className="font-bold text-xl mb-8">
+            Experience
+          </h2>
+
+          <ExperienceWrapper locale={locale} /> 
         </div>
 
         <div className="mt-10 flex items-center flex-col max-w-screen-lg">
