@@ -36,25 +36,25 @@ const ExperienceItem = ({ experience, locale }: Props) => {
 
       {/* Body */}
       <div>
-        <div className="flex items-end gap-2">
-          <Link href={experience.link}>
+        <Link href={experience.link}>
+          <div className="flex gap-2 items-end">
             <h2
-              className="font-medium underline text-lg hover:text-slate-600
+              className="font-medium underline  hover:text-slate-600
             dark:hover:text-zinc-300"
             >
               {experience.title}
             </h2>
-          </Link>
-      
-          {
-            experience.isActive && (
-              <span className="text-green-500" >
-                {locale === "en" ? "Active" : "فعال"}
-              </span>
-            )
-          }
-        </div>
-      
+
+            {
+              experience.isActive && (
+                <span className="text-green-500 text-sm" >
+                  {locale === "en" ? "Active" : "فعال"}
+                </span>
+              )
+            }
+          </div>
+        </Link>      
+
         <p
           className="text-base text-slate-900 
           dark:text-zinc-300 font-light mt-2"
