@@ -16,6 +16,7 @@ const ExperienceWrapper = async ({ locale }: Props) => {
       {
         experiences.map(experience => (
           <ExperienceItem 
+            key={experience.id}
             experience={experience}
             locale={locale}
           />

@@ -10,16 +10,14 @@ type Props = {
 
 const ExperienceItem = ({ experience, locale }: Props) => {
   return (
-    <div 
+    <div
       className="ltr:border-l-[1px] rtl:border-r-[1px] border-slate-300 border-solid border-0
             ltr:pl-8 rtl:pr-8 relative dark:border-zinc-700 pb-16 "
     >
       {/* Badge  */}
       <div
         className={
-          `${experience.isActive
-            ? "bg-emerald-400 dark:bg-emerald-500" : 
-            "bg-slate-300 dark:bg-zinc-700"}
+          `${experience.isActive ? "bg-emerald-400 dark:bg-emerald-500" : "bg-slate-300 dark:bg-zinc-700"}
               w-4 h-4 rounded-full absolute top-0 ltr:-left-[8px] rtl:-right-[9px]`
         }
       >
@@ -32,28 +30,30 @@ const ExperienceItem = ({ experience, locale }: Props) => {
           )
         }
       </div>
-      
 
       {/* Body */}
       <div>
         <Link href={experience.link}>
           <div className="flex gap-2 items-end">
-            <h2
-              className="font-medium underline  hover:text-slate-600
-            dark:hover:text-zinc-300"
-            >
-              {experience.title}
-            </h2>
+            <h2>
+              <strong 
+                className="underline hover:text-slate-600
+              dark:hover:text-zinc-300"
+              >
+                {experience.title}
+              </strong>
 
-            {
-              experience.isActive && (
-                <span className="text-green-500 text-sm" >
-                  {locale === "en" ? "Active" : "فعال"}
-                </span>
-              )
-            }
+              {
+                experience.isActive && (
+                  <span 
+                    className="text-green-500 text-sm no-underline  px-2 inline-block"
+                  >{locale === "en" ? "Active" : "فعال"}
+                  </span>
+                )
+              }
+            </h2>
           </div>
-        </Link>      
+        </Link>
 
         <p
           className="text-base text-slate-900 
@@ -62,7 +62,6 @@ const ExperienceItem = ({ experience, locale }: Props) => {
           {experience.description}
         </p>
       </div>
-      
     </div>
   )
 }

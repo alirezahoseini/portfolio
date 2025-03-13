@@ -1,5 +1,4 @@
 import localFont from "next/font/local"
-import { Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import React from "react"
 import clsx from "clsx"
@@ -11,9 +10,25 @@ import StickyNavigation from "@/components/modules/sticky-navigation/StickyNavig
 import ReactQueryProvider from "@/lib/providers/ReactQueryProvider"
 
 // Fonts
-const myFont = Inter({ subsets: ["latin"] })
-const FaFont = localFont({ src: "../../assets/fonts/YekanBakh.ttf" })
+const SatoshiFont = localFont({ 
+  src: "../../assets/fonts/Satoshi-Variable.ttf",
+  variable: "--font-satoshi"
+})
 
+const ClashDisplayFont = localFont({ 
+  src: "../../assets/fonts/ClashDisplay-Variable.ttf",
+  variable: "--font-clash"
+})
+
+const FaFont = localFont({ 
+  src: "../../assets/fonts/YekanBakh.ttf",
+  variable: "--font-yekan"
+})
+
+const DoranFont = localFont({
+  src: "../../assets/fonts/DoranFaNum-VF.ttf",
+  variable: "--font-doran"
+})
 
 type Props = {
   children: React.ReactNode
@@ -36,7 +51,11 @@ export default async function RootLayout({ children, params }: Props) {
         className={
           clsx(
             "px-2 max-w-screen-xl mx-auto",
-            locale === "en" ? myFont.className : FaFont.className
+            locale === "en" ? "font-satoshi" : "font-yekan",
+            SatoshiFont.variable,
+            ClashDisplayFont.variable,
+            FaFont.variable,
+            DoranFont.variable
           )
         }
       >
@@ -53,8 +72,6 @@ export default async function RootLayout({ children, params }: Props) {
             </ThemeProvider>
           </LocaleProvider>
         </ReactQueryProvider>
-
-
       </body>
     </html>
   )
