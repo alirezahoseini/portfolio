@@ -11,6 +11,38 @@ export default {
   theme: {
     extend: {
       colors: {
+        highlight: {
+          light: "#30af5b",
+          dark: "#b5ff6d"
+        },
+        primary: {
+          light: "#0a0a0a",
+          dark: "#f6f7ff"
+        },
+        secondary: {
+          light: "#0a0a0a",
+          dark: "#a9a9bd"
+        },
+        inverse: {
+          light: "#0b0b0d",
+          dark: "#f7f8fa"
+        },
+        bg600: {
+          light: "#cbd5e1",
+          dark: "#2c2c35"
+        },
+        bg700: {
+          light: "#e2e8f0",
+          dark: "#191920"
+        },
+        bg800: {
+          light: "#fff",
+          dark: "#111116"
+        },
+        bg900: {
+          light: "#f7f8fa",
+          dark: "#0b0b0d"
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -20,14 +52,6 @@ export default {
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))"
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))"
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -66,11 +90,25 @@ export default {
         satoshi: ["var(--font-satoshi)"],
         yekan: ["var(--font-yekan)"],
         doran: ["var(--font-doran)"]
+      },
+      animation: { "wave": "wave-animation 2.5s infinite" },
+      keyframes: {
+        "wave-animation": {
+          "0%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "60%": { transform: "rotate(0deg)" },
+          "to": { transform: "rotate(0deg)" }
+        }
       }
     }
+
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate"),
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require("tailwindcss-rtl")]
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  require("tailwindcss-rtl")]
 } satisfies Config

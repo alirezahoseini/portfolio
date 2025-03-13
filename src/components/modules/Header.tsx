@@ -28,7 +28,7 @@ function Header() {
   }
 
   return (
-    <header className="sticky z-50 top-0 mb-6 pt-2 container mx-auto">
+    <header className="sticky z-50 top-0 mb-6 pt-2 container mx-auto max-w-screen-md">
       <div
         className="flex w-[95%] lg:w-full mx-auto justify-between 
       items-center bg-white dark:bg-zinc-900 backdrop-blur-md

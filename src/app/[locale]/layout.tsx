@@ -20,7 +20,7 @@ const ClashDisplayFont = localFont({
   variable: "--font-clash"
 })
 
-const FaFont = localFont({ 
+const YekanFont = localFont({ 
   src: "../../assets/fonts/YekanBakh.ttf",
   variable: "--font-yekan"
 })
@@ -50,11 +50,11 @@ export default async function RootLayout({ children, params }: Props) {
       <body
         className={
           clsx(
-            "px-2 max-w-screen-xl mx-auto",
+            "bg-bg900-light dark:bg-bg900-dark",
             locale === "en" ? "font-satoshi" : "font-yekan",
             SatoshiFont.variable,
             ClashDisplayFont.variable,
-            FaFont.variable,
+            YekanFont.variable,
             DoranFont.variable
           )
         }
@@ -66,7 +66,7 @@ export default async function RootLayout({ children, params }: Props) {
 
               <StickyNavigation />
 
-              <div className="mb-[100px] container mx-auto px-4">
+              <div className="mb-[100px]">
                 {children}
               </div>
             </ThemeProvider>

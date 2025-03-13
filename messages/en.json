@@ -1,10 +1,9 @@
 {
   "HomePage": {
-    "name": "Alireza Hosseini",
-    "job_title": "Front-end Developer",
-    "latest_projects": "Latest Projects",
-    "seo_title": "Alireza hosseini - Front-end developer",
-    "seo_desc": "Alireza Hosseini, a Front-End Developer specializing in React.js, JavaScript, and designing modern, responsive websites. My projects focus on providing excellent user experience and high performance to help businesses strengthen their online presence."
+    "hello_text": "Hey! It's me Alireza,",
+    "hero_title": "Designing seamless & ,engaging digital experiences, with purpose.",
+    "subtitle": "I collaborate with brands and businesses to craft modern, user-friendly, and high-performance web experiences that leave a lasting impact.",
+    "know_me_better": "Know me better"
   },
   "Navigation": {
     "home": "Home",
