@@ -15,11 +15,11 @@ export default {
           light: "#30af5b",
           dark: "#b5ff6d"
         },
-        primary: {
+        "custom-primary": {
           light: "#0a0a0a",
           dark: "#f6f7ff"
         },
-        secondary: {
+        "custom-secondary": {
           light: "#0a0a0a",
           dark: "#a9a9bd"
         },
@@ -42,6 +42,14 @@ export default {
         bg900: {
           light: "#f7f8fa",
           dark: "#0b0b0d"
+        },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))"
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))"
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

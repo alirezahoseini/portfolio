@@ -66,6 +66,8 @@
   }
 }
 
+
+/* Custom section Styles  */
 .max-screen {
   width: 100%;
   margin-right: auto;
@@ -117,5 +119,18 @@ section {
   section {
       padding-top:6rem;
       padding-bottom: 6rem;
+  }
+}
+
+
+/* Opacity Container Styles  */
+.opacity-container-child {
+  transition: opacity .3s ease;
+  cursor: pointer
+}
+
+@media (min-width: 640px) {
+  .opacity-container:has(.opacity-container-child:hover) .opacity-container-child:not(:hover) {
+      opacity:.5
   }
 }

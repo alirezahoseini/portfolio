@@ -111,7 +111,7 @@
 /* Active */
 [dir="rtl"] .navItem[aria-current="page"]:nth-child(1) ~ #navSlider {
   right: 4px;
-}
+} 
 
 [dir="rtl"] .navItem[aria-current="page"]:nth-child(2) ~ #navSlider {
   right: calc(0px + 100% / 4);
