@@ -1,7 +1,7 @@
 import React from "react"
 import { Sparkle } from "lucide-react"
-import { InfiniteSlider } from "../../components/ui/infinite-slider"
 import { useLocale } from "next-intl"
+import { InfiniteSlider } from "../../components/ui/infinite-slider"
 
 const titles = [
   "Community",
@@ -45,6 +45,18 @@ const TitlesSlider = () => {
           ))
         }
       </InfiniteSlider>
+
+      <span 
+        className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r 
+        from-bg900-light dark:from-bg900-dark"
+      >
+      </span>
+
+      <span 
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l 
+        from-bg900-light dark:from-bg900-dark"
+      >
+      </span>
     </div>
   )
 }

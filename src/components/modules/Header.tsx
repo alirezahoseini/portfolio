@@ -30,7 +30,7 @@ function Header() {
   return (
     <header 
       className="sticky z-50 top-0 
-      bg-gradient-to-t from-transparent to-[#f7f8fada] dark:to-[#0b0b0dc7] pt-2"
+      bg-gradient-to-b from-bg900-light dark:from-bg900-dark pt-2"
     >
       <div
         className="flex w-[95%] lg:w-full mx-auto justify-between 

@@ -8,7 +8,7 @@ const StickyNavigation = () => {
   return (
     <nav
       id={styles.nav} 
-      className=" z-50 bg-gradient-to-b from-transparent to-[#f7f8faaf] dark:to-[#0b0b0daf]"
+      className=" z-50 bg-gradient-to-t from-bg900-light dark:from-bg900-dark"
     >
       <ul
         className="bg-white dark:bg-zinc-900
