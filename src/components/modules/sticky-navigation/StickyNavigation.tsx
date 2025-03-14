@@ -6,7 +6,10 @@ import NavigationLink from "./NavigationLink"
 const StickyNavigation = () => {
   const t = useTranslations("Navigation")
   return (
-    <nav id={styles.nav} className=" z-50">
+    <nav
+      id={styles.nav} 
+      className=" z-50 bg-gradient-to-b from-transparent to-[#f7f8faaf] dark:to-[#0b0b0daf]"
+    >
       <ul
         className="bg-white dark:bg-zinc-900
        border-slate-200 border-solid border dark:border-zinc-700

@@ -28,13 +28,16 @@ function Header() {
   }
 
   return (
-    <header className="sticky z-50 top-0 mb-6 pt-2 container mx-auto max-w-screen-md">
+    <header 
+      className="sticky z-50 top-0 
+      bg-gradient-to-t from-transparent to-[#f7f8fada] dark:to-[#0b0b0dc7] pt-2"
+    >
       <div
         className="flex w-[95%] lg:w-full mx-auto justify-between 
       items-center bg-white dark:bg-zinc-900 backdrop-blur-md
        border-slate-200 border-solid border dark:border-zinc-700
        text-zinc-600 dark:text-zinc-100 py-2 px-4 rounded-full 
-       bg-opacity-60 dark:bg-opacity-60 shadow-sm"
+       bg-opacity-60 dark:bg-opacity-60 shadow-sm max-w-screen-md"
       >
         <h1>AH</h1>
 
