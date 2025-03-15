@@ -1,4 +1,7 @@
 {
+  "Common": {
+    "about_me": "About Me"
+  },
   "HomePage": {
     "hello_text": "Hey! It's me Alireza,",
     "hero_title": "Designing seamless & ,engaging digital experiences, with purpose.",

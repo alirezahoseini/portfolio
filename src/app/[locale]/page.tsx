@@ -1,4 +1,5 @@
 import TitlesSlider from "@/components/modules/TitlesSlider"
+import About from "@/components/templates/home/about/About"
 import Hero from "@/components/templates/home/hero/Hero"
 // import { getMessages } from "next-intl/server"
 // import { IHomePageMessages } from "./types"
@@ -17,7 +18,7 @@ export default async function HomePage() {
 
       <TitlesSlider />
 
-      
+      <About />
     </>
   )
 }
