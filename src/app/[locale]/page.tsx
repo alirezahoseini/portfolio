@@ -16,6 +16,8 @@ export default async function HomePage() {
       <Hero />
 
       <TitlesSlider />
+
+      
     </>
   )
 }

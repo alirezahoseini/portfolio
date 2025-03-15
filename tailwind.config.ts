@@ -99,7 +99,10 @@ export default {
         yekan: ["var(--font-yekan)"],
         doran: ["var(--font-doran)"]
       },
-      animation: { "wave": "wave-animation 2.5s infinite" },
+      animation: {
+        "wave": "wave-animation 2.5s infinite",
+        "shimmer": "shimmer 2.2s infinite"
+      },
       keyframes: {
         "wave-animation": {
           "0%": { transform: "rotate(0deg)" },
@@ -110,6 +113,11 @@ export default {
           "50%": { transform: "rotate(10deg)" },
           "60%": { transform: "rotate(0deg)" },
           "to": { transform: "rotate(0deg)" }
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-4rem top" },
+          "70%": { backgroundPosition: "12.5rem top" },
+          "100%": { backgroundPosition: "12.5rem top" }
         }
       }
     }

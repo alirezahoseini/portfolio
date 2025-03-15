@@ -1,0 +1,11 @@
+.shimmer {
+    font-weight: 500;
+    display: inline-block;
+    background: currentColor -webkit-gradient(linear,100% 0,0 0,from(#fff),color-stop(.5,#fff),to(#fff));
+    background-position: -4rem top;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 4rem 100%;
+    -webkit-text-fill-color: transparent;
+}
