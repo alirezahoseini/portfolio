@@ -12,15 +12,15 @@ const ShimmerTitle: React.FC<ShimmerTitleProps> = ({ children }) => {
     <div
       className={
         `text-highlight-light dark:text-highlight-dark
-        flex items-center gap-2`
+        flex items-center gap-2 mb-4`
       }
     >
       <Sparkle size={18} />
 
       <p 
         className={
-          `${styles.shimmer} dark:animate-shimmer leading-none
-            ltr:font-clash rtl:font-doran ltr:text-sm rtl:text-base uppercase mt-[2px]`
+          `${styles.shimmer} dark:animate-shimmer leading-none rtl:text-lg
+            ltr:font-clash rtl:font-doran ltr:text-sm uppercase mt-[2px] rtl:mt-0`
         }
       >
         {children}
