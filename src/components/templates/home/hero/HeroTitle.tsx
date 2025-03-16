@@ -18,7 +18,7 @@ const HeroTitle = async () => {
         className="text-highlight-light 
         dark:text-highlight-dark"
       >
-        {text[1]} 
+        {text[1]}
       </span> 
 
       {text[2]} 

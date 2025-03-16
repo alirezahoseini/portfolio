@@ -3,14 +3,12 @@ import React from "react"
 
 type Props = {
   children: React.ReactNode
-  key: number
   renge: number[]
   progress: MotionValue<number>
 }
 
 const Word = ({
   children,
-  key,
   renge,
   progress
 }: Props) => {
@@ -27,7 +25,6 @@ const Word = ({
       </span>
 
       <motion.span 
-        key={key}
         style={{ opacity: opacity }}
       >{children}
       </motion.span>
