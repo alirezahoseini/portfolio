@@ -20,13 +20,15 @@ const Projects = async () => {
           text={m("selected_projects")}
           className="text-4xl md:text-5xl rtl:font-semibold text-center
             ltr:font-clash rtl:font-doran ltr:tracking-wide 
-            ltr:font-medium "
-          delay={80}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,20px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          threshold={0.2}
-          rootMargin="-100px"
+            ltr:font-medium"
+          delay={150}
+          duration={0.6} 
+          staggerChildren={0.04}
+          animationFrom={{ opacity: 0, y: 50 }}
+          animationTo={{ opacity: 1, y: 0 }}
+          easing={[0.215, 0.61, 0.355, 1]}
         />
+
       </div>
     </section>
       

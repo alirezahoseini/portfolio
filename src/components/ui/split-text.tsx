@@ -14,6 +14,9 @@ interface SplitTextProps {
   textAlign?: "left" | "right" | "center" | "justify" | "start" | "end"
   onLetterAnimationComplete?: () => void
   isPersian?: boolean
+  // اضافه کردن کنترل بیشتر روی انیمیشن
+  duration?: number
+  staggerChildren?: number
 }
 
 const SplitText: React.FC<SplitTextProps> = ({
@@ -22,26 +25,23 @@ const SplitText: React.FC<SplitTextProps> = ({
   delay = 150,
   animationFrom = { opacity: 0, transform: "translate3d(0,40px,0)" },
   animationTo = { opacity: 1, transform: "translate3d(0,0,0)" },
-  easing = "easeOut",
+  easing = [0.215, 0.61, 0.355, 1], // cubic-bezier easing برای انیمیشن نرم‌تر
   threshold = 0.1,
   rootMargin = "-100px",
   textAlign = "center",
   onLetterAnimationComplete,
-  isPersian
+  isPersian,
+  duration = 0.6, // مدت زمان طولانی‌تر برای انیمیشن نرم‌تر
+  staggerChildren = 0.03 // تأخیر بین المان‌ها (به جای محاسبه با index)
 }) => {
   const isTextPersian = isPersian !== undefined 
     ? isPersian 
-    : /[\u0600-\u06FF]/.test(text) 
- 
+    : /[\u0600-\u06FF]/.test(text)
+  
   const words = text.split(" ")
-
-  const elements = isTextPersian 
-    ? words 
-    : words.map(word => word.split("")).flat()
   
   const [inView, setInView] = useState(false)
   const ref = useRef<HTMLParagraphElement>(null)
-  const animatedCount = useRef(0)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,21 +63,39 @@ const SplitText: React.FC<SplitTextProps> = ({
     return () => observer.disconnect()
   }, [threshold, rootMargin])
 
+  // استفاده از variants برای انیمیشن بهتر و کنترل staggering
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: staggerChildren,
+        delayChildren: delay / 1000
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: {
+      ...animationFrom,
+      transition: { duration, ease: easing }
+    },
+    visible: {
+      ...animationTo,
+      transition: { duration, ease: easing }
+    }
+  }
+
   // Custom animation complete handler
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleAnimationComplete = (index: number) => {
-    animatedCount.current += 1
-    if (animatedCount.current === elements.length && onLetterAnimationComplete) {
+  const handleAnimationComplete = () => {
+    if (onLetterAnimationComplete) {
       onLetterAnimationComplete()
     }
   }
 
-  // Convert delay from milliseconds to seconds for Framer Motion
-  const delayInSeconds = delay / 1000
-
   if (isTextPersian) {
     return (
-      <p
+      <motion.p
         ref={ref}
         className={`split-parent overflow-hidden inline ${className}`}
         style={
@@ -88,33 +106,29 @@ const SplitText: React.FC<SplitTextProps> = ({
             direction: "rtl"
           }
         }
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={containerVariants}
+        onAnimationComplete={handleAnimationComplete}
       >
         {
           words.map((word, index) => (
             <motion.span
               key={index}
-              initial={animationFrom}
-              animate={inView ? animationTo : animationFrom}
-              transition={
-                {
-                  duration: 0.5,
-                  ease: easing,
-                  delay: index * delayInSeconds
-                }
-              }
-              className="inline-block transform transition-opacity will-change-transform"
-              style={{ marginLeft: "0.2em" }}
+              variants={itemVariants}
+              className="inline-block transform will-change-transform"
+              style={{ marginLeft: "0.3em" }}
             >
               {word}
             </motion.span>
           ))
         }
-      </p>
+      </motion.p>
     )
   }
   else {
     return (
-      <p
+      <motion.p
         ref={ref}
         className={`split-parent overflow-hidden inline ${className}`}
         style={
@@ -124,6 +138,10 @@ const SplitText: React.FC<SplitTextProps> = ({
             wordWrap: "break-word"
           }
         }
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={containerVariants}
+        onAnimationComplete={handleAnimationComplete}
       >
         {
           words.map((word, wordIndex) => (
@@ -133,30 +151,15 @@ const SplitText: React.FC<SplitTextProps> = ({
             >
               {
                 !isTextPersian && typeof word === "string" 
-                  ? word.split("").map((letter, letterIndex) => {
-                    const index = words
-                      .slice(0, wordIndex)
-                      .reduce((acc, w) => typeof w === "string" ? acc + w.length : acc + 1, 0) + letterIndex
-
-                    return (
-                      <motion.span
-                        key={index}
-                        initial={animationFrom}
-                        animate={inView ? animationTo : animationFrom}
-                        transition={
-                          {
-                            duration: 0.5,
-                            ease: easing,
-                            delay: index * delayInSeconds
-                          }
-                        }
-                        onAnimationComplete={() => handleAnimationComplete(index)}
-                        className="inline-block transform transition-opacity will-change-transform"
-                      >
-                        {letter}
-                      </motion.span>
-                    )
-                  })
+                  ? word.split("").map((letter, letterIndex) => (
+                    <motion.span
+                      key={`${wordIndex}-${letterIndex}`}
+                      variants={itemVariants}
+                      className="inline-block transform will-change-transform"
+                    >
+                      {letter}
+                    </motion.span>
+                  ))
                   : word
               }
 
@@ -166,7 +169,7 @@ const SplitText: React.FC<SplitTextProps> = ({
             </span>
           ))
         }
-      </p>
+      </motion.p>
     )
   }
 }
