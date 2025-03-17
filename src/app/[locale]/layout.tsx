@@ -8,6 +8,7 @@ import LocaleProvider from "@/lib/providers/LocaleProvider"
 import Header from "@/components/modules/Header"
 import StickyNavigation from "@/components/modules/sticky-navigation/StickyNavigation"
 import ReactQueryProvider from "@/lib/providers/ReactQueryProvider"
+import ProgressProvider from "@/lib/providers/ProgressProvider"
 
 // Fonts
 const SatoshiFont = localFont({ 
@@ -62,13 +63,15 @@ export default async function RootLayout({ children, params }: Props) {
         <ReactQueryProvider>
           <LocaleProvider locale={locale}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              <Header />
+              <ProgressProvider>
+                <Header />
 
-              <StickyNavigation />
+                <StickyNavigation />
 
-              <div className="mb-[100px]">
-                {children}
-              </div>
+                <div className="mb-[100px]">
+                  {children}
+                </div>
+              </ProgressProvider>
             </ThemeProvider>
           </LocaleProvider>
         </ReactQueryProvider>
