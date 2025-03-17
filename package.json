@@ -9,6 +9,7 @@
     "lint": "next lint . --fix"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.10",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@shadcn/ui": "^0.0.4",

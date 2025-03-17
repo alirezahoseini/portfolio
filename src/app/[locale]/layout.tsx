@@ -50,7 +50,7 @@ export default async function RootLayout({ children, params }: Props) {
       <body
         className={
           clsx(
-            "bg-bg900-light dark:bg-bg900-dark",
+            "bg-bg900-light dark:bg-bg900-dark ltr:font-normal rtl:font-light",
             locale === "en" ? "font-satoshi" : "font-yekan",
             SatoshiFont.variable,
             ClashDisplayFont.variable,

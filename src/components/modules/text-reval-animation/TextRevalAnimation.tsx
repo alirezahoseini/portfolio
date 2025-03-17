@@ -22,7 +22,7 @@ const TextRevalAnimation = ({ value }: Props) => {
   return (
     <p
       className="text-2xl sm:text-3xl flex flex-wrap gap-2 mt-2
-      dark:text-bg900-light text-bg900-dark font-medium justify-center
+      dark:text-bg900-light text-bg900-dark font-normal justify-center
       leading-7"
       ref={element}
     >
