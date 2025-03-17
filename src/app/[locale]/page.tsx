@@ -1,4 +1,3 @@
-import Link from "next/link"
 import TitlesSlider from "@/components/modules/TitlesSlider"
 import About from "@/components/templates/home/about/About"
 import Hero from "@/components/templates/home/hero/Hero"
@@ -24,9 +23,6 @@ export default async function HomePage() {
 
       <Projects />
 
-      <Link href="/fa/about" >
-        about
-      </Link>
     </>
   )
 }

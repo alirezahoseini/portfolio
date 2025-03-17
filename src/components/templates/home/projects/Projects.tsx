@@ -33,7 +33,7 @@ const Projects = async () => {
 
         <p 
           className="text-custom-secondary-light dark:text-custom-secondary-dark
-          text-base text-balance max-w-[85%]"
+          text-base md:text-balance max-w-[85%]"
         >
           {m("selected_projects_subtitle")}
         </p>

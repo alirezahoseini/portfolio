@@ -29,4 +29,4 @@ const ShimmerTitle: React.FC<ShimmerTitleProps> = ({ children }) => {
   )
 }
 
-export default ShimmerTitle
+export default React.memo(ShimmerTitle)

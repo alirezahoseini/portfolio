@@ -41,4 +41,4 @@ const StickyNavigation = () => {
   )
 }
 
-export default StickyNavigation
+export default React.memo(StickyNavigation)
