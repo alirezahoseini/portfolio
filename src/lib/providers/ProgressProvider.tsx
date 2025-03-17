@@ -1,27 +1,19 @@
 "use client"
-import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
-import NProgress from "nprogress"
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar"
 
 const ProgressProvider = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname()
-  const [loading, setLoading] = useState(false)
+  return (
+    <>
+      <ProgressBar
+        height="4px"
+        color="#ff5733"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
 
-  useEffect(() => {
-    if (!loading) {
-      NProgress.start()
-      setLoading(true)
-    }
-
-    const timer = setTimeout(() => {
-      NProgress.done()
-      setLoading(false)
-    }, 200) // minmum wait if fast load
-
-    return () => clearTimeout(timer)
-  }, [pathname])
-
-  return children
+      {children}
+    </>
+  )
 }
 
 export default ProgressProvider

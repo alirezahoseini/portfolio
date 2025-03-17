@@ -134,16 +134,16 @@ section {
 }
 
 /* Nprogress styles */
-#nprogress {
+.nprogress {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   z-index: 100;
 }
-#nprogress .bar {
+.nprogress .bar {
   background: #30af5b !important;
-  height: 3px !important;
+  height: 2px !important;
   box-shadow: 0 2px 10px 0.3px #30af5a5e;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -151,7 +151,8 @@ section {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-html.dark #nprogress .bar {
+html.dark .nprogress .bar {
+  height: 2px !important;
   background: #b5ff6d !important;
-  box-shadow: 0 2px 10px 0.3px #b5ff6d;
+  box-shadow: 0 2px 10px 0.3px #b6ff6d66;
 }
