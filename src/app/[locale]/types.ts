@@ -12,6 +12,8 @@ export type IProject = {
   description: string
   img: string
   techs: string[]
+  bg: string
+  date: number
 }
 
 export type IButtonsMessages = {

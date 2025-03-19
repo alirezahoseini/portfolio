@@ -2,6 +2,7 @@ import React from "react"
 import { getTranslations } from "next-intl/server"
 import SplitText from "@/components/ui/split-text"
 import ShimmerTitle from "@/components/modules/shimmer-title/ShimmerTitle"
+import ProjectsGrid from "@/components/modules/projects-grid/ProjectsGrid"
 
 const Projects = async () => {
   const t = await getTranslations("Common")
@@ -37,6 +38,8 @@ const Projects = async () => {
         >
           {m("selected_projects_subtitle")}
         </p>
+
+        <ProjectsGrid />
 
       </div>
     </section>
