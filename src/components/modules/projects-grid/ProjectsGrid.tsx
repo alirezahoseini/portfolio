@@ -10,8 +10,8 @@ const ProjectsGrid = async () => {
 
   return (
     <div 
-      className="opacity-container grid grid-rows-[masonry] grid-cols-1 lg:grid-cols-2
-      gap-x-16 gap-y-10"
+      className="opacity-container grid grid-rows-[masonry] grid-cols-1 md:grid-cols-2
+      gap-x-16 gap-y-16 md:gap-y-10 mt-10"
     >
       {
         projects.map((project: IProject) => (

@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import { IProject } from "@/app/[locale]/types"
+import { Badge } from "@/components/ui/badge"
 
 
 const ProjectGridItem = (props: IProject) => {
@@ -11,12 +12,14 @@ const ProjectGridItem = (props: IProject) => {
     img,
     techs,
     bg,
-    // date,
+    date
   } = props
+
+  const newTechs = techs.length >3 ? techs.slice(0, 3) : techs
 
   return (
     <div 
-      className="opacity-container-child even:mt-16 group" 
+      className="opacity-container-child even:md:mt-14 group" 
     >
       <div 
         className="rounded-2xl"
@@ -33,25 +36,44 @@ const ProjectGridItem = (props: IProject) => {
       </div>
 
       {/* CARD BODY */}
-      <div>
-        <h2>
+      <div className="mt-3">
+        <h2 className="font-semibold text-lg">
           {title}
         </h2>
 
-        <div>
+        <div
+          className="flex items-center justify-between mt-3 text-custom-secondary-light
+        dark:text-custom-secondary-dark font-satoshi"
+        >
           {/* Techs  */}
-          <div>
-            {
-              techs.map((tech: string) => (
-                <span>
+          <div className="flex gap-2">
+            { 
+              newTechs.map((tech: string) => (
+                <Badge 
+                  className="font-light bg-bg700-light
+                  dark:bg-bg700-dark" 
+                  variant="outline"
+                >
                   {tech}
-                </span>
+                </Badge>
               ))
+            }
+
+            {
+              techs.length >3 && (
+                <Badge 
+                  className="font-light bg-bg700-light
+                dark:bg-bg700-dark" 
+                  variant="outline"
+                >
+                  +{techs.length - 3}
+                </Badge>
+              )
             }
           </div>
 
-          <span>
-
+          <span className="text-sm">
+            {date}
           </span>
         </div>
       </div>

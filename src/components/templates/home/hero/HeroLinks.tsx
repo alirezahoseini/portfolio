@@ -39,6 +39,7 @@ const HeroLinks = async () => {
         {
           socialLinks.map(item => (
             <Link 
+              key={item.name}
               href={item.url}
               className="uppercase flex text-secondary-light dark:text-secondary-dark
                  items-center gap-1 text-sm opacity-container-child"
