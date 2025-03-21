@@ -1,8 +1,8 @@
 export const projects = {
   en: [
     {
-      id: 1,
-      bg: "#fff",
+      id: "first",
+      bg: "#FDD85D",
       date: 2024,
       title: "Next-Movie",
       description: `This website is designed for selling various men's and women's clothing. 
@@ -11,8 +11,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind"]
     },
     {
-      id: 2,
-      bg: "#fff",
+      id: "second",
+      bg: "#00408F",
       date: 2024,
       title: "Next-Movie",
       description: `This website is designed for selling various men's and women's clothing. 
@@ -21,8 +21,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind"]
     },
     {
-      id: 3,
-      bg: "#fff",
+      id: "three",
+      bg: "#FDC500",
       date: 2024,
       title: "Next-Movie",
       description: `This website is designed for selling various men's and women's clothing. 
@@ -31,8 +31,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind"]
     },
     {
-      id: 4,
-      bg: "#fff",
+      id: "four",
+      bg: "#77B6EA",
       date: 2024,
       title: "Next-Movie",
       description: `This website is designed for selling various men's and women's clothing. 
@@ -44,8 +44,8 @@ export const projects = {
 
   fa: [
     {
-      id: 1,
-      bg: "#fff",
+      id: "first",
+      bg: "#FDD85D",
       date: 2024,
       title: "Next-Movie",
       description: `این وب‌سایت برای فروش انواع لباس‌های مردانه و زنانه طراحی شده است.
@@ -54,8 +54,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind", "Tailwind", "Tailwind", "Tailwind"]
     },
     {
-      id: 2,
-      bg: "#fff",
+      id: "second",
+      bg: "#00408F",
       date: 2024,
       title: "Next-Movie",
       description: `این وب‌سایت برای فروش انواع لباس‌های مردانه و زنانه طراحی شده است.
@@ -64,8 +64,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind", "Tailwind", "Tailwind", "Tailwind"]
     },
     {
-      id: 3,
-      bg: "#fff",
+      id: "three",
+      bg: "#FDC500",
       date: 2024,
       title: "Next-Movie",
       description: `این وب‌سایت برای فروش انواع لباس‌های مردانه و زنانه طراحی شده است.
@@ -74,8 +74,8 @@ export const projects = {
       techs: ["Nextjs", "React", "Tailwind", "Tailwind", "Tailwind", "Tailwind"]
     },
     {
-      id: 4,
-      bg: "#fff",
+      id: "four",
+      bg: "#77B6EA",
       date: 2024,
       title: "Next-Movie",
       description: `این وب‌سایت برای فروش انواع لباس‌های مردانه و زنانه طراحی شده است.

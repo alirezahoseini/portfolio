@@ -1,7 +1,8 @@
 {
   "Common": {
     "about_me": "درباره من",
-    "my_work": "کارهای من"
+    "my_work": "کارهای من",
+    "view_all_projects": "دیدن تمام پروژه ها"
   },
   "HomePage": {
     "hello_text": "سلام! من علیرضام،",

@@ -7,7 +7,7 @@ export type IHomePageMessages =  {
 } 
 
 export type IProject = {
-  id: number
+  id: string
   title: string
   description: string
   img: string

@@ -1,7 +1,8 @@
 {
   "Common": {
     "about_me": "About Me",
-    "my_work": "My Work"
+    "my_work": "My Work",
+    "view_all_projects": "View All Projects"
   },
   "HomePage": {
     "hello_text": "Hey! It's me Alireza,",
