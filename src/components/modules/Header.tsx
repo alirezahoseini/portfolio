@@ -39,7 +39,7 @@ function Header() {
        text-zinc-600 dark:text-zinc-100 py-2 px-4 rounded-full 
        bg-opacity-60 dark:bg-opacity-60 shadow-sm max-w-screen-md"
       >
-        <h1>AH</h1>
+        <h1 className="font-clash text-xl md:text-2xl font-medium ">AH</h1>
 
         <div className="flex items-center gap-2">
           <Button
