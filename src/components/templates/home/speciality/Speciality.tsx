@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useQuery } from "@tanstack/react-query"
 import SpecialityAccordion from "./SpecialityAccordion"
 import SpecialityTitle from "./SpecialityTitle"
+import SpecialitySkeleton from "./SpecialitySkeleton"
 import { ISelectedImage, ISpeciality } from "@/app/[locale]/types"
 import { getSpeciality } from "@/lib/services"
 
@@ -34,16 +35,16 @@ const Speciality = () => {
           <div>error</div>
         )
       }
+      
+      <div>
+        <SpecialityTitle />
 
-      {
-        isLoading && !isError
-          ? (
-            <div>loading</div>
-          )
-          : (
-            <div>
-              <SpecialityTitle />
-        
+        {
+          isLoading && !isError
+            ? (
+              <SpecialitySkeleton />
+            )
+            : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-10">
 
                 <SpecialityAccordion 
@@ -70,9 +71,9 @@ const Speciality = () => {
                   }
                 </div>
               </div>
-            </div>
-          )
-      }
+            )
+        }
+      </div>
     </section>
   )
 }
