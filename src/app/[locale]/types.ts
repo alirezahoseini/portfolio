@@ -36,3 +36,13 @@ export type IExperience = {
   description: string
   link: string
 }
+
+export type ISpeciality = {
+  id: number
+  title: string
+  desc: string
+  icon: string
+  image: string
+}
+
+export type ISelectedImage = null | string
