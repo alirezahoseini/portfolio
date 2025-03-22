@@ -30,5 +30,10 @@
     "page_title": "About me",
     "about_me_description": "I’ve loved computers since I was a kid and I’ve always been curious about how programs work. Writing code, solving problems, and finding solutions are really exciting to me. Also, working with an active team, where everyone works towards the same goal, is something I really enjoy.<br /> Over time, I’ve focused more on React, Next.js, and TypeScript. I started by building simple pages with HTML and CSS, and slowly moved into professional web development. Now, I work on projects that challenge me and help me learn new things.<br /> I’m always looking to grow and learn more. If you have an idea you want to turn into a professional website, I’d love to chat!",
     "cv_link": "/Resume_en_alireza_hosseini.pdf"
+  },
+  "NotFound": {
+    "title": "Oops! Page not found.",
+    "description": "We couldn’t find what you are looking for. Please check the URL and try again!",
+    "button": "Back to Homepage"
   }
 }
