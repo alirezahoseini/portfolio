@@ -38,7 +38,7 @@ const TextWithIcon: React.FC<TextWithIconProps> = ({
 
   return (
     <div className={`flex items-center gap-2 font-light ${className}`}>
-      <Icon className="w-5 h-5" />
+      <Icon size={18} />
 
       <span>{text}</span>
     </div>

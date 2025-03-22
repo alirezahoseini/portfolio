@@ -47,12 +47,13 @@ const SpecialityAccordion = (props: Props) => {
                 <TextWithIcon
                   text={item.title}
                   iconName={item.icon}
+                  className="ltr:font-medium"
                 />
               </h3>
             </AccordionTrigger>
 
             <AccordionContent
-              className="font-light"
+              className="rtl:font-light"
             >
               {item.desc}
             </AccordionContent>

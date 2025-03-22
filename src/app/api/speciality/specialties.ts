@@ -10,7 +10,7 @@ export const specialties = {
     },
     {
       id: 2,
-      title: "design",
+      title: "Design",
       desc: `Building responsive websites. Providing the users an
        enriching experience that responds to any device and screen size.`,
       icon: "PenTool",

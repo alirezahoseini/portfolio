@@ -46,7 +46,6 @@ const Speciality = () => {
             )
             : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-10">
-
                 <SpecialityAccordion 
                   specialtiesList={data}
                   setSelectedImage={setSelectedImage}
