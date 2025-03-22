@@ -1,44 +1,78 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useLocale } from "next-intl"
+import Image from "next/image"
+import { useQuery } from "@tanstack/react-query"
 import SpecialityAccordion from "./SpecialityAccordion"
 import SpecialityTitle from "./SpecialityTitle"
-import API from "@/lib/axiosConfig"
 import { ISelectedImage, ISpeciality } from "@/app/[locale]/types"
+import { getSpeciality } from "@/lib/services"
 
 
 const Speciality = () => {
-  const [specialtiesList, setSpecialtiesList] = useState<ISpeciality[]>([])
-  const [selectedImage, setSelectedImage] = useState<ISelectedImage>(null)
+  const [selectedImage, setSelectedImage] = useState<ISelectedImage>(1)
   const locale = useLocale()
+  
+  const {
+    isError,
+    isLoading,
+    data
+  } = useQuery({ 
+    queryKey: ["speciality", locale],
+    queryFn: () => getSpeciality({ locale }),
+    staleTime: 5 * 60 * 2000, // 10 min
+    refetchOnWindowFocus: false
+  })
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await API.get(`speciality?lang=${locale}`)
-      setSpecialtiesList(data)
-    }
-    fetchData()
-  }, [])
 
   return (
     <section
       className="max-screen"
     >
-      <div>
-        <SpecialityTitle />
+      {
+        isError && (
+          <div>error</div>
+        )
+      }
+
+      {
+        isLoading && !isError
+          ? (
+            <div>loading</div>
+          )
+          : (
+            <div>
+              <SpecialityTitle />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mt-10">
 
-          <SpecialityAccordion specialtiesList={specialtiesList} />
+                <SpecialityAccordion 
+                  specialtiesList={data}
+                  setSelectedImage={setSelectedImage}
+                />
 
-          <div className="">
-            image
-          </div>
-
-       
-        </div>
-
-      </div>
+                <div className="relative w-full h-full aspect-video rounded-3xl overflow-hidden">
+                  {
+                    data.map((item: ISpeciality) => (
+                      <Image 
+                        key={item.id}
+                        src={item.image} 
+                        alt="Speciality image"
+                        width={640}
+                        height={426}
+                        className={
+                          `absolute top-0 right-0 h-full w-full object-cover
+                           transition-all duration-500 
+                           ${selectedImage === item.id ? "opacity-100" : "opacity-0"}`
+                        }
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          )
+      }
     </section>
   )
 }

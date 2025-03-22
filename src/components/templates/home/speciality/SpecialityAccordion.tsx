@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Dispatch, SetStateAction } from "react"
 import {
   Accordion,
   AccordionContent,
@@ -10,15 +10,24 @@ import TextWithIcon from "@/components/modules/TextWithIcon"
 
 type Props = {
   specialtiesList: ISpeciality[]
+  setSelectedImage: Dispatch<SetStateAction<number>>
 }
 
 const SpecialityAccordion = (props: Props) => {
-  const { specialtiesList } = props
+  const { specialtiesList, setSelectedImage } = props
+
+  const changeImageHandler = (value: string) => {
+    const selectedItem: ISpeciality = specialtiesList.find(item => item.title === value) || specialtiesList[0]
+    if(selectedItem) {
+      setSelectedImage(selectedItem.id)
+    }
+  }
+
   return (
     <Accordion
       type="single"
       collapsible
-      // onValueChange={}
+      onValueChange={changeImageHandler}
     >
       {
         specialtiesList.map(item => (
@@ -54,4 +63,4 @@ const SpecialityAccordion = (props: Props) => {
   )
 }
 
-export default SpecialityAccordion
+export default React.memo(SpecialityAccordion)

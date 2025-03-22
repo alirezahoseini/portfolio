@@ -29,4 +29,4 @@ const SpecialityTitle = () => {
   )
 }
 
-export default SpecialityTitle
+export default React.memo(SpecialityTitle)

@@ -10,6 +10,10 @@ type GetExperiencesProps = {
   locale: ILang
 }
 
+type GetSpecialityProps = {
+  locale: ILang
+}
+
 const getProjects = async ({ locale, limit }: GetProjectsProps) => {
   try {
     const url = `projects?lang=${locale}${limit ? `&limit=${limit}`: ""}`
@@ -48,6 +52,25 @@ const getExperiences = async ({ locale }: GetExperiencesProps) => {
   }
 }
 
+const getSpeciality = async ({ locale }: GetSpecialityProps) => {
+  try {
+    const url = `speciality?lang=${locale}`
+    const { status, data: speciality } = await API.get(url)
+
+    if (status === 200) {
+      return speciality
+    }
+    else {
+      return false
+    }
+  }
+  catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error fetching speciality:", error)
+    return { error: "Failed to fetch speciality. Please try again later." }
+  }
+}
+
 export {
-  getProjects, getExperiences 
+  getProjects, getExperiences, getSpeciality
 }

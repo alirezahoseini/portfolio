@@ -7,6 +7,14 @@ export const specialties = {
        enriching experience that responds to any device and screen size.`,
       icon: "CodeXml",
       image: "/development.webp"
+    },
+    {
+      id: 2,
+      title: "design",
+      desc: `Building responsive websites. Providing the users an
+       enriching experience that responds to any device and screen size.`,
+      icon: "PenTool",
+      image: "/design.jpg"
     }
   ],
 
@@ -18,6 +26,14 @@ export const specialties = {
        تجربه ای غنی که به هر دستگاه و اندازه صفحه نمایش پاسخ می دهد.`,
       icon: "CodeXml",
       image: "/development.webp"
+    },
+    {
+      id: 2,
+      title: "طراحی",
+      desc: `ساخت وب سایت های واکنش گرا. ارائه به کاربران
+       تجربه ای غنی که به هر دستگاه و اندازه صفحه نمایش پاسخ می دهد.`,
+      icon: "PenTool",
+      image: "/design.jpg"
     }
   ]
 

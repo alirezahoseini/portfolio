@@ -45,4 +45,4 @@ export type ISpeciality = {
   image: string
 }
 
-export type ISelectedImage = null | string
+export type ISelectedImage = number
