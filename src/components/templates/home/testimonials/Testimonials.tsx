@@ -5,12 +5,12 @@ import TestimonialsCarousel from "../../../modules/testimonials-carousel/Testimo
 
 const Testimonials = () => {
   return (
-    <section className="max-screen flex flex-col md:flex-row gap-12">
-      <div className="w-full md:max-w-[45%] lg:w-[30%]">
+    <section className="max-screen flex flex-col lg:flex-row gap-12">
+      <div className="w-full lg:w-[30%]">
         <TestimonialsTitle />
       </div>
 
-      <div className="w-full md:w-2/3">
+      <div className="w-full lg:w-2/3">
         <TestimonialsCarousel />
       </div> 
     </section>

@@ -38,12 +38,19 @@ export const SelectedSnapDisplay: React.FC<PropType> = props => {
   const { selectedSnap, snapCount } = props
 
   return (
-    <div className="min-w-12 leading-none font-satoshi text-center text-sm text-muted-foreground">
-      {selectedSnap + 1} 
+    <div
+      className="min-w-12 leading-none font-satoshi text-center text-sm text-muted-foreground
+      flex items-center justify-center gap-1"
+    >
+      <span>
+        {selectedSnap + 1} 
+      </span>
 
-      / 
+      <span> / </span>
 
-      { snapCount }
+      <span>
+        { snapCount }
+      </span>
     </div>
   )
 }

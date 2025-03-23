@@ -28,6 +28,16 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* اضافه کردن متغیرهای جدید برای رنگ‌های ثابت */
+    --progress-bar: 142 65% 43%; /* #30af5b */
+    --progress-shadow: 142 65% 43% 37%; /* #30af5a5e */
+    --dark-progress-bar: 84 100% 71%; /* #b5ff6d */
+    --dark-progress-shadow: 84 100% 71% 40%; /* #b6ff6d66 */
+    --border-light: 210 20% 86%; /* #cbd5e1 */
+    --border-dark: 240 10% 19%; /* #2c2c35 */
+    --underline-light: 142 65% 43%; /* #30af5b */
+    --underline-dark: 84 100% 71%; /* #b5ff6d */
   }
   .dark {
     --background: 248 100% 3%;
@@ -142,9 +152,9 @@ section {
   z-index: 100;
 }
 .nprogress .bar {
-  background: #30af5b !important;
+  background: hsl(var(--progress-bar)) !important;
   height: 2px !important;
-  box-shadow: 0 2px 10px 0.3px #30af5a5e;
+  box-shadow: 0 2px 10px 0.3px hsla(var(--progress-shadow));
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -153,6 +163,58 @@ section {
 }
 html.dark .nprogress .bar {
   height: 2px !important;
-  background: #b5ff6d !important;
-  box-shadow: 0 2px 10px 0.3px #b6ff6d66;
+  background: hsl(var(--dark-progress-bar)) !important;
+  box-shadow: 0 2px 10px 0.3px hsla(var(--dark-progress-shadow));
+}
+
+/* Underline effect button */
+.underline-effect {
+  position: relative;
+  display: block;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  border-bottom: 1.5px solid hsl(var(--border-light));
+  font-weight: 400;
+  padding: 6px;
+}
+
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  top: 100%;
+  left: 0;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -ms-transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform-origin: bottom right;
+  background-color: hsl(var(--underline-light));
+}
+
+html.dark .underline-effect {
+  border-color: hsl(var(--border-dark));
+}
+
+html.dark .underline-effect::after {
+  background-color: hsl(var(--underline-dark));
+}
+
+.underline-effect:hover::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform-origin: left bottom;
 }

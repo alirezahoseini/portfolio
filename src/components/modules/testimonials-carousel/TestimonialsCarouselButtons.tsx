@@ -59,31 +59,36 @@ const TestimonialsCarouselButtons = ({ emblaApi }: IEmblaApi) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className="flex items-center rtl:flex-row-reverse">
+    <div className="flex items-center w-fit">
       <button
-        onClick={onNextButtonClick}
-        disabled={nextBtnDisabled}
-        className="inline-flex items-center justify-center
-         text-sm transition-all outline-none active:scale-[0.98] 
-         disabled:pointer-events-none disabled:opacity-50 border
-        border-bg700-light dark:border-bg700-dark bg-bg800-light
-        dark:bg-bg900-dark rounded-full hover:bg-bg900-light
-        hover:dark:bg-bg700-dark ml-auto h-12 w-12 translate-y-0 border-solid"
-      >
-        <ArrowLeft className="w-4 h-4" />
-      </button>
-
-      <SelectedSnapDisplay selectedSnap={selectedSnap} snapCount={snapCount} />
-
-      <button
+        type="button"
         onClick={onPrevButtonClick}
         disabled={prevBtnDisabled}
         className="inline-flex items-center justify-center
          text-sm transition-all outline-none active:scale-[0.98] 
          disabled:pointer-events-none disabled:opacity-50 border
-        border-bg700-light dark:border-bg700-dark bg-bg800-light
+        border-bg700-light dark:border-bg600-dark bg-bg800-light
         dark:bg-bg900-dark rounded-full hover:bg-bg900-light
-        hover:dark:bg-bg700-dark ml-auto h-12 w-12 translate-y-0 border-solid"
+        hover:dark:bg-bg700-dark h-12 w-12 translate-y-0 border-solid
+        rtl:rotate-180"
+      >
+        <ArrowLeft className="w-4 h-4" />
+
+      </button>
+
+      <SelectedSnapDisplay selectedSnap={selectedSnap} snapCount={snapCount} />
+
+      <button
+        type="button"
+        onClick={onNextButtonClick}
+        disabled={nextBtnDisabled}
+        className="inline-flex items-center justify-center
+         text-sm transition-all outline-none active:scale-[0.98] 
+         disabled:pointer-events-none disabled:opacity-50 border
+        border-bg700-light dark:border-bg600-dark bg-bg800-light
+        dark:bg-bg900-dark rounded-full hover:bg-bg900-light
+        hover:dark:bg-bg700-dark h-12 w-12 translate-y-0 border-solid
+        rtl:rotate-180"
       >
         <ArrowRight className="w-4 h-4" />
       </button>
