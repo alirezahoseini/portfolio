@@ -2,6 +2,7 @@
 import React from "react"
 import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
+import TechSliderSkeleton from "./TechSliderSkeleton"
 import { getTechs } from "@/lib/services"
 import { InfiniteSlider } from "@/components/ui/infinite-slider"
 import { ITech } from "@/app/[locale]/types"
@@ -27,9 +28,7 @@ const TechsSlider = () => {
       :
       isLoading
         ? (
-          <div>
-            Loading
-          </div>
+          <TechSliderSkeleton />
         )
         : (
           <div className="relative overflow-hidden">
