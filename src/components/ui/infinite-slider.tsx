@@ -1,6 +1,6 @@
 "use client"
 import { useMotionValue, animate, motion } from "motion/react"
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import useMeasure from "react-use-measure"
 import { cn } from "@/lib/utils"
 
@@ -14,7 +14,7 @@ export type InfiniteSliderProps = {
   className?: string
 }
 
-export function InfiniteSlider({
+const InfiniteSlider = ({
   children,
   gap = 16,
   speed = 100,
@@ -22,7 +22,7 @@ export function InfiniteSlider({
   direction = "horizontal",
   reverse = false,
   className
-}: InfiniteSliderProps) {
+}: InfiniteSliderProps) => {
   const [currentSpeed, setCurrentSpeed] = useState(speed)
   const [ref, { width, height }] = useMeasure()
   const translation = useMotionValue(0)
@@ -94,8 +94,9 @@ export function InfiniteSlider({
     : {}
 
   return (
-    <div className={cn("overflow-hidden di", className)}
-      style={{direction: "ltr"}}
+    <div
+      className={cn("overflow-hidden di", className)}
+      style={{ direction: "ltr" }}
     >
       <motion.div
         className="flex w-max"
@@ -118,3 +119,5 @@ export function InfiniteSlider({
     </div>
   )
 }
+
+export default React.memo(InfiniteSlider)

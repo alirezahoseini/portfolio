@@ -13,7 +13,10 @@
     "selected_projects":"Selected Projects",
     "selected_projects_subtitle": "Here are some of my projects and accomplishments.",
     "speciality": "Speciality",
-    "areas_of_expertise": "Areas of Expertise"
+    "areas_of_expertise": "Areas of Expertise",
+    "testimonials": "Testimonials",
+    "testimonials_subtitle": "What others say",
+    "testimonials_description": "I've worked with some amazing people over the years, here is what they have to say about me."
   },
   "Navigation": {
     "home": "Home",

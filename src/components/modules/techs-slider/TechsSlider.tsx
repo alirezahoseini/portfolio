@@ -4,8 +4,8 @@ import { useQuery } from "@tanstack/react-query"
 import Image from "next/image"
 import TechSliderSkeleton from "./TechSliderSkeleton"
 import { getTechs } from "@/lib/services"
-import { InfiniteSlider } from "@/components/ui/infinite-slider"
 import { ITech } from "@/app/[locale]/types"
+import InfiniteSlider from "@/components/ui/infinite-slider"
 
 const TechsSlider = () => {
   
@@ -78,4 +78,4 @@ const TechsSlider = () => {
   )
 }
 
-export default TechsSlider
+export default React.memo(TechsSlider)

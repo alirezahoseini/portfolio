@@ -1,6 +1,6 @@
 import React from "react"
 import { Sparkle } from "lucide-react"
-import { InfiniteSlider } from "../../components/ui/infinite-slider"
+import InfiniteSlider from "../../components/ui/infinite-slider"
 
 const titles = [
   "Community",

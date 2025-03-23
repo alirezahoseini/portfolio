@@ -13,7 +13,10 @@
     "selected_projects":"پروژه های انتخاب شده",
     "selected_projects_subtitle": "اینجا نمونه‌هایی از پروژه‌ها و دستاوردهایم رو می‌بینید.",
     "speciality": "تخصص",
-    "areas_of_expertise": "حوزه های تخصصی"
+    "areas_of_expertise": "حوزه های تخصصی",
+    "testimonials": "نظرات مثبت",
+    "testimonials_subtitle": "آنچه دیگران می گویند",
+    "testimonials_description": "من در طول سال ها با افراد شگفت انگیزی کار کرده ام، در اینجا چیزی است که آنها درباره من می گویند."
   },
   "Navigation": {
     "home": "خانه",
