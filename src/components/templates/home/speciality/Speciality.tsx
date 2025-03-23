@@ -8,6 +8,7 @@ import SpecialityTitle from "./SpecialityTitle"
 import SpecialitySkeleton from "./SpecialitySkeleton"
 import { ISelectedImage, ISpeciality } from "@/app/[locale]/types"
 import { getSpeciality } from "@/lib/services"
+import TechsSlider from "@/components/modules/techs-slider/TechsSlider"
 
 
 const Speciality = () => {
@@ -73,6 +74,8 @@ const Speciality = () => {
             )
         }
       </div>
+
+      <TechsSlider />
     </section>
   )
 }

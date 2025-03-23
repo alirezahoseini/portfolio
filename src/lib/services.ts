@@ -71,6 +71,25 @@ const getSpeciality = async ({ locale }: GetSpecialityProps) => {
   }
 }
 
+const getTechs = async () => {
+  try {
+    const url = "techs"
+    const { status, data: techs } = await API.get(url)
+
+    if (status === 200) {
+      return techs
+    }
+    else {
+      return false
+    }
+  }
+  catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error fetching techs:", error)
+    return { error: "Failed to fetch techs. Please try again later." }
+  }
+}
+
 export {
-  getProjects, getExperiences, getSpeciality
+  getProjects, getExperiences, getSpeciality, getTechs
 }

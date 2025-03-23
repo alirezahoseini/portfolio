@@ -46,3 +46,9 @@ export type ISpeciality = {
 }
 
 export type ISelectedImage = number
+
+export type ITech = {
+  id: number
+  title: string
+  logo: string
+}

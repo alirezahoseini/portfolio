@@ -45,7 +45,7 @@ function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-2xl"
+            className="text-2xl rounded-full"
             onClick={themeChangeHandler}
           >
             {theme === "dark" ? <Sun size="40px" /> : <Moon size="40px" />}
@@ -53,7 +53,12 @@ function Header() {
 
           <Separator orientation="vertical" className="h-5" />
 
-          <Button variant="ghost" size="icon" onClick={switchLanguage}>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={switchLanguage}
+            className="bg-none rounded-full hover:bg-transparent"
+          >
             <Image
               src={`/${locale == "fa" ? "en" : "ir"}-flag.png`}
               width="35"
