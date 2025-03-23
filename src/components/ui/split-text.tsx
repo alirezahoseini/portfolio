@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 interface SplitTextProps {
   text?: string
@@ -174,4 +174,4 @@ const SplitText: React.FC<SplitTextProps> = ({
   }
 }
 
-export default SplitText
+export default React.memo(SplitText)

@@ -1,6 +1,7 @@
 import React from "react"
 import TestimonialsTitle from "./TestimonialsTitle"
-import TestimonialsCarousel from "./TestimonialsCarousel"
+import TestimonialsCarousel from "../../../modules/testimonials-carousel/TestimonialsCarousel"
+
 
 const Testimonials = () => {
   return (

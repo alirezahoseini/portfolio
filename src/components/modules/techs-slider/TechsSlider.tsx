@@ -43,8 +43,8 @@ const TechsSlider = () => {
                   <div 
                     key={tech.id}
                     className="gap-2 inline-flex w-fit justify-center items-center min-w-fit
-                  px-4 py-2 text-sm font-satoshi text-custom-primary-light dark:text-custom-primary-dark
-                  bg-bg800-light dark:bg-bg700-dark rounded-full"
+                    px-4 py-2 text-sm font-satoshi text-custom-primary-light dark:text-custom-primary-dark
+                   bg-bg800-light dark:bg-bg700-dark rounded-full"
                   >
                     <Image 
                       src={tech.logo}

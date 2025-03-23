@@ -20,6 +20,8 @@
     "axios": "^1.8.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
     "eslint-config-next": "^15.1.7",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-newline-destructuring": "^1.2.2",
