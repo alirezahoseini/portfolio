@@ -1,6 +1,5 @@
 import React from "react"
 import { Sparkle } from "lucide-react"
-import { useLocale } from "next-intl"
 import { InfiniteSlider } from "../../components/ui/infinite-slider"
 
 const titles = [
@@ -14,8 +13,6 @@ const titles = [
 ]
 
 const TitlesSlider = () => {
-  const locale = useLocale()
-  const isRtl = locale === "fa"
 
   return (
     <div 
@@ -27,7 +24,6 @@ const TitlesSlider = () => {
         className="w-full" 
         direction="horizontal"
         speed={20}
-        rtl={isRtl}
       >
         {
           titles.map(item => (

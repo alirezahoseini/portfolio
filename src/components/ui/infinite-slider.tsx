@@ -12,7 +12,6 @@ export type InfiniteSliderProps = {
   direction?: "horizontal" | "vertical"
   reverse?: boolean
   className?: string
-  rtl?: boolean
 }
 
 export function InfiniteSlider({
@@ -22,7 +21,6 @@ export function InfiniteSlider({
   speedOnHover,
   direction = "horizontal",
   reverse = false,
-  rtl = false,
   className
 }: InfiniteSliderProps) {
   const [currentSpeed, setCurrentSpeed] = useState(speed)
@@ -35,8 +33,10 @@ export function InfiniteSlider({
     let controls
     const size = direction === "horizontal" ? width : height
     const contentSize = size + gap
-    const from = rtl ? contentSize / 2 : (reverse ? -contentSize / 2 : 0)
-    const to = rtl ? -contentSize / 2 : (reverse ? 0 : -contentSize / 2)
+    
+    // منطق ساده LTR
+    const from = reverse ? -contentSize / 2 : 0
+    const to = reverse ? 0 : -contentSize / 2
 
     const distanceToTravel = Math.abs(to - from)
     const duration = distanceToTravel / currentSpeed
@@ -77,8 +77,7 @@ export function InfiniteSlider({
     gap,
     isTransitioning,
     direction,
-    reverse,
-    rtl
+    reverse
   ])
 
   const hoverProps = speedOnHover
@@ -95,16 +94,18 @@ export function InfiniteSlider({
     : {}
 
   return (
-    <div className={cn("overflow-hidden", className)}>
+    <div className={cn("overflow-hidden di", className)}
+      style={{direction: "ltr"}}
+    >
       <motion.div
         className="flex w-max"
         style={
           {
-            ...(direction === "horizontal"
-              ? { x: translation }
-              : { y: translation }),
+            ...(direction === "horizontal" ? { x: translation } : { y: translation }),
             gap: `${gap}px`,
-            flexDirection: direction === "horizontal" ? (rtl ? "row-reverse" : "row") : "column"
+            flexDirection: direction === "horizontal" ? "row" : "column",
+            transformStyle: "preserve-3d",
+            willChange: "transform"
           }
         }
         ref={ref}
