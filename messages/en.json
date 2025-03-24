@@ -42,5 +42,11 @@
     "linkedin_link": "https://www.linkedin.com/in/alirezahosseini1379",
     "instagram_link": "https://www.instagram.com/alir_ezahosseini1",
     "gmail_link": "mailto:ahosseini0161@gmail.com"
+  },
+  "Footer": {
+    "available_for_work": "Available for work",
+    "footer_title": "Let's create your next big idea.",
+    "footer_btn": "Contact Me",
+    "copyright": "© 2025 Alireza Hosseini. All rights reserved."
   }
 }

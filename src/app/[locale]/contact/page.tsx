@@ -1,6 +1,6 @@
 import React from "react"
 
-const ConnectPage = () => {
+const ContactPage = () => {
   return (
     <>
     
@@ -10,4 +10,4 @@ const ConnectPage = () => {
   )
 }
 
-export default ConnectPage
+export default ContactPage

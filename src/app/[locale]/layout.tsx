@@ -9,6 +9,7 @@ import Header from "@/components/modules/Header"
 import StickyNavigation from "@/components/modules/sticky-navigation/StickyNavigation"
 import ReactQueryProvider from "@/lib/providers/ReactQueryProvider"
 import ProgressProvider from "@/lib/providers/ProgressProvider"
+import Footer from "@/components/modules/footer/Footer"
 
 // Fonts
 const SatoshiFont = localFont({ 
@@ -71,6 +72,8 @@ export default async function RootLayout({ children, params }: Props) {
                 <div className="mb-[100px]">
                   {children}
                 </div>
+
+                <Footer />
               </ProgressProvider>
             </ThemeProvider>
           </LocaleProvider>

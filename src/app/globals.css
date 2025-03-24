@@ -29,6 +29,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
+
     /* اضافه کردن متغیرهای جدید برای رنگ‌های ثابت */
     --progress-bar: 142 65% 43%; /* #30af5b */
     --progress-shadow: 142 65% 43% 37%; /* #30af5a5e */
@@ -218,3 +219,4 @@ html.dark .underline-effect::after {
   -o-transform: scaleX(1);
   transform-origin: left bottom;
 }
+

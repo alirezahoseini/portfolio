@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { ITestimonial } from "@/app/[locale]/types"
@@ -13,9 +13,15 @@ const TestimonialsCarouselItem = (props: ITestimonial) => {
     message
   } = props
 
-  const [isShort, setIsShort] = useState<boolean>(true)
+  const [isShort, setIsShort] = useState<boolean>(false)
   const t = useTranslations("Common")
 
+
+  useEffect(() => {
+    if(message.length > 220) {
+      setIsShort(true)
+    }
+  }, [])
 
   return (
     <div className="px-1 lg:px-2">
@@ -60,21 +66,25 @@ const TestimonialsCarouselItem = (props: ITestimonial) => {
             {
               isShort
                 ? (
-                  `${message.slice(0, 220)}...   `
+                  `${message.slice(0, 220)} ${isShort ? "...   ": ""}`
                 )
                 : (
-                  `${message}   `
+                  `${message} ${isShort ? "   " : ""}`
                 )
             }
 
-            <button 
-              type="button"
-              onClick={() => setIsShort(!isShort)}
-              className="text-sm hover:underline hover:dark:text-bg900-light
-              hover:text-bg900-dark underline-offset-2"
-            >
-              {isShort ? t("see_more") : t("show_less")}
-            </button>
+            {
+              message.length > 220 && (
+                <button 
+                  type="button"
+                  onClick={() => setIsShort(!isShort)}
+                  className="text-sm hover:underline hover:dark:text-bg900-light
+                hover:text-bg900-dark underline-offset-2"
+                >
+                  {isShort ? t("see_more") : t("show_less")}
+                </button>
+              )
+            }
           </p>
         </div>
       </div>

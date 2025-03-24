@@ -8,12 +8,13 @@ const StickyNavigation = () => {
   return (
     <nav
       id={styles.nav} 
-      className=" z-50 bg-gradient-to-t from-bg900-light dark:from-bg900-dark"
+      className="z-50 bg-gradient-to-t from-bg900-light dark:from-bg900-dark
+      pointer-events-none min-h-16"
     >
       <ul
         className="bg-white dark:bg-zinc-900
        border-slate-200 border-solid border dark:border-zinc-700
-       text-zinc-600 dark:text-zinc-100"
+       text-zinc-600 dark:text-zinc-100 lg:!hidden"
       >
         <NavigationLink href="/" className={styles.navItem}>
           {t("home")}
@@ -27,13 +28,13 @@ const StickyNavigation = () => {
           {t("projects")}
         </NavigationLink>
 
-        <NavigationLink href="/connect" className={styles.navItem}>
+        <NavigationLink href="/contact" className={styles.navItem}>
           {t("connect")}
         </NavigationLink>
 
         <span 
           id={styles.navSlider}
-          className="bg-zinc-200 dark:bg-zinc-800 "
+          className="bg-zinc-200 dark:bg-zinc-800 pointer-events-none "
         >
         </span>
       </ul>

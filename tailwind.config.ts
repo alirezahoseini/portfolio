@@ -137,11 +137,14 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" }
         }
+      },
+      boxShadow: {
+        "custom": "4px 4px 30px 0 rgba(0, 0, 0, 0.02)"
       }
     }
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate"),
   // eslint-disable-next-line @typescript-eslint/no-require-imports 
-    require("tailwindcss-rtl")]
+  require("tailwindcss-rtl")]
 } satisfies Config
