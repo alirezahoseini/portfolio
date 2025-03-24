@@ -6,11 +6,7 @@ type GetProjectsProps = {
   limit?: number
 }
 
-type GetExperiencesProps = {
-  locale: ILang
-}
-
-type GetSpecialityProps = {
+type LocaleProps = {
   locale: ILang
 }
 
@@ -33,7 +29,7 @@ const getProjects = async ({ locale, limit }: GetProjectsProps) => {
   }
 }
 
-const getExperiences = async ({ locale }: GetExperiencesProps) => {
+const getExperiences = async ({ locale }: LocaleProps) => {
   try {
     const url = `experiences?lang=${locale}`
     const { status, data: experiences } = await API.get(url)
@@ -52,7 +48,7 @@ const getExperiences = async ({ locale }: GetExperiencesProps) => {
   }
 }
 
-const getSpeciality = async ({ locale }: GetSpecialityProps) => {
+const getSpeciality = async ({ locale }: LocaleProps) => {
   try {
     const url = `speciality?lang=${locale}`
     const { status, data: speciality } = await API.get(url)
@@ -71,7 +67,25 @@ const getSpeciality = async ({ locale }: GetSpecialityProps) => {
   }
 }
 
+const getTestimonials = async ({ locale }: LocaleProps) => {
+  try {
+    const url = `testimonials?lang=${locale}`
+    const { status, data: testimonials } = await API.get(url)
+
+    if (status === 200) {
+      return testimonials
+    }
+    else {
+      return false
+    }
+  }
+  catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error fetching testimonials:", error)
+    return { error: "Failed to fetch testimonials. Please try again later." }
+  }
+}
 
 export {
-  getProjects, getExperiences, getSpeciality
+  getProjects, getExperiences, getSpeciality, getTestimonials
 }

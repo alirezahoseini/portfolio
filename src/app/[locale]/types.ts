@@ -52,3 +52,11 @@ export type ITech = {
   title: string
   logo: string
 }
+
+export type ITestimonial = {
+  id: number
+  author: string
+  job_title: string
+  image: string
+  message: string
+}

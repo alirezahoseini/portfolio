@@ -8,12 +8,13 @@ import Autoplay from "embla-carousel-autoplay"
 import styles from "./TestimonialsCarousel.module.css"
 import TestimonialsCarouselButtons from "./TestimonialsCarouselButtons"
 import TestimonialsCarouselItem from "./TestimonialsCarouselItem"
+import { ITestimonial } from "@/app/[locale]/types"
 
+type Props = {
+  testimonials: ITestimonial[]
+}
 
-const SLIDE_COUNT = 5
-const slides = Array.from(Array(SLIDE_COUNT).keys())
-
-const TestimonialsCarousel = () => {
+const TestimonialsCarousel = ({ testimonials }: Props) => {
   const locale = useLocale()
   const t = useTranslations("HomePage")
   const s = useTranslations("Socials")
@@ -29,9 +30,9 @@ const TestimonialsCarousel = () => {
       <div className={styles.embla__viewport} ref={emblaRef}>
         <div className={styles.embla__container}>
           {
-            slides.map(index => (
+            testimonials.map(item => (
               <TestimonialsCarouselItem
-                key={index}
+                key={item.id}
               />
             ))
           }
