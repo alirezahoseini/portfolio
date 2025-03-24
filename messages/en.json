@@ -2,7 +2,9 @@
   "Common": {
     "about_me": "About Me",
     "my_work": "My Work",
-    "view_all_projects": "View All Projects"
+    "view_all_projects": "View All Projects",
+    "see_more": "see more",
+    "show_less": "show less"
   },
   "HomePage": {
     "hello_text": "Hey! It's me Alireza,",
@@ -10,7 +12,7 @@
     "hero_subtitle": "I collaborate with brands and businesses to craft modern, user-friendly, and high-performance web experiences that leave a lasting impact.",
     "know_me_better": "Know me better",
     "about_description": "Hey, I’m Alireza Hosseini, with years of experience in design & development, focused on creating high-quality and impactful digital experiences. I’ve collaborated with innovative brands and businesses to elevate their products to their best version.",
-    "selected_projects":"Selected Projects",
+    "selected_projects": "Selected Projects",
     "selected_projects_subtitle": "Here are some of my projects and accomplishments.",
     "speciality": "Speciality",
     "areas_of_expertise": "Areas of Expertise",
@@ -24,11 +26,6 @@
     "about": "About",
     "projects": "Projects",
     "connect": "Connect"
-  },
-  "Buttons": {
-    "download_resume": "Download CV",
-    "github": "Github",
-    "more": "More"
   },
   "AboutPage": {
     "page_title": "About me",

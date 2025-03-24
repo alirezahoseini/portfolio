@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 import { ITestimonial } from "@/app/[locale]/types"
 
 
@@ -13,6 +14,7 @@ const TestimonialsCarouselItem = (props: ITestimonial) => {
   } = props
 
   const [isShort, setIsShort] = useState<boolean>(true)
+  const t = useTranslations("Common")
 
 
   return (
@@ -71,7 +73,7 @@ const TestimonialsCarouselItem = (props: ITestimonial) => {
               className="text-sm hover:underline hover:dark:text-bg900-light
               hover:text-bg900-dark underline-offset-2"
             >
-              {isShort ? "see more" : "show less"}
+              {isShort ? t("see_more") : t("show_less")}
             </button>
           </p>
         </div>

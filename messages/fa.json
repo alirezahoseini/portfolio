@@ -2,7 +2,9 @@
   "Common": {
     "about_me": "درباره من",
     "my_work": "کارهای من",
-    "view_all_projects": "دیدن تمام پروژه ها"
+    "view_all_projects": "دیدن تمام پروژه ها",
+    "see_more":"دیدن بیشتر",
+    "show_less": "نمایش کمتر"
   },
   "HomePage": {
     "hello_text": "سلام! من علیرضام،",
@@ -24,11 +26,6 @@
     "about": "درباره",
     "projects": "پروژه ها",
     "connect": "تماس"
-  },
-  "Buttons": {
-    "download_resume": "دانلود رزومه",
-    "github": "گیت هاب",
-    "more": "بیشتر"
   },
   "AboutPage": {
     "page_title": "درباره من",
