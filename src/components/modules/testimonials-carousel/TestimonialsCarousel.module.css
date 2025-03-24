@@ -9,12 +9,6 @@
   grid-auto-columns: 100%;
 }
 
-.embla__slide {
-  min-width: 0;
-  background-color: aqua;
-  margin-right: 10px;
-}
-
 @media (min-width: 768px) {
   .embla__container {
     grid-auto-columns: 95%;

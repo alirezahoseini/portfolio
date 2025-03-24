@@ -5,13 +5,14 @@ import { useQuery } from "@tanstack/react-query"
 import TestimonialsTitle from "./TestimonialsTitle"
 import TestimonialsCarousel from "../../../modules/testimonials-carousel/TestimonialsCarousel"
 import { getTestimonials } from "@/lib/services"
+import { Skeleton } from "@/components/ui/skeleton"
 
 
 const Testimonials = () => {
   const locale = useLocale()
 
   const { isLoading, data } = useQuery({ 
-    queryKey: ["speciality", locale],
+    queryKey: ["testimonials", locale],
     queryFn: () => getTestimonials({ locale }),
     staleTime: 5 * 60 * 2000, // 10 min
     refetchOnWindowFocus: false
@@ -27,7 +28,9 @@ const Testimonials = () => {
         {
           isLoading
             ? (
-              <>loading</>
+              <Skeleton 
+                className="w-full min-h-64 rounded-3xl"
+              />
             )
             : (
               <TestimonialsCarousel testimonials={data} />

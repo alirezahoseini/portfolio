@@ -33,6 +33,7 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
             testimonials.map(item => (
               <TestimonialsCarouselItem
                 key={item.id}
+                {...item}
               />
             ))
           }
