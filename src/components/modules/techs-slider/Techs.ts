@@ -1,4 +1,4 @@
-export const techsArray = [
+export const techs = [
   {
     id: 1,
     title: "Axios",
