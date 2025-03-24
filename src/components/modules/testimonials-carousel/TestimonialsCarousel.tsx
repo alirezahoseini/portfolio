@@ -16,11 +16,12 @@ const slides = Array.from(Array(SLIDE_COUNT).keys())
 const TestimonialsCarousel = () => {
   const locale = useLocale()
   const t = useTranslations("HomePage")
+  const s = useTranslations("Socials")
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     direction: locale === "fa" ? "rtl" : "ltr"
-  }, [Autoplay({ stopOnInteraction: true })])
+  }, [Autoplay({ stopOnInteraction: true, stopOnMouseEnter: true })])
 
 
   return (
@@ -39,9 +40,9 @@ const TestimonialsCarousel = () => {
 
       <div className="flex justify-between items-center mt-5 rtl:flex-row-reverse">
         <Link
-          href="#"
+          href={s("linkedin_link")}
           className="underline-effect text-custom-primary-light dark:text-custom-primary-dark
-          text-sm !flex items-center justify-center gap-2 active:scale-[0.98]"
+          text-sm !flex items-center justify-center gap-2 active:scale-[0.98] select-none"
         >
           <span>{t("check_linkedin")}</span>
 

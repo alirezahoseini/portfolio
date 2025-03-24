@@ -39,5 +39,11 @@
     "title": "Oops! Page not found.",
     "description": "We couldn’t find what you are looking for. Please check the URL and try again!",
     "button": "Back to Homepage"
+  },
+  "Socials": {
+    "github_link": "https://github.com/alirezahoseini",
+    "linkedin_link": "https://www.linkedin.com/in/alirezahosseini1379",
+    "instagram_link": "https://www.instagram.com/alir_ezahosseini1",
+    "gmail_link": "mailto:ahosseini0161@gmail.com"
   }
 }

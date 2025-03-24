@@ -4,28 +4,30 @@ import { ArrowUpRight } from "lucide-react"
 import { Link } from "@/i18n/routing"
 import { Button } from "@/components/ui/button"
 
-const socialLinks = [
-  {
-    name: "github",
-    url: "#"
-  },
-  {
-    name: "linkedin",
-    url: "#"
-  },
-  {
-    name: "instagram",
-    url: "#"
-  },
-  {
-    name: "gmail",
-    url: "#"
-  }
-
-]
 
 const HeroLinks = async () => {
   const t = await getTranslations("HomePage")
+  const s = await getTranslations("Socials")
+
+  const socialLinks = [
+    {
+      name: "github",
+      url: s("github_link")
+    },
+    {
+      name: "linkedin",
+      url: s("linkedin_link")
+    },
+    {
+      name: "instagram",
+      url: s("instagram_link")
+    },
+    {
+      name: "gmail",
+      url: s("gmail_link")
+    }
+  ]
+
   return (
     <div
       className="flex gap-4 mt-8 md:rtl:mt-10
@@ -42,7 +44,7 @@ const HeroLinks = async () => {
               key={item.name}
               href={item.url}
               className="uppercase flex text-secondary-light dark:text-secondary-dark
-                 items-center gap-1 text-sm opacity-container-child"
+                 items-center gap-1 text-sm opacity-container-child rtl:flex-row-reverse"
             >
               {item.name}
 

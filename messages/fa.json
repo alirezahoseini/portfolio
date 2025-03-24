@@ -39,5 +39,11 @@
     "title": "اووپس! صفحه پیدا نشد.",
     "description": "ما صفحه ای که دنبال می کنید را پیدا نکردیم. لطفا url را برسی کنید.",
     "button": "بازگشت به صفحه اصلی"
+  },
+  "Socials": {
+    "github_link": "https://github.com/alirezahoseini",
+    "linkedin_link": "https://www.linkedin.com/in/alirezahosseini1379",
+    "instagram_link": "https://www.instagram.com/alir_ezahosseini1",
+    "gmail_link": "mailto:ahosseini0161@gmail.com"
   }
 }
