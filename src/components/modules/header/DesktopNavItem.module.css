@@ -1,0 +1,15 @@
+.navItem::before {
+    content: "\00a0";
+    width: 6px;
+    height: 6px;
+    display: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.navItem.active::before{
+    display: inline-block;
+}

@@ -4,8 +4,9 @@ import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
 import Image from "next/image"
 import { useLocale } from "next-intl"
+import DesktopNavigation from "./DesktopNavigation"
 import { Separator } from "@/components/ui/separator"
-import { usePathname, useRouter } from "@/i18n/routing"
+import { Link, usePathname, useRouter } from "@/i18n/routing"
 import { Button } from "@/components/ui/button"
 
 function Header() {
@@ -32,24 +33,29 @@ function Header() {
       className="sticky z-50 top-0 
       bg-gradient-to-b from-bg900-light dark:from-bg900-dark pt-2"
     >
-      <div
+      <nav
         className="flex w-[95%] lg:w-full mx-auto justify-between 
-      items-center bg-white dark:bg-zinc-900 backdrop-blur-md
-       border-slate-200 border-solid border dark:border-zinc-700
-       text-zinc-600 dark:text-zinc-100 py-2 px-4 rounded-full 
-       bg-opacity-60 dark:bg-opacity-60 shadow-sm max-w-screen-md"
+      items-center bg-white dark:bg-zinc-900 backdrop-blur-[12px]
+       border-bg700-light border-solid border dark:border-bg700-dark
+       text-zinc-600 dark:text-zinc-100 py-1 px-6 rounded-full 
+       bg-opacity-60 dark:bg-opacity-60 shadow-sm max-w-[600px]"
       >
-        <h1 className="font-clash text-xl md:text-2xl font-medium ">AH</h1>
+        <h1 className="font-clash text-xl md:text-2xl font-medium ">
+          <Link href="/" >
+            AH
+          </Link>
+        </h1>
+
+        <DesktopNavigation />
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-2xl rounded-full"
+          <button
+            className="rounded-full w-11 h-11 inline-flex items-center justify-center
+         text-sm transition-all outline-none active:scale-90 active:bg-accent"
             onClick={themeChangeHandler}
           >
-            {theme === "dark" ? <Sun size="40px" /> : <Moon size="40px" />}
-          </Button>
+            {theme === "dark" ? <Sun size="18px" /> : <Moon size="18px" />}
+          </button>
 
           <Separator orientation="vertical" className="h-5" />
 
@@ -68,7 +74,7 @@ function Header() {
             />
           </Button>
         </div>
-      </div>
+      </nav>
     </header>
   )
 }
