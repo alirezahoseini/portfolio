@@ -1,16 +1,26 @@
+"use client"
 import React from "react"
-import { getTranslations } from "next-intl/server"
+import { useLocale, useTranslations } from "next-intl"
+import { useQuery } from "@tanstack/react-query"
 import ProjectGridItem from "./ProjectGridItem"
-import API from "@/lib/axiosConfig"
+import ProjectsGridSkeleton from "./ProjectsGridSkeleton"
 import { IProject } from "@/app/[locale]/types"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
+import { getProjects } from "@/lib/services"
 
 
-const ProjectsGrid = async () => {
-  const { data } = await API.get("projects")
-  const projects: IProject[] = [...data]
-  const t = await getTranslations("Common")
+const ProjectsGrid = () => {
+  const locale = useLocale()
+
+  const { isLoading, data } = useQuery({ 
+    queryKey: ["projects", locale],
+    queryFn: () => getProjects({ locale }),
+    staleTime: 5 * 60 * 2000, // 10 min
+    refetchOnWindowFocus: false
+  })
+  
+  const t = useTranslations("Common")
   
 
   return (
@@ -20,12 +30,18 @@ const ProjectsGrid = async () => {
         gap-x-16 gap-y-10 my-16"
       >
         {
-          projects.map((project: IProject) => (
-            <ProjectGridItem 
-              key={project.id}
-              {...project}
-            />
-          ))
+          isLoading
+            ? (
+              <ProjectsGridSkeleton />
+            )
+            : (
+              data.map((project: IProject) => (
+                <ProjectGridItem 
+                  key={project.id}
+                  {...project}
+                />
+              ))
+            )
         }
       </div>
     

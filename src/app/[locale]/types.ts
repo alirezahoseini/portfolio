@@ -10,10 +10,22 @@ export type IProject = {
   id: string
   title: string
   description: string
-  img: string
-  techs: string[]
-  bg: string
+  backgroundColor: string
   date: number
+  coverImage: {
+    url: string
+    alt: string
+  }
+  heroImage: {
+    url: string
+    alt: string
+  }
+  technologies: string[]
+  screenshots: string[]
+  links: {
+    github: string
+    live: string
+  }
 }
 
 export type IButtonsMessages = {

@@ -54,7 +54,10 @@ const TestimonialsCarouselItem = (props: ITestimonial) => {
               {author}
             </h5>
 
-            <span className="text-sm text-custom-secondary-light dark:text-custom-secondary-dark">
+            <span
+              className="text-sm text-custom-secondary-light
+             dark:text-custom-secondary-dark "
+            >
               {job_title}
             </span>
           </div>

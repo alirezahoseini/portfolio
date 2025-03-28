@@ -2,12 +2,14 @@ import { NextRequest, NextResponse } from "next/server"
 import { projects } from "./projects"
 import { IProject } from "@/app/[locale]/types"
 
-type ResponseData = IProject[] | IProject
+type ResponseData = IProject[]
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
   const locale = url.searchParams.get("lang") || "fa"
   const limit = url.searchParams.get("limit")
+
+  console.log(locale)
 
   // Get projects with locale
   const projectList: ResponseData = locale === "en" ? projects.en : projects.fa

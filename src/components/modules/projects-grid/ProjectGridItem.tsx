@@ -11,13 +11,13 @@ const ProjectGridItem = (props: IProject) => {
   const {
     id,
     title,
-    img,
-    techs,
-    bg,
-    date
+    date,
+    backgroundColor,
+    coverImage,
+    technologies
   } = props
 
-  const newTechs = techs.length > 3 ? techs.slice(0, 3) : techs
+  const newTechs = technologies.length > 3 ? technologies.slice(0, 3) : technologies
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
   
@@ -36,11 +36,11 @@ const ProjectGridItem = (props: IProject) => {
         <Link href={`/projects/${id}`}>
           <div 
             className="rounded-2xl overflow-hidden"
-            style={{ backgroundColor: bg }}
+            style={{ backgroundColor: backgroundColor }}
           >
             <Image 
-              src={img} 
-              alt={title} 
+              src={coverImage.url} 
+              alt={coverImage.alt} 
               width={600} 
               height={400}
               loading="eager"
@@ -75,13 +75,13 @@ const ProjectGridItem = (props: IProject) => {
                 }
 
                 {
-                  techs.length >3 && (
+                  technologies.length >3 && (
                     <Badge 
                       className="font-light bg-bg700-light
                   dark:bg-bg700-dark" 
                       variant="outline"
                     >
-                      +{techs.length - 3}
+                      +{technologies.length - 3}
                     </Badge>
                   )
                 }
