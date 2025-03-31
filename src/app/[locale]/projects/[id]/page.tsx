@@ -1,20 +1,20 @@
 import React from "react"
 import { notFound } from "next/navigation"
-import { ILocales } from "@/i18n/routing"
 import { getSingleProject } from "@/lib/services"
 import ProjectHeader from "@/components/templates/single-project/ProjectHeader"
 import ProjectBody from "@/components/templates/single-project/ProjectBody"
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string
-    locale: Promise<{ ILocales: ILocales }>
-  }
+    locale: string
+  }>
 }
 
 
 const SingleProject = async ({ params }: Props) => {
-  const { locale, id } = await params
+  const resolvedParams = await params
+  const { locale, id } = resolvedParams
 
   const response = await getSingleProject({ id, locale })
 

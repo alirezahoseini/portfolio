@@ -21,6 +21,7 @@ const ProjectBody = async ({
   links
 }: Props) => {
 
+  // eslint-disable-next-line no-console
   console.log(
     description,
     technologies
