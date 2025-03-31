@@ -1,4 +1,5 @@
 import React from "react"
+import { getTranslations } from "next-intl/server"
 import AvailableBadge from "./AvailableBadge"
 import Copyright from "./Copyright"
 import SocialIcons from "./SocialIcons"
@@ -6,7 +7,6 @@ import SplitText from "@/components/ui/split-text"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
 import FadeInAnimate from "@/components/HOC/FadeInAnimate"
-import { getTranslations } from "next-intl/server"
 
 const Footer = async () => {
   const t = await getTranslations("Footer")

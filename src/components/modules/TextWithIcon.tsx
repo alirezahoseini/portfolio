@@ -14,11 +14,9 @@ const TextWithIcon: React.FC<TextWithIconProps> = ({
   iconName = "AlertCircle", 
   className = "" 
 }) => {
-  // استفاده از آیکن پیش‌فرض برای اولین رندر
   const [Icon, setIcon] = React.useState<React.ComponentType<LucideProps>>(AlertCircle)
 
   React.useEffect(() => {
-    // بارگذاری آیکن به صورت داینامیک
     if (iconName && iconName !== "AlertCircle") {
       import("lucide-react")
         .then(mod => {
@@ -27,7 +25,8 @@ const TextWithIcon: React.FC<TextWithIconProps> = ({
           }
         })
         .catch(() => {
-          // در صورت خطا، از آیکن پیش‌فرض استفاده می‌کنیم
+          
+          // eslint-disable-next-line no-console
           console.error(`Icon ${iconName} not found`)
         })
     }

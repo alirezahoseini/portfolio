@@ -10,13 +10,9 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   const limit = url.searchParams.get("limit")
   const projectId = url.searchParams.get("id")
 
-  // console.log(locale)
   // Get projects with locale
   const projectList: ResponseData = locale === "en" ? projects.en : projects.fa
 
-  console.log(locale)
-
-  // console.log(projectList)
   // If we have a project ID, return single project
   if(projectId) {
     const project = projectList.find(project => project.id === projectId)
@@ -27,7 +23,6 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
         { status: 404 }
       )
     }
-
     return NextResponse.json(project)
   }
 

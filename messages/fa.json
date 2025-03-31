@@ -30,7 +30,8 @@
   "SingleProject": {
     "back_to_projects": "بازگشت به پروژه ها",
     "see_project_btn": "مشاهده نسخه آنلاین",
-    "how_built_it": "تکنولوژی ها"
+    "how_built_it": "تکنولوژی ها",
+    "screenshots": "تصاویر"
   },
   "AboutPage": {
     "page_title": "درباره من",

@@ -1,11 +1,13 @@
 import React from "react"
 import ProjectButtons from "./ProjectButtons"
 import ProjectTechs from "./ProjectTechs"
+import ProjectImages from "./ProjectImages"
 
 type Props = {
   title: string
   description: string
   technologies: string[]
+  screenshots: string[]
   links: {
     github: string
     live: string
@@ -16,6 +18,7 @@ const ProjectBody = async ({
   title,
   description,
   technologies,
+  screenshots,
   links
 }: Props) => {
 
@@ -42,6 +45,8 @@ const ProjectBody = async ({
       </p>
 
       <ProjectTechs technologies={technologies} />
+
+      <ProjectImages images={screenshots} />
     </div>
   )
 }

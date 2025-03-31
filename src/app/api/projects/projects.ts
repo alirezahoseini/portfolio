@@ -23,7 +23,7 @@ export const projects = {
         "Redux Toolkit"
       ],
       screenshots: [
-        "/projects/next-movie/screenshot1.jpg"
+        "/projects/next-movie/1.png"
       ],
       links: {
         github: "https://github.com/yourusername/next-movie",
@@ -56,7 +56,7 @@ export const projects = {
         "Redux Toolkit"
       ],
       screenshots: [
-        "/projects/next-movie/screenshot1.jpg"
+        "/projects/next-movie/1.png"
       ],
       links: {
         github: "https://github.com/yourusername/next-movie",
