@@ -21,6 +21,11 @@ const ProjectBody = async ({
   links
 }: Props) => {
 
+  console.log(
+    description,
+    technologies
+  )
+
   const t = await getTranslations("SingleProject")
   return (
     <div
@@ -69,6 +74,8 @@ const ProjectBody = async ({
           />
         </Link>
       </div>
+
+    
     </div>
   )
 }
