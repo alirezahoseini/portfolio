@@ -2,6 +2,7 @@ import React from "react"
 import { notFound } from "next/navigation"
 import { ILocales } from "@/i18n/routing"
 import { getSingleProject } from "@/lib/services"
+import ProjectHeader from "@/components/templates/single-project/ProjectHeader"
 
 type Props = {
   params: {
@@ -25,9 +26,10 @@ const SingleProject = async ({ params }: Props) => {
   return (
     response?.data
       ? (
-        <div>
-        
-        </div>
+        <article className="max-screen mt-10 !max-w-screen-lg">
+          <ProjectHeader {...response.data} />
+          
+        </article>
       )
       : (
         <div>
