@@ -21,10 +21,10 @@ const ProjectButtons = async ({ links }: Props) => {
         links.live && (
           <Link 
             className="rounded-full px-6 py-3 bg-custom-primary-light
-      dark:bg-custom-primary-dark flex items-center justify-center
-      hover:bg-opacity-90 dark:hover:bg-opacity-70 text-custom-primary-dark 
-      ltr:font-semibold rtl:font-normal dark:text-custom-primary-light text-sm 
-      transition-all duration-150 gap-2"
+           dark:bg-custom-primary-dark flex items-center justify-center
+            hover:bg-opacity-90 dark:hover:bg-opacity-70 text-custom-primary-dark 
+            ltr:font-semibold rtl:font-normal dark:text-custom-primary-light text-sm 
+            transition-all duration-150 gap-2"
             href={links.live}
             target="_blank"
           >
@@ -43,7 +43,7 @@ const ProjectButtons = async ({ links }: Props) => {
       {
         links.github && (
           <Link 
-            className="rounded-full px-4 py-3 bg-custom-primary-light
+            className="rounded-full px-4 py-[10px] bg-custom-primary-light
           dark:bg-custom-primary-dark flex items-center justify-center
           hover:bg-opacity-90 dark:hover:bg-opacity-70 text-custom-primary-dark 
           ltr:font-semibold rtl:font-light dark:text-custom-primary-light text-sm transition-all

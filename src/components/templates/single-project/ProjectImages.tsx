@@ -22,8 +22,8 @@ const ProjectImages = async ({ images }: Props) => {
               <Image 
                 key={i + 1}
                 src={item}
-                width={800}
-                height={300}
+                width={900}
+                height={400}
                 className="w-full h-fit rounded-2xl"
                 alt="project screenshot"
               />
