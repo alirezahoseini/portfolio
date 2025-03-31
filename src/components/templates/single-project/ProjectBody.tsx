@@ -1,8 +1,6 @@
 import React from "react"
-import { ArrowUpRight } from "lucide-react"
-import { getTranslations } from "next-intl/server"
-import { Link } from "@/i18n/routing"
-import GithubIcon from "@/assets/icons/github"
+import ProjectButtons from "./ProjectButtons"
+import ProjectTechs from "./ProjectTechs"
 
 type Props = {
   title: string
@@ -21,13 +19,7 @@ const ProjectBody = async ({
   links
 }: Props) => {
 
-  // eslint-disable-next-line no-console
-  console.log(
-    description,
-    technologies
-  )
 
-  const t = await getTranslations("SingleProject")
   return (
     <div
       className="flex items-center justify-between flex-wrap gap-4"
@@ -38,45 +30,18 @@ const ProjectBody = async ({
         dark:text-custom-primary-dark"
       >
         {title}
-      </h1>
+      </h1>  
 
-      {/* Buttons  */}
-      <div className="inline-flex items-center justify-center gap-3">
-        <Link 
-          className="rounded-full px-6 py-3 bg-custom-primary-light
-          dark:bg-custom-primary-dark flex items-center justify-center
-          hover:bg-opacity-90 dark:hover:bg-opacity-70 text-custom-primary-dark 
-          font-semibold dark:text-custom-primary-light text-sm transition-all
-          duration-150 gap-2"
-          href={links.live}
-          target="_blank"
-        >
-          <span>
-            {t("see_project_btn")}
-          </span>
+      <ProjectButtons links={links} />
 
-          <ArrowUpRight 
-            size={16} 
-            className="rtl:-rotate-90"
-          />
-        </Link>
+      <p 
+        className="text-custom-secondary-light dark:text-custom-secondary-dark
+        mt-4"
+      >
+        {description}
+      </p>
 
-        <Link 
-          className="rounded-full px-4 py-3 bg-custom-primary-light
-          dark:bg-custom-primary-dark flex items-center justify-center
-          hover:bg-opacity-90 dark:hover:bg-opacity-70 text-custom-primary-dark 
-          font-semibold dark:text-custom-primary-light text-sm transition-all
-          duration-150 gap-2"
-          href={links.github}
-          target="_blank"
-        >
-          <GithubIcon 
-            className="w-[20px]"
-          />
-        </Link>
-      </div>
-
-    
+      <ProjectTechs technologies={technologies} />
     </div>
   )
 }

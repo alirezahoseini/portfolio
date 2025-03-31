@@ -46,6 +46,7 @@ const ProjectHeader = async ({ heroImage, date }: Props) => {
         alt={heroImage.alt}
         width={800}
         height={250}
+        loading="eager"
         className="mt-8 rounded-2xl w-full h-fit"
       />
     </div>
