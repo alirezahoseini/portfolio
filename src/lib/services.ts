@@ -1,16 +1,9 @@
+import axios from "axios"
 import API from "./axiosConfig"
-import { ILang } from "./types"
+import { IGetProjectsProps, IGetSingleProjectProps, ILocaleProps } from "./types"
 
-type GetProjectsProps = {
-  locale: ILang
-  limit?: number
-}
-
-type LocaleProps = {
-  locale: ILang
-}
-
-const getProjects = async ({ locale, limit }: GetProjectsProps) => {
+// All projects
+const getProjects = async ({ locale, limit }: IGetProjectsProps) => {
   try {
     const url = `projects?lang=${locale}${limit ? `&limit=${limit}`: ""}`
     const { status, data: projects } = await API.get(url)
@@ -29,7 +22,50 @@ const getProjects = async ({ locale, limit }: GetProjectsProps) => {
   }
 }
 
-const getExperiences = async ({ locale }: LocaleProps) => {
+
+// Single project
+const getSingleProject = async ({ id, locale }: IGetSingleProjectProps) => {
+  try {
+    const url = `projects?id=${id}&lang=${locale}`
+    const { status, data } = await API.get(url)
+
+    if (status === 200) {
+      return {
+        error: false, status: 200, data
+      }
+    }
+  }
+  catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      const status = error.response.status
+
+      if (status === 404) {
+        return {
+          error: true, status: 404, data: false
+        }
+      }
+      else {
+        // HTTP ERRORS ( 500, 401, 403 ...)
+        // eslint-disable-next-line no-console
+        console.error(`HTTP error occurred: Status ${status}`, error.response.data)
+        return {
+          error: true, status: status, data: false 
+        }
+      }
+    }
+    else {
+      // Internal errors 
+      // eslint-disable-next-line no-console
+      console.error("Error fetching project (Non-HTTP or setup error):", error)
+      return {
+        error: true, status: null, data: false
+      }
+    }
+  }
+}
+
+
+const getExperiences = async ({ locale }: ILocaleProps) => {
   try {
     const url = `experiences?lang=${locale}`
     const { status, data: experiences } = await API.get(url)
@@ -48,7 +84,8 @@ const getExperiences = async ({ locale }: LocaleProps) => {
   }
 }
 
-const getSpeciality = async ({ locale }: LocaleProps) => {
+
+const getSpeciality = async ({ locale }: ILocaleProps) => {
   try {
     const url = `speciality?lang=${locale}`
     const { status, data: speciality } = await API.get(url)
@@ -67,7 +104,8 @@ const getSpeciality = async ({ locale }: LocaleProps) => {
   }
 }
 
-const getTestimonials = async ({ locale }: LocaleProps) => {
+
+const getTestimonials = async ({ locale }: ILocaleProps) => {
   try {
     const url = `testimonials?lang=${locale}`
     const { status, data: testimonials } = await API.get(url)
@@ -86,6 +124,7 @@ const getTestimonials = async ({ locale }: LocaleProps) => {
   }
 }
 
+
 export {
-  getProjects, getExperiences, getSpeciality, getTestimonials
+  getProjects, getSingleProject, getExperiences, getSpeciality, getTestimonials
 }

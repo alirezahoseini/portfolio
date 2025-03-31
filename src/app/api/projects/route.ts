@@ -8,11 +8,28 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
   const locale = url.searchParams.get("lang") || "fa"
   const limit = url.searchParams.get("limit")
+  const projectId = url.searchParams.get("id")
+
+  // console.log(locale)
+  // Get projects with locale
+  const projectList: ResponseData = locale === "en" ? projects.en : projects.fa
 
   console.log(locale)
 
-  // Get projects with locale
-  const projectList: ResponseData = locale === "en" ? projects.en : projects.fa
+  // console.log(projectList)
+  // If we have a project ID, return single project
+  if(projectId) {
+    const project = projectList.find(project => project.id === projectId)
+    
+    if (!project) {
+      return NextResponse.json(
+        { error: "Project not found" },
+        { status: 404 }
+      )
+    }
+
+    return NextResponse.json(project)
+  }
 
   // Return limited projects
   if (limit) {

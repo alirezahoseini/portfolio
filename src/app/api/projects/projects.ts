@@ -35,7 +35,7 @@ export const projects = {
   fa: [
     {
       id: "next-movie",
-      title: "Next movie",
+      title: "Next movie fa",
       date: 2024,
       backgroundColor: "#fafada",
       description: `یک پلتفرم مدرن استریم فیلم که با Next.js ساخته شده است. 

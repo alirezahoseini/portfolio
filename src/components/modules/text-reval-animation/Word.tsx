@@ -19,7 +19,7 @@ const Word = ({
   return (
     <span className="relative mt-2">
       <span 
-        className="absolute top-0 right-0 opacity-30 "
+        className="absolute top-0 right-0 opacity-20 "
       >
         {children}
       </span>
