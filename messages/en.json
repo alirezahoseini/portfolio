@@ -28,7 +28,8 @@
     "connect": "Connect"
   },
   "SingleProject": {
-    "back_to_projects": "Back to Projects"
+    "back_to_projects": "Back to Projects",
+    "see_project_btn": "Check it out"
   },
   "AboutPage": {
     "page_title": "About me",

@@ -1,3 +1,5 @@
+import { ILocales } from "@/i18n/routing"
+
 export type ILang = string
 
 
@@ -7,7 +9,7 @@ export type IGetProjectsProps = {
 }
 
 export type IGetSingleProjectProps = {
-  locale: ILang
+  locale: Promise<{ ILocales: ILocales }>
   id: string
 }
 
