@@ -42,11 +42,12 @@ export type IAboutPageMessages = {
 
 export type IExperience = {
   id: number
-  title: string
-  isActive: boolean
+  position: string
+  companyName: string
   date: string
-  description: string
+  description: string[]
   link: string
+  logo: string
 }
 
 export type ISpeciality = {

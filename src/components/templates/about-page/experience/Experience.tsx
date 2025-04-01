@@ -1,5 +1,6 @@
 import React from "react"
 import ExperienceTitle from "./ExperienceTitle"
+import ExperienceWrapper from "@/components/modules/experience-wrapper/ExperienceWrapper"
 
 const Experience = () => {
   return (
@@ -12,7 +13,7 @@ const Experience = () => {
       </div>
 
       <div className="w-full lg:w-2/3">
-        content
+        <ExperienceWrapper />
       </div>
     </section>
   )

@@ -42,10 +42,10 @@ AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.memo(React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> & { hideChevron?: boolean }>(({
   className,
   children,
+  hideChevron = false, // Add this prop
   ...props
 }, ref) => (
   <AccordionPrimitive.Header className="flex">
@@ -56,7 +56,7 @@ const AccordionTrigger = React.memo(React.forwardRef<
     >
       {children}
 
-      <ChevronIcon />
+      {!hideChevron && <ChevronIcon />}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 )))

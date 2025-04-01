@@ -1,79 +1,97 @@
 export const experiences = {
   en: [
     {
-      id: 1,
-      title: "Mr. coder | Front-end developer",
-      isActive: true,
+      id: "@Mr-coder",
+      position: "Front-end Developer",
+      companyName: "Mr. Coder",
       date: "Sep. 2023 - Present",
-      description: `Writing technical content and tutorials on platforms like Medium, Dev.to, 
-      and Hashnode. Topics include software development, data science, and open-source contributions.`,
-      link: "https://mr-coder.ir"
+      description: [
+        `Led the UI team to revamp the entire application in Angular 
+         from scratch, involving structuring the entire project and 
+         improving the UI which matches the new branding guidelines 
+         as well as accessibility.`,
+        `Set guidelines and document it for others working on the 
+         same files ensuring code quality and efficiency. While 
+         constantly delivering solutions to critical bugs and new 
+         features under the sprint deadlines.`
+      ],
+      link: "https://mr-coder.ir",
+      logo: "/experiences/crossknot.jpg"
     },
     {
-      id: 2,
-      title: "Tech Guru | Back-end Developer",
-      isActive: false,
-      date: "Jan. 2022 - Aug. 2023",
-      description: `Developed RESTful APIs and microservices using Node.js and Express. 
-      Focused on optimizing database queries and improving application performance.`,
-      link: "https://tech-guru.com"
+      id: "@Tik-Arts",
+      position: "Front-end Developer",
+      companyName: "Tik Arts",
+      date: "Jan. 2020 - Oct. 2021",
+      description: [
+        `Developed an e-commerce platform for workwear and safety 
+         equipment, enhancing user experience and performance.`,
+        `Implemented Next.js and optimized UI/UX, ensuring a smooth 
+         shopping experience with fast load times.`
+      ],
+      link: "https://tikarts.com",
+      logo: "/experiences/oneshield.jpg"
     },
     {
-      id: 3,
-      title: "Creative Solutions | UI/UX Designer",
-      isActive: false,
-      date: "Mar. 2021 - Dec. 2021",
-      description: `Designed user interfaces and experiences for web and mobile applications. 
-      Conducted user research and usability testing to enhance user satisfaction.`,
-      link: "https://creative-solutions.com"
-    },
-    {
-      id: 4,
-      title: "Data Insights | Data Analyst",
-      isActive: true,
-      date: "Jun. 2023 - Present",
-      description: `Analyzed large datasets to extract actionable insights. 
-      Created visualizations and reports to communicate findings to stakeholders.`,
-      link: "https://data-insights.com"
+      id: "@Viona",
+      position: "Front-end Developer",
+      companyName: "Viona",
+      date: "Mar. 2024 - Present",
+      description: [
+        `Built an online store for socks manufacturing and sales, 
+         focusing on a clean and responsive design.`,
+        `Integrated payment gateways and enhanced site speed 
+         optimization for a seamless shopping experience.`
+      ],
+      link: "https://viona.com",
+      logo: "/experiences/social3.jpg"
     }
   ],
 
   fa: [
     {
-      id: 1,
-      title: "آقای کدنویس | فرانت اند دولوپر",
-      isActive: true,
-      date: "مهر 1403 - اکنون",
-      description: `نوشتن محتوای فنی و آموزش در پلتفرم هایی مانند Medium، Dev.to، 
-      و هشنود. موضوعات شامل توسعه نرم افزار، علم داده و مشارکت های منبع باز است.`,
-      link: "https://mr-coder.ir"
+      id: "@Mr-coder",
+      position: "توسعه‌دهنده فرانت‌اند",
+      companyName: "مستر کدر",
+      date: "سپتامبر ۲۰۲۳ - اکنون",
+      description: [
+        `هدایت تیم UI برای بازطراحی کامل برنامه در Angular از صفر، 
+         شامل ساختاردهی مجدد کل پروژه و بهبود UI مطابق با دستورالعمل‌های 
+         جدید برند و دسترس‌پذیری.`,
+        `تنظیم راهنماها و مستندسازی برای سایر اعضای تیم جهت حفظ کیفیت 
+         کد و بهینه‌سازی عملکرد، همزمان با ارائه راه‌حل‌های موثر برای 
+         باگ‌های حیاتی و ویژگی‌های جدید در چارچوب زمان‌بندی اسپرینت.`
+      ],
+      link: "https://mr-coder.ir",
+      logo: "/experiences/crossknot.jpg"
     },
     {
-      id: 2,
-      title: "گورو تکنولوژی | بک اند دولوپر",
-      isActive: false,
-      date: "دی 1400 - مرداد 1402",
-      description: `توسعه API های RESTful و میکروسرویس ها با استفاده از Node.js و Express. 
-      تمرکز بر بهینه سازی کوئری های پایگاه داده و بهبود عملکرد برنامه.`,
-      link: "https://tech-guru.com"
+      id: "@Tik-Arts",
+      position: "توسعه‌دهنده فرانت‌اند",
+      companyName: "تیک آرتس",
+      date: "ژانویه ۲۰۲۴ - اکنون",
+      description: [
+        `توسعه یک فروشگاه اینترنتی برای لباس کار و تجهیزات ایمنی، 
+         بهبود تجربه کاربری و عملکرد سایت.`,
+        `پیاده‌سازی Next.js و بهینه‌سازی UI/UX برای ایجاد تجربه خریدی 
+         سریع و روان.`
+      ],
+      link: "https://tikarts.com",
+      logo: "/experiences/oneshield.jpg"
     },
     {
-      id: 3,
-      title: "راهکارهای خلاقانه | طراح UI/UX",
-      isActive: false,
-      date: "اسفند 1399 - آذر 1400",
-      description: `طراحی رابط های کاربری و تجربیات کاربری برای برنامه های وب و موبایل. 
-      انجام تحقیقات کاربری و آزمایش های قابلیت استفاده برای افزایش رضایت کاربران.`,
-      link: "https://creative-solutions.com"
-    },
-    {
-      id: 4,
-      title: "بینش داده | تحلیلگر داده",
-      isActive: true,
-      date: "خرداد 1399 - اکنون ",
-      description: `تحلیل مجموعه داده های بزرگ برای استخراج بینش های قابل اقدام. 
-      ایجاد تجسم ها و گزارش ها برای ارتباط یافته ها به ذینفعان.`,
-      link: "https://data-insights.com"
+      id: "@Viona",
+      position: "توسعه‌دهنده فرانت‌اند",
+      companyName: "ویونا",
+      date: "مارس ۲۰۲۴ - اکنون",
+      description: [
+        `ایجاد یک فروشگاه آنلاین برای تولید و فروش جوراب، با تمرکز 
+         بر طراحی مدرن و واکنش‌گرا.`,
+        `یکپارچه‌سازی درگاه‌های پرداخت و بهینه‌سازی سرعت سایت برای 
+         ارائه تجربه خریدی روان.`
+      ],
+      link: "https://viona.com",
+      logo: "/experiences/social3.jpg"
     }
-  ] 
-}
+  ]
+};
