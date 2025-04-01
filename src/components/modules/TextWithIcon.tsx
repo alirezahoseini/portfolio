@@ -1,7 +1,6 @@
 "use client"
 import React from "react"
-import { AlertCircle } from "lucide-react"
-import { LucideProps } from "lucide-react"
+import DynamicIcon from "./DynamicIcon"
 
 interface TextWithIconProps {
   text: string
@@ -14,30 +13,10 @@ const TextWithIcon: React.FC<TextWithIconProps> = ({
   iconName = "AlertCircle", 
   className = "" 
 }) => {
-  const [Icon, setIcon] = React.useState<React.ComponentType<LucideProps>>(AlertCircle)
-
-  React.useEffect(() => {
-    if (iconName && iconName !== "AlertCircle") {
-      import("lucide-react")
-        .then(mod => {
-          if (mod[iconName as keyof typeof mod]) {
-            setIcon(() => mod[iconName as keyof typeof mod] as React.ComponentType<LucideProps>)
-          }
-        })
-        .catch(() => {
-          
-          // eslint-disable-next-line no-console
-          console.error(`Icon ${iconName} not found`)
-        })
-    }
-    else {
-      setIcon(AlertCircle)
-    }
-  }, [iconName])
 
   return (
     <div className={`flex items-center gap-2 font-light ${className}`}>
-      <Icon size={18} />
+      <DynamicIcon iconName={iconName} className="w-[18px]" />
 
       <span>{text}</span>
     </div>

@@ -73,3 +73,9 @@ export type ITestimonial = {
   image: string
   message: string
 }
+
+export type IContact = {
+  title: string
+  text: string
+  iconName: string
+}

@@ -124,7 +124,26 @@ const getTestimonials = async ({ locale }: ILocaleProps) => {
   }
 }
 
+const getContactInfos = async ({ locale }: ILocaleProps) => {
+  try {
+    const url = `contactinfo?lang=${locale}`
+    const { status, data: contactInfos } = await API.get(url)
+
+    if (status === 200) {
+      return contactInfos
+    }
+    else {
+      return false
+    }
+  }
+  catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error fetching contactInfos:", error)
+    return { error: "Failed to fetch contactInfos. Please try again later." }
+  }
+}
 
 export {
-  getProjects, getSingleProject, getExperiences, getSpeciality, getTestimonials
+  getProjects, getSingleProject, getExperiences, getSpeciality, getTestimonials,
+  getContactInfos
 }
