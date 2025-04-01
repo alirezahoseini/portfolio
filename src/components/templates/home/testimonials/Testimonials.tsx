@@ -1,15 +1,16 @@
 "use client"
 import React from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { useQuery } from "@tanstack/react-query"
-import TestimonialsTitle from "./TestimonialsTitle"
 import TestimonialsCarousel from "../../../modules/testimonials-carousel/TestimonialsCarousel"
 import { getTestimonials } from "@/lib/services"
 import { Skeleton } from "@/components/ui/skeleton"
+import SectionTitle from "@/components/modules/SectionTitle"
 
 
 const Testimonials = () => {
   const locale = useLocale()
+  const t = useTranslations("HomePage")
 
   const { isLoading, data } = useQuery({ 
     queryKey: ["testimonials", locale],
@@ -21,7 +22,11 @@ const Testimonials = () => {
   return (
     <section className="max-screen flex flex-col lg:flex-row gap-12">
       <div className="w-full lg:w-[30%]">
-        <TestimonialsTitle />
+        <SectionTitle
+          title={t("testimonials")}
+          subtitle={t("testimonials_subtitle")}
+          description={t("testimonials_description")}
+        />
       </div>
 
       <div className="w-full lg:w-2/3">

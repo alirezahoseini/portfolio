@@ -1,19 +1,20 @@
 "use client"
 import React, { useState } from "react"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import Image from "next/image"
 import { useQuery } from "@tanstack/react-query"
 import SpecialityAccordion from "./SpecialityAccordion"
-import SpecialityTitle from "./SpecialityTitle"
 import SpecialitySkeleton from "./SpecialitySkeleton"
 import { ISelectedImage, ISpeciality } from "@/app/[locale]/types"
 import { getSpeciality } from "@/lib/services"
 import TechsSlider from "@/components/modules/techs-slider/TechsSlider"
+import SectionTitle from "@/components/modules/SectionTitle"
 
 
 const Speciality = () => {
   const [selectedImage, setSelectedImage] = useState<ISelectedImage>(1)
   const locale = useLocale()
+  const t = useTranslations("HomePage")
   
   const {
     isError,
@@ -38,7 +39,10 @@ const Speciality = () => {
       }
       
       <div>
-        <SpecialityTitle />
+        <SectionTitle
+          title={t("speciality")}
+          subtitle={t("areas_of_expertise")}
+        />
 
         {
           isLoading && !isError
