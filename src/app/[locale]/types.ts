@@ -41,7 +41,7 @@ export type IAboutPageMessages = {
 }
 
 export type IExperience = {
-  id: number
+  id: string
   position: string
   companyName: string
   date: string
