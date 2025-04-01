@@ -75,7 +75,9 @@ const Speciality = () => {
         }
       </div>
 
-      <TechsSlider />
+      <div className="py-9">
+        <TechsSlider />
+      </div>
     </section>
   )
 }

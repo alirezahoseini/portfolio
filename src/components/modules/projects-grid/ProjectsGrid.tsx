@@ -35,12 +35,14 @@ const ProjectsGrid = () => {
               <ProjectsGridSkeleton />
             )
             : (
-              data.map((project: IProject) => (
-                <ProjectGridItem 
-                  key={project.id}
-                  {...project}
-                />
-              ))
+              data && (
+                data.map((project: IProject) => (
+                  <ProjectGridItem 
+                    key={project.id}
+                    {...project}
+                  />
+                ))
+              )
             )
         }
       </div>

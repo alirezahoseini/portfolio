@@ -10,7 +10,7 @@ const TechsSlider = () => {
 
     <div className="relative overflow-hidden">
       <InfiniteSlider
-        className="w-full relative overflow-hidden py-12" 
+        className="w-full relative overflow-hidden py-3" 
         direction="horizontal"
         speed={35}
         speedOnHover={10}
