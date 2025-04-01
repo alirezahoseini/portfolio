@@ -40,8 +40,10 @@
     "hero_title": "A , creative developer , & digital designer",
     "hero_subtitle": "I collaborate with brands globally to design impactful, mission-focused websites that drive results and achieve business goals.",
     "resume_file": "/Resume_en_alireza_hosseini.pdf",
-    "resume_title": "My Resume"
-
+    "resume_title": "My Resume",
+    "work_history": "Work History",
+    "experience": "Experience",
+    "experience_description": "I have worked with some of the most innovative industry leaders to help build their top-notch products."
   },
   "NotFound": {
     "title": "Oops! Page not found.",

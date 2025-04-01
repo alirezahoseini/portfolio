@@ -1,6 +1,7 @@
 import React from "react"
-import AboutHero from "@/components/templates/about-page/AboutHero"
+import AboutHero from "@/components/templates/about-page/hero/AboutHero"
 import TechsSlider from "@/components/modules/techs-slider/TechsSlider"
+import Experience from "@/components/templates/about-page/experience/Experience"
 
 const AboutPage = () => {
   return (
@@ -14,6 +15,8 @@ const AboutPage = () => {
       >
         <TechsSlider />
       </div>
+
+      <Experience />
     </div>
   )
 }

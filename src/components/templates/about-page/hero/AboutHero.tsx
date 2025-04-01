@@ -1,9 +1,9 @@
 import { getTranslations } from "next-intl/server"
 import React from "react"
+import Link from "next/link"
 import AboutHeroImage from "./AboutHeroImage"
 import HeroTitle from "@/components/modules/HeroTitle"
 import { Button } from "@/components/ui/button"
-import { Link } from "@/i18n/routing"
 
 const AboutHero = async () => {
   const t = await getTranslations("AboutPage")
@@ -28,7 +28,10 @@ const AboutHero = async () => {
         <Button
           className="rounded-full px-8 py-6 font-semibold"
         >
-          <Link href={t("resume_file")} >
+          <Link
+            href={t("resume_file")}
+            target="_blank"
+          >
             {t("resume_title")}
           </Link>
         </Button>
