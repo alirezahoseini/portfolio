@@ -3,10 +3,10 @@ import React from "react"
 import { useLocale } from "next-intl"
 import { useQuery } from "@tanstack/react-query"
 import ExperienceSkeleton from "./ExperienceSkeleton"
+import ExperienceItem from "./ExperienceItem"
 import { getExperiences } from "@/lib/services"
 import { Accordion } from "@/components/ui/accordion"
 import { IExperience } from "@/app/[locale]/types"
-import ExperienceItem from "./ExperienceItem"
 
 
 const ExperienceWrapper = () => {

@@ -94,4 +94,4 @@ export const experiences = {
       logo: "/experiences/social3.jpg"
     }
   ]
-};
+}

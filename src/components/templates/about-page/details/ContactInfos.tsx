@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import { useLocale } from "next-intl"
 import React from "react"
+import ContactInfosSkeleton from "./ContactInfosSkeleton"
 import { getContactInfos } from "@/lib/services"
 import { IContact } from "@/app/[locale]/types"
 import DynamicIcon from "@/components/modules/DynamicIcon"
-import ContactInfosSkeleton from "./ContactInfosSkeleton"
 
 
 const ContactInfos = () => {
