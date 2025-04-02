@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react"
 import { useQuery } from "@tanstack/react-query"
 import { useLocale } from "next-intl"
 import ProjectsSortingTabs from "./ProjectsSortingTabs"
+import ProjectsArchiveSkeleton from "./ProjectsArchiveSkeleton"
 import { getProjects } from "@/lib/services"
-import ProjectsGridSkeleton from "@/components/modules/projects-grid/ProjectsGridSkeleton"
 import { IProject } from "@/app/[locale]/types"
 import ProjectGridItem from "@/components/modules/projects-grid/ProjectGridItem"
 
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       {
         isLoading
           ? (
-            <ProjectsGridSkeleton />
+            <ProjectsArchiveSkeleton />
           )
           : (
             <>
@@ -45,12 +45,18 @@ const ProjectsSection = () => {
               >
                 {
                   data && (
-                    projects.map((project: IProject) => (
-                      <ProjectGridItem 
-                        key={project.id}
-                        {...project}
-                      />
-                    ))
+                    projects.length
+                      ? (
+                        projects.map((project: IProject) => (
+                          <ProjectGridItem 
+                            key={project.id}
+                            {...project}
+                          />
+                        ))
+                      )
+                      : (
+                        <h1>Nothing here</h1>
+                      )
                   )
                 }
               </div>
