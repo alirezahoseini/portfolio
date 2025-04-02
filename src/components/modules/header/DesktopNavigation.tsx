@@ -26,7 +26,7 @@ const DesktopNavigation = () => {
         </DesktopNavItem>
       
         <DesktopNavItem href="/contact" className="">
-          {t("connect")}
+          {t("contact")}
         </DesktopNavItem>
       </ul>
     </div>

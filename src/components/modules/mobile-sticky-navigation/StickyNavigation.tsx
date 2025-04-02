@@ -29,7 +29,7 @@ const StickyNavigation = () => {
         </NavigationLink>
 
         <NavigationLink href="/contact" className={styles.navItem}>
-          {t("connect")}
+          {t("contact")}
         </NavigationLink>
 
         <span 

@@ -23,12 +23,14 @@ const ProjectGridItem = ({
   return (
     <div ref={ref} className="even:md:mt-14 group relative opacity-container-child">
       <motion.div
-        style={{
-          opacity: hasAnimation ? (isInView ? 1 : 0) : 1,
-          transform: hasAnimation ? (isInView ? "translateY(0)" : "translateY(60px)") : "none",
-          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-          filter: hasAnimation ? (isInView ? "blur(0)" : "blur(5px)") : "none"
-        }}
+        style={
+          {
+            opacity: hasAnimation ? (isInView ? 1 : 0) : 1,
+            transform: hasAnimation ? (isInView ? "translateY(0)" : "translateY(60px)") : "none",
+            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
+            filter: hasAnimation ? (isInView ? "blur(0)" : "blur(5px)") : "none"
+          }
+        }
       >
         <Link href={`/projects/${id}`}>
           <div 

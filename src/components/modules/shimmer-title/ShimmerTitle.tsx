@@ -19,7 +19,7 @@ const ShimmerTitle: React.FC<ShimmerTitleProps> = ({ children }) => {
 
       <p 
         className={
-          `${styles.shimmer} dark:animate-shimmer leading-none rtl:text-lg
+          `${styles.shimmer} dark:animate-shimmer leading-none rtl:text-lg ltr:tracking-widest
             ltr:font-clash rtl:font-doran ltr:text-sm uppercase mt-[2px] rtl:mt-0 pl-[1px]`
         }
       >
