@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 import AvailableBadge from "./AvailableBadge"
 import Copyright from "./Copyright"
 import SocialIcons from "./SocialIcons"
+import ScrollToTopButton from "./ScrollToTopButton"
 import SplitText from "@/components/ui/split-text"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
@@ -56,6 +57,8 @@ const Footer = async () => {
       </div>
 
       <Copyright />
+
+      <ScrollToTopButton />
     </footer>
   )
 }
