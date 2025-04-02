@@ -48,6 +48,10 @@
     "details_title":"More Details",
     "details_description": "I'm passionate about design and converting it into code. What attracts me to design is the creativity and playing with the elements within the design, and the ability to turn what's in my mind into a reality on a website or app – I really enjoy that. Since I first got into design, I've been looking for ways to create unique and engaging user experiences and interfaces for users. This has become a useful challenge for"
   },
+  "Projects": {
+    "projects_subtitle": "My work",
+    "projects_title": "Creating next level digital products"
+  },
   "NotFound": {
     "title": "Oops! Page not found.",
     "description": "We couldn’t find what you are looking for. Please check the URL and try again!",

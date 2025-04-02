@@ -49,6 +49,7 @@ const ProjectsSection = () => {
                       ? (
                         projects.map((project: IProject) => (
                           <ProjectGridItem 
+                            hasAnimation={false}
                             key={project.id}
                             {...project}
                           />

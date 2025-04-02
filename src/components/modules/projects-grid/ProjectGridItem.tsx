@@ -7,16 +7,15 @@ import { IProject } from "@/app/[locale]/types"
 import { Badge } from "@/components/ui/badge"
 import { Link } from "@/i18n/routing"
 
-const ProjectGridItem = (props: IProject) => {
-  const {
-    id,
-    title,
-    date,
-    backgroundColor,
-    coverImage,
-    technologies
-  } = props
-
+const ProjectGridItem = ({ 
+  id,
+  title,
+  date,
+  backgroundColor,
+  coverImage,
+  technologies,
+  hasAnimation = true 
+}: IProject & { hasAnimation?: boolean }) => {
   const newTechs = technologies.length > 3 ? technologies.slice(0, 3) : technologies
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
@@ -24,14 +23,12 @@ const ProjectGridItem = (props: IProject) => {
   return (
     <div ref={ref} className="even:md:mt-14 group relative opacity-container-child">
       <motion.div
-        style={
-          {
-            opacity: isInView ? 1 : 0,
-            transform: isInView ? "translateY(0)" : "translateY(60px)",
-            transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
-            filter: isInView ? "blur(0)" : "blur(5px)"
-          }
-        }
+        style={{
+          opacity: hasAnimation ? (isInView ? 1 : 0) : 1,
+          transform: hasAnimation ? (isInView ? "translateY(0)" : "translateY(60px)") : "none",
+          transition: "opacity 0.4s ease-out, transform 0.4s ease-out",
+          filter: hasAnimation ? (isInView ? "blur(0)" : "blur(5px)") : "none"
+        }}
       >
         <Link href={`/projects/${id}`}>
           <div 
