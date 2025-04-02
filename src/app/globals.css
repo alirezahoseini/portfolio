@@ -220,3 +220,14 @@ html.dark .underline-effect::after {
   transform-origin: left bottom;
 }
 
+
+/* Tabs styles  */
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
