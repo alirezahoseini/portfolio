@@ -79,3 +79,9 @@ export type IContact = {
   text: string
   iconName: string
 }
+
+export type IContactFormValues = {
+  fullName: string
+  email: string
+  message: string
+}

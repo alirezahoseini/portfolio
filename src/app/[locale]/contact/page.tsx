@@ -1,11 +1,11 @@
 import React from "react"
+import { getTranslations } from "next-intl/server"
 import ContactForm from "@/components/templates/contact-page/ContactForm"
 import ContactSideBar from "@/components/templates/contact-page/ContactSideBar"
 import SectionTitle from "@/components/modules/SectionTitle"
-import { getTranslations } from "next-intl/server"
 
 const ContactPage = async () => {
-   const t = await getTranslations("ContactPage")
+  const t = await getTranslations("ContactPage")
   return (
     <section className="max-screen">
       <div className="flex flex-col ">
@@ -16,7 +16,7 @@ const ContactPage = async () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 mt-8 items-start">
           <ContactForm />
 
           <ContactSideBar />
