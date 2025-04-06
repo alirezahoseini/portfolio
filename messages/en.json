@@ -55,7 +55,11 @@
   "ContactPage": {
     "contact_title": "Let's start a project together",
     "contact_subtitle": "Connect with me",
-    "contact_sidebar_desc": "My inbox is always open, Whether you have a project or just want to say Hi. I would love to hear from you. Feel free to contact me and I'll get back to you"
+    "contact_sidebar_desc": "My inbox is always open, Whether you have a project or just want to say Hi. I would love to hear from you. Feel free to contact me and I'll get back to you",
+    "full_name": "Full Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit"
   },
   "NotFound": {
     "title": "Oops! Page not found.",
