@@ -120,13 +120,13 @@
   }
 }
 
-section {
+section.max-screen {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 640px) {
-  section {
+  section.max-screen {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }

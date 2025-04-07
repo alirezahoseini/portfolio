@@ -4,10 +4,13 @@ import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useTranslations } from "next-intl"
+import { toast } from "sonner"
+import { Loader } from "lucide-react"
 import { IFormInput } from "./types"
 import { Button } from "@/components/ui/button"
 import FormItem from "@/components/ui/form-item"
 import useContactFormSchema from "@/lib/hooks/useContactFormSchema"
+import API from "@/lib/axiosConfig"
 
 type ContactFormData = z.infer<ReturnType<typeof useContactFormSchema>>
 
@@ -17,8 +20,8 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
-    // reset
+    formState: { errors, isSubmitting },
+    reset
   } = useForm<ContactFormData>({
     defaultValues: { 
       fullName: "",
@@ -29,16 +32,24 @@ const ContactForm = () => {
   })
    
   const onSubmit = async (formData: ContactFormData) => {
-    // eslint-disable-next-line no-console
-    console.log(formData)
-    // try {
-    //   // TODO: Implement your API call here using formData
-    //   await new Promise(resolve => setTimeout(resolve, 1000))
-    //   reset()
-    // }
-    // catch (_error) {
-    //   // TODO: Handle error properly
-    // }
+    try {
+      const response = await API.post("sendemail", {
+        name: formData.fullName,
+        email: formData.email,
+        message: formData.message
+      })
+
+      if (response.data.success) {
+        toast.success(t("success_message"))
+        reset()
+      }
+      else {
+        toast.error(t("error_message"))
+      }
+    }
+    catch {
+      toast.error(t("error_message"))
+    }
   }
 
   const inputs: IFormInput[] = [
@@ -80,9 +91,19 @@ const ContactForm = () => {
       <Button 
         disabled={isSubmitting}
         type="submit"
-        className="disabled:bg-slate-500 rounded-full px-8 py-4"
+        className="rounded-full px-8 py-4"
       >
-        {t("submit")}
+        {
+          isSubmitting
+            ? (
+              <Loader
+                className={`${isSubmitting && "animate-spin"}`}
+              />
+            )
+            : (
+              t("submit")
+            )
+        }
       </Button>
     </form>
   )

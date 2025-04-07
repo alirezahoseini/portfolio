@@ -2,6 +2,7 @@ import localFont from "next/font/local"
 import { notFound } from "next/navigation"
 import React from "react"
 import clsx from "clsx"
+import { Toaster } from "sonner"
 import { routing, ILocales } from "@/i18n/routing"
 import { ThemeProvider } from "@/lib/providers/ThemeProvider"
 import LocaleProvider from "@/lib/providers/LocaleProvider"
@@ -10,6 +11,7 @@ import StickyNavigation from "@/components/modules/mobile-sticky-navigation/Stic
 import ReactQueryProvider from "@/lib/providers/ReactQueryProvider"
 import ProgressProvider from "@/lib/providers/ProgressProvider"
 import Footer from "@/components/modules/footer/Footer"
+
 
 // Fonts
 const SatoshiFont = localFont({ 
@@ -65,6 +67,8 @@ export default async function RootLayout({ children, params }: Props) {
           <LocaleProvider locale={locale}>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <ProgressProvider>
+                <Toaster richColors />
+
                 <Header />
 
                 <StickyNavigation />
