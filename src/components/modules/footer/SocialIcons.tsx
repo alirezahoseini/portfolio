@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react"
-import { getTranslations } from "next-intl/server"
 import React from "react"
+import { useTranslations } from "next-intl"
 import GithubIcon from "@/assets/icons/github"
 import InstagramIcon from "@/assets/icons/instagram"
 import LinkedinIcon from "@/assets/icons/linkedin"
@@ -10,9 +10,9 @@ import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 type Props = { className?: string }
 
 
-const SocialIcons = async ({ className }: Props) => {
-  const s = await getTranslations("Socials")
-
+const SocialIcons = ({ className }: Props) => {
+  const s = useTranslations("Footer")
+  
   const socialLinks = [
     {
       icon: <LinkedinIcon className="w-5 h-5" />,

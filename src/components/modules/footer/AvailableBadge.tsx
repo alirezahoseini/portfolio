@@ -1,8 +1,8 @@
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 import React from "react"
 
-const AvailableBadge = async () => {
-  const t = await getTranslations("Footer")
+const AvailableBadge = () => {
+  const t = useTranslations("Footer")
   return (
     <span
       className="flex items-center justify-center mb-4 gap-2 rounded-full bg-[#B5FF6D]/10 px-4 py-2"
