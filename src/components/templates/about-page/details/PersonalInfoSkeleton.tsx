@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 const skeletonArray = Array.from({ length: 4 })
 
-const ContactInfosSkeleton = () => {
+const PersonalInfoSkeleton = () => {
   return (
     <ul className="w-full lg:w-1/2 grid grid-cols-2 gap-3">
       {
@@ -29,4 +29,4 @@ const ContactInfosSkeleton = () => {
   )
 }
 
-export default ContactInfosSkeleton
+export default PersonalInfoSkeleton

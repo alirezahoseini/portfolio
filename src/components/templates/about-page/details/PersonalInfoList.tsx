@@ -1,13 +1,12 @@
 import { useQuery } from "@tanstack/react-query"
 import { useLocale } from "next-intl"
 import React from "react"
-import ContactInfosSkeleton from "./ContactInfosSkeleton"
-import { getContactInfos } from "@/lib/services"
+import PersonalInfoSkeleton from "./PersonalInfoSkeleton"
+import { getPersonalInfo } from "@/lib/services"
 import { IContact } from "@/app/[locale]/types"
 import DynamicIcon from "@/components/modules/DynamicIcon"
 
-
-const ContactInfos = () => {
+const PersonalInfoList = () => {
   const locale = useLocale()
   
   const {
@@ -15,8 +14,8 @@ const ContactInfos = () => {
     isLoading,
     data
   } = useQuery({ 
-    queryKey: ["contactinfos", locale],
-    queryFn: () => getContactInfos({ locale }),
+    queryKey: ["personalInfo", locale],
+    queryFn: () => getPersonalInfo({ locale }),
     staleTime: 5 * 60 * 2000, // 10 min
     refetchOnWindowFocus: false
   })
@@ -32,10 +31,10 @@ const ContactInfos = () => {
           : (
             isLoading
               ? (
-                <ContactInfosSkeleton />
+                <PersonalInfoSkeleton />
               )
               : (
-                <ul className="w-full lg:w-1/2 grid grid-cols-2 gap-3">
+                <ul className="w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-2 gap-3">
                   {
                     data.map((item: IContact) => (
                       <li
@@ -71,4 +70,4 @@ const ContactInfos = () => {
   )
 }
 
-export default ContactInfos
+export default PersonalInfoList

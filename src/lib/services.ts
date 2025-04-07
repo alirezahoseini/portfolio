@@ -5,7 +5,7 @@ import { IGetProjectsProps, IGetSingleProjectProps, ILocaleProps } from "./types
 // All projects
 const getProjects = async ({ locale, limit }: IGetProjectsProps) => {
   try {
-    const url = `projects?lang=${locale}${limit ? `&limit=${limit}`: ""}`
+    const url = `projects?lang=${locale}${limit ? `&limit=${limit}` : ""}`
     const { status, data: projects } = await API.get(url)
 
     if (status === 200) {
@@ -22,7 +22,6 @@ const getProjects = async ({ locale, limit }: IGetProjectsProps) => {
   }
 }
 
-
 // Single project
 const getSingleProject = async ({ id, locale }: IGetSingleProjectProps) => {
   try {
@@ -31,7 +30,9 @@ const getSingleProject = async ({ id, locale }: IGetSingleProjectProps) => {
 
     if (status === 200) {
       return {
-        error: false, status: 200, data
+        error: false,
+        status: 200,
+        data
       }
     }
   }
@@ -41,7 +42,9 @@ const getSingleProject = async ({ id, locale }: IGetSingleProjectProps) => {
 
       if (status === 404) {
         return {
-          error: true, status: 404, data: false
+          error: true,
+          status: 404,
+          data: false
         }
       }
       else {
@@ -49,21 +52,24 @@ const getSingleProject = async ({ id, locale }: IGetSingleProjectProps) => {
         // eslint-disable-next-line no-console
         console.error(`HTTP error occurred: Status ${status}`, error.response.data)
         return {
-          error: true, status: status, data: false 
+          error: true,
+          status: status,
+          data: false
         }
       }
     }
     else {
-      // Internal errors 
+      // Internal errors
       // eslint-disable-next-line no-console
       console.error("Error fetching project (Non-HTTP or setup error):", error)
       return {
-        error: true, status: null, data: false
+        error: true,
+        status: null,
+        data: false
       }
     }
   }
 }
-
 
 const getExperiences = async ({ locale }: ILocaleProps) => {
   try {
@@ -84,7 +90,6 @@ const getExperiences = async ({ locale }: ILocaleProps) => {
   }
 }
 
-
 const getSpeciality = async ({ locale }: ILocaleProps) => {
   try {
     const url = `speciality?lang=${locale}`
@@ -103,7 +108,6 @@ const getSpeciality = async ({ locale }: ILocaleProps) => {
     return { error: "Failed to fetch speciality. Please try again later." }
   }
 }
-
 
 const getTestimonials = async ({ locale }: ILocaleProps) => {
   try {
@@ -124,26 +128,29 @@ const getTestimonials = async ({ locale }: ILocaleProps) => {
   }
 }
 
-const getContactInfos = async ({ locale }: ILocaleProps) => {
+const getPersonalInfo = async ({ locale }: ILocaleProps) => {
   try {
     const url = `contactinfo?lang=${locale}`
-    const { status, data: contactInfos } = await API.get(url)
+    const { status, data: personalInfo } = await API.get(url)
 
     if (status === 200) {
-      return contactInfos
+      return personalInfo
     }
-    else {
-      return false
-    }
+
+    throw new Error("Failed to fetch personal info")
   }
   catch (error) {
     // eslint-disable-next-line no-console
-    console.error("Error fetching contactInfos:", error)
-    return { error: "Failed to fetch contactInfos. Please try again later." }
+    console.error("Error fetching personal info:", error)
+    return { error: "Failed to fetch personal info. Please try again later." }
   }
 }
 
 export {
-  getProjects, getSingleProject, getExperiences, getSpeciality, getTestimonials,
-  getContactInfos
+  getProjects,
+  getSingleProject,
+  getExperiences,
+  getSpeciality,
+  getTestimonials,
+  getPersonalInfo
 }

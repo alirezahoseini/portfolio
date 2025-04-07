@@ -1,9 +1,8 @@
 "use client"
 import React from "react"
 import { useTranslations } from "next-intl"
-import ContactInfos from "./ContactInfos"
+import PersonalInfoList from "./PersonalInfoList"
 import SectionTitle from "@/components/modules/SectionTitle"
-
 
 const AboutDetails = () => {
   const t = useTranslations("AboutPage")
@@ -22,7 +21,7 @@ const AboutDetails = () => {
           {t("details_description")}
         </p>
 
-        <ContactInfos />
+        <PersonalInfoList />
       </div> 
     </section>
   )
