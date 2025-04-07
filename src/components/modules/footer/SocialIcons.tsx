@@ -11,7 +11,7 @@ type Props = { className?: string }
 
 
 const SocialIcons = ({ className }: Props) => {
-  const s = useTranslations("Footer")
+  const s = useTranslations("Socials")
   
   const socialLinks = [
     {
