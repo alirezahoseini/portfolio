@@ -17,8 +17,8 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
-    reset
+    formState: { errors, isSubmitting }
+    // reset
   } = useForm<ContactFormData>({
     defaultValues: { 
       fullName: "",
@@ -29,16 +29,16 @@ const ContactForm = () => {
   })
    
   const onSubmit = async (formData: ContactFormData) => {
-    try {
-      console.log(formData)
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      // TODO: Handle form submission with formData
-      reset()
-    }
-    catch {
-      // TODO: Handle error properly
-    }
+    // eslint-disable-next-line no-console
+    console.log(formData)
+    // try {
+    //   // TODO: Implement your API call here using formData
+    //   await new Promise(resolve => setTimeout(resolve, 1000))
+    //   reset()
+    // }
+    // catch (_error) {
+    //   // TODO: Handle error properly
+    // }
   }
 
   const inputs: IFormInput[] = [
