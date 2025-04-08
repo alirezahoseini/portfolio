@@ -58,6 +58,12 @@ export type ISpeciality = {
   image: string
 }
 
+export type IFaq = {
+  id: number
+  title: string
+  desc: string
+}
+
 export type ISelectedImage = number
 
 export type ITech = {

@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 import ContactForm from "@/components/templates/contact-page/ContactForm"
 import ContactSideBar from "@/components/templates/contact-page/ContactSideBar"
 import SectionTitle from "@/components/modules/SectionTitle"
+import Faq from "@/components/templates/contact-page/faq/Faq"
 
 const ContactPage = async () => {
   const t = await getTranslations("ContactPage")
@@ -21,6 +22,8 @@ const ContactPage = async () => {
 
           <ContactSideBar />
         </div>
+
+        <Faq />
       </div>
     </section>
   )

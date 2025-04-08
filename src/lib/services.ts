@@ -146,11 +146,31 @@ const getPersonalInfo = async ({ locale }: ILocaleProps) => {
   }
 }
 
+const getFaqs = async ({ locale }: ILocaleProps) => {
+  try {
+    const url = `faqs?lang=${locale}`
+    const { status, data: faqs } = await API.get(url)
+
+    if (status === 200) {
+      return faqs
+    }
+    else {
+      return false
+    }
+  }
+  catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("Error fetching FAQS:", error)
+    return { error: "Failed to fetch FAQS. Please try again later." }
+  }
+}
+
 export {
   getProjects,
   getSingleProject,
   getExperiences,
   getSpeciality,
   getTestimonials,
-  getPersonalInfo
+  getPersonalInfo,
+  getFaqs
 }

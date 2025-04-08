@@ -61,7 +61,9 @@
     "message": "Message",
     "submit": "Submit",
     "success_message": "Your message has been sent successfully!",
-    "error_message": "Failed to send message. Please try again."
+    "error_message": "Failed to send message. Please try again.",
+    "faq_subtitle": "FAQs",
+    "faq_title": "Have Questions?"
   },
   "NotFound": {
     "title": "Oops! Page not found.",
