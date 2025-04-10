@@ -6,9 +6,10 @@ import TechsSlider from "@/components/modules/techs-slider/TechsSlider"
 import Experience from "@/components/templates/about-page/experience/Experience"
 import AboutDetails from "@/components/templates/about-page/details/AboutDetails"
 
-export const generateMetadata = async ({ params }: {
-  params: { locale: string }
+export const generateMetadata = async (props: {
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> => {
+  const params = await props.params
   const locale = await params.locale
   const t = await getTranslations("AboutPage")
 

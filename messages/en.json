@@ -69,7 +69,9 @@
     "success_message": "Your message has been sent successfully!",
     "error_message": "Failed to send message. Please try again.",
     "faq_subtitle": "FAQs",
-    "faq_title": "Have Questions?"
+    "faq_title": "Have Questions?",
+    "meta_title": "Contact | Alireza Hosseini",
+    "meta_description":"Start a professional collaboration to build your next project."
   },
   "NotFound": {
     "title": "Oops! Page not found.",

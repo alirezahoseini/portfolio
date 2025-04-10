@@ -4,9 +4,10 @@ import { Metadata } from "next"
 import SectionTitle from "@/components/modules/SectionTitle"
 import ProjectsSection from "@/components/templates/projects-archive/ProjectsSection"
 
-export const generateMetadata = async ({ params }: {
-  params: { locale: string }
+export const generateMetadata = async (props: {
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> => {
+  const params = await props.params
   const locale = await params.locale
   const t = await getTranslations("ProjectsPage")
 
