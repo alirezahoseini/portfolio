@@ -9,7 +9,7 @@ const ContactPage = async () => {
   const t = await getTranslations("ContactPage")
   return (
     <section className="max-screen">
-      <div className="flex flex-col ">
+      <div className="flex flex-col">
         <div className="w-full lg:w-1/2">
           <SectionTitle 
             title={t("contact_title")}

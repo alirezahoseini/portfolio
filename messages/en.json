@@ -19,7 +19,9 @@
     "testimonials": "Testimonials",
     "testimonials_subtitle": "What others say",
     "testimonials_description": "I've worked with some amazing people over the years, here is what they have to say about me.",
-    "check_linkedin": "Check it out on Linkedin"
+    "check_linkedin": "Check it out on Linkedin",
+    "meta_title": "Alireza Hosseini - Front-End developer",
+    "meta_description": "A passionate front-end developer focused on creating engaging and user-friendly web experiences."
   },
   "Navigation": {
     "home": "Home",
@@ -44,13 +46,17 @@
     "work_history": "Work History",
     "experience": "Experience",
     "experience_description": "I have worked with some of the most innovative industry leaders to help build their top-notch products.",
-    "details_subtitle":"About me",
-    "details_title":"More Details",
-    "details_description": "I'm passionate about design and converting it into code. What attracts me to design is the creativity and playing with the elements within the design, and the ability to turn what's in my mind into a reality on a website or app – I really enjoy that. Since I first got into design, I've been looking for ways to create unique and engaging user experiences and interfaces for users. This has become a useful challenge for"
+    "details_subtitle": "About me",
+    "details_title": "More Details",
+    "details_description": "I'm passionate about design and converting it into code. What attracts me to design is the creativity and playing with the elements within the design, and the ability to turn what's in my mind into a reality on a website or app – I really enjoy that. Since I first got into design, I've been looking for ways to create unique and engaging user experiences and interfaces for users. This has become a useful challenge for",
+    "meta_title": "About Me | Alireza Hosseini",
+    "meta_description": "Get to know me better. I'm a web developer who uses modern technologies and a creative touch to build awesome websites!"
   },
-  "Projects": {
+  "ProjectsPage": {
     "projects_subtitle": "My work",
-    "projects_title": "Creating next level digital products"
+    "projects_title": "Creating next level digital products",
+    "meta_title": "Projects | Alireza Hosseini",
+    "meta_description": "Explore my projects and the digital products I've created that showcase my skills and expertise."
   },
   "ContactPage": {
     "contact_title": "Let's start a project together",

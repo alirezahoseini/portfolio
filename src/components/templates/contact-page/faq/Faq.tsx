@@ -29,7 +29,7 @@ const Faq = () => {
   })
 
   return (
-    <section className="max-screen flex items-start">
+    <section className="max-screen flex items-start flex-col lg:flex-row gap-8">
       <div className="w-full lg:w-1/3">
         <SectionTitle
           title={t("faq_title")}
