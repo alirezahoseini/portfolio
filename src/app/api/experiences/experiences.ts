@@ -4,94 +4,52 @@ export const experiences = {
       id: "@Mr-coder",
       position: "Front-end Developer",
       companyName: "Mr. Coder",
-      date: "Sep. 2023 - Present",
+      date: "Nov. 2024 - Present",
       description: [
-        `Led the UI team to revamp the entire application in Angular 
-         from scratch, involving structuring the entire project and 
-         improving the UI which matches the new branding guidelines 
-         as well as accessibility.`,
-        `Set guidelines and document it for others working on the 
-         same files ensuring code quality and efficiency. While 
-         constantly delivering solutions to critical bugs and new 
-         features under the sprint deadlines.`
+        `Front-end developer with React.js and a member of the technical team
+         at Mr. Coder Digital Marketing Agency.`
       ],
       link: "https://mr-coder.ir",
-      logo: "/experiences/crossknot.jpg"
+      logo: "/experiences/mrcoder.png"
     },
     {
-      id: "@Tik-Arts",
-      position: "Front-end Developer",
-      companyName: "Tik Arts",
-      date: "Jan. 2020 - Oct. 2021",
+      id: "@SofamAgency",
+      position: "Web Designer",
+      companyName: "Sofam Agency",
+      date: "Apr. 2024 - Jun. 2024",
       description: [
-        `Developed an e-commerce platform for workwear and safety 
-         equipment, enhancing user experience and performance.`,
-        `Implemented Next.js and optimized UI/UX, ensuring a smooth 
-         shopping experience with fast load times.`
+        `Member of the design and support team for the website and content creator
+         of SEO-optimized articles for the Sofam Magazine.`
       ],
-      link: "https://tikarts.com",
-      logo: "/experiences/oneshield.jpg"
-    },
-    {
-      id: "@Viona",
-      position: "Front-end Developer",
-      companyName: "Viona",
-      date: "Mar. 2024 - Present",
-      description: [
-        `Built an online store for socks manufacturing and sales, 
-         focusing on a clean and responsive design.`,
-        `Integrated payment gateways and enhanced site speed 
-         optimization for a seamless shopping experience.`
-      ],
-      link: "https://viona.com",
-      logo: "/experiences/social3.jpg"
+      link: "",
+      logo: "/experiences/sofam.jpg"
     }
   ],
 
   fa: [
     {
-      id: "@Mr-coder",
+      id: "@MrCoder",
       position: "توسعه‌دهنده فرانت‌اند",
-      companyName: "مستر کدر",
-      date: "سپتامبر ۲۰۲۳ - اکنون",
+      companyName: "Mr. Coder",
+      date: "آذر 1403  - اکنون",
       description: [
-        `هدایت تیم UI برای بازطراحی کامل برنامه در Angular از صفر، 
-         شامل ساختاردهی مجدد کل پروژه و بهبود UI مطابق با دستورالعمل‌های 
-         جدید برند و دسترس‌پذیری.`,
-        `تنظیم راهنماها و مستندسازی برای سایر اعضای تیم جهت حفظ کیفیت 
-         کد و بهینه‌سازی عملکرد، همزمان با ارائه راه‌حل‌های موثر برای 
-         باگ‌های حیاتی و ویژگی‌های جدید در چارچوب زمان‌بندی اسپرینت.`
+        `توسعه دهنده فرانت اند با React.js و عضو تیم فنی آژانس دیجیتال مارکتینگ 
+        آقای کدنویس`
+       
       ],
       link: "https://mr-coder.ir",
-      logo: "/experiences/crossknot.jpg"
+      logo: "/experiences/mrcoder.png"
     },
     {
-      id: "@Tik-Arts",
-      position: "توسعه‌دهنده فرانت‌اند",
-      companyName: "تیک آرتس",
-      date: "ژانویه ۲۰۲۴ - اکنون",
+      id: "@SofamAgency",
+      position: "طراح وب",
+      companyName: "Sofam",
+      date: "فروردین 1403 - تیر 1403",
       description: [
-        `توسعه یک فروشگاه اینترنتی برای لباس کار و تجهیزات ایمنی، 
-         بهبود تجربه کاربری و عملکرد سایت.`,
-        `پیاده‌سازی Next.js و بهینه‌سازی UI/UX برای ایجاد تجربه خریدی 
-         سریع و روان.`
+        "عضو تیم طراحی و پشتیبانی وبسایت و تولید کننده مقالات سئو شده برای مجله سوفام"
       ],
-      link: "https://tikarts.com",
-      logo: "/experiences/oneshield.jpg"
-    },
-    {
-      id: "@Viona",
-      position: "توسعه‌دهنده فرانت‌اند",
-      companyName: "ویونا",
-      date: "مارس ۲۰۲۴ - اکنون",
-      description: [
-        `ایجاد یک فروشگاه آنلاین برای تولید و فروش جوراب، با تمرکز 
-         بر طراحی مدرن و واکنش‌گرا.`,
-        `یکپارچه‌سازی درگاه‌های پرداخت و بهینه‌سازی سرعت سایت برای 
-         ارائه تجربه خریدی روان.`
-      ],
-      link: "https://viona.com",
-      logo: "/experiences/social3.jpg"
+      link: "",
+      logo: "/experiences/sofam.jpg"
     }
   ]
 }
