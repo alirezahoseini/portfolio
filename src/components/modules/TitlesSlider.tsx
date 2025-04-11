@@ -6,10 +6,10 @@ const titles = [
   "Community",
   "Animations",
   "Development",
-  "Mentor",
   "Websites",
   "Designing",
-  "Graphics"
+  "Graphics",
+  "Mentor"
 ]
 
 const TitlesSlider = () => {
