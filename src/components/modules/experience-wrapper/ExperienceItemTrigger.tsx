@@ -47,16 +47,29 @@ const ExperienceItemTrigger = (props: Props) => {
           className="flex justify-between items-center w-full
             text-custom-secondary-light dark:text-custom-secondary-dark "
         >
-          <span>
-            <Link
-              href={link}
-              target="_blank"
-              className="text-sm 
-                underline-offset-4 hover:underline"
-            >
-              @{companyName}
-            </Link>
-          </span>
+          {
+            link
+              ? (
+                <span>
+                  <Link
+                    href={link}
+                    target="_blank"
+                    className="text-sm 
+                    underline-offset-4 hover:underline"
+                  >
+                    @{companyName}
+                  </Link>
+                </span>
+              )
+              : (
+                <span
+                  className="text-sm 
+                  underline-offset-4 hover:underline"
+                >
+                  @{companyName}
+                </span>
+              )
+          }
 
           <span className="text-xs">
             {date}

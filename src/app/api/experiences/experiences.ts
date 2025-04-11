@@ -16,7 +16,7 @@ export const experiences = {
       id: "@SofamAgency",
       position: "Web Designer",
       companyName: "Sofam Agency",
-      date: "Apr. 2024 - Jun. 2024",
+      date: "Feb. 2024 - Jun. 2024",
       description: [
         `Member of the design and support team for the website and content creator
          of SEO-optimized articles for the Sofam Magazine.`
@@ -44,7 +44,7 @@ export const experiences = {
       id: "@SofamAgency",
       position: "طراح وب",
       companyName: "Sofam",
-      date: "فروردین 1403 - تیر 1403",
+      date: "بهمن 1402 - تیر 1403",
       description: [
         "عضو تیم طراحی و پشتیبانی وبسایت و تولید کننده مقالات سئو شده برای مجله سوفام"
       ],
