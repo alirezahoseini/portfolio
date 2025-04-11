@@ -8,6 +8,7 @@ import { IProject } from "@/app/[locale]/types"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/routing"
 import { getProjects } from "@/lib/services"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 
 const ProjectsGrid = () => {
@@ -48,13 +49,15 @@ const ProjectsGrid = () => {
       </div>
     
       <div className="w-full flex items-center justify-center">
-        <Button 
-          className="rounded-full px-8 py-6 font-semibold"
-        >
-          <Link href="/projects" >
-            {t("view_all_projects")}
-          </Link>
-        </Button>
+        <FadeInAnimate>
+          <Button 
+            className="rounded-full px-8 py-6 font-semibold"
+          >
+            <Link href="/projects" >
+              {t("view_all_projects")}
+            </Link>
+          </Button>
+        </FadeInAnimate>
       </div>   
     </>
 

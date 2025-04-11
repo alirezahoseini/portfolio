@@ -5,6 +5,7 @@ import ContactForm from "@/components/templates/contact-page/ContactForm"
 import ContactSideBar from "@/components/templates/contact-page/ContactSideBar"
 import SectionTitle from "@/components/modules/SectionTitle"
 import Faq from "@/components/templates/contact-page/faq/Faq"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 export const generateMetadata = async (props: {
   params: Promise<{ locale: string }>
@@ -61,7 +62,9 @@ const ContactPage = async () => {
           <ContactSideBar />
         </div>
 
-        <Faq />
+        <FadeInAnimate>
+          <Faq />
+        </FadeInAnimate>
       </div>
     </section>
   )

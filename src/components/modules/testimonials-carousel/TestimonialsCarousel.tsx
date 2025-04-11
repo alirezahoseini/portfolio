@@ -9,6 +9,7 @@ import styles from "./TestimonialsCarousel.module.css"
 import TestimonialsCarouselButtons from "./TestimonialsCarouselButtons"
 import TestimonialsCarouselItem from "./TestimonialsCarouselItem"
 import { ITestimonial } from "@/app/[locale]/types"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 type Props = {
   testimonials: ITestimonial[]
@@ -31,30 +32,35 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
         <div className={styles.embla__container}>
           {
             testimonials.map(item => (
-              <TestimonialsCarouselItem
-                key={item.id}
-                {...item}
-              />
+              <FadeInAnimate key={item.id}>
+                <TestimonialsCarouselItem
+                  {...item}
+                />
+              </FadeInAnimate>
             ))
           }
         </div>
       </div>
 
       <div className="flex justify-between items-center mt-5 rtl:flex-row-reverse">
-        <Link
-          href={s("linkedin_link")}
-          className="underline-effect text-custom-primary-light dark:text-custom-primary-dark
+        <FadeInAnimate>
+          <Link
+            href={s("linkedin_link")}
+            className="underline-effect text-custom-primary-light dark:text-custom-primary-dark
           text-sm !flex items-center justify-center gap-2 active:scale-[0.98] select-none"
-        >
-          <span>{t("check_linkedin")}</span>
+          >
+            <span>{t("check_linkedin")}</span>
 
-          <ArrowUpRight 
-            size={16} 
-            className="rtl:-rotate-90"
-          />
-        </Link>
+            <ArrowUpRight 
+              size={16} 
+              className="rtl:-rotate-90"
+            />
+          </Link>
+        </FadeInAnimate>
 
-        <TestimonialsCarouselButtons emblaApi={emblaApi} />
+        <FadeInAnimate>
+          <TestimonialsCarouselButtons emblaApi={emblaApi} />
+        </FadeInAnimate>
       </div>
 
     </section>

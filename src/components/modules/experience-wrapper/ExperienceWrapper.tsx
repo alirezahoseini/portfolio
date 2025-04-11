@@ -7,6 +7,7 @@ import ExperienceItem from "./ExperienceItem"
 import { getExperiences } from "@/lib/services"
 import { Accordion } from "@/components/ui/accordion"
 import { IExperience } from "@/app/[locale]/types"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 
 const ExperienceWrapper = () => {
@@ -40,10 +41,11 @@ const ExperienceWrapper = () => {
                 <Accordion type="single" collapsible>
                   {
                     data.map((experience: IExperience) => (
-                      <ExperienceItem
-                        key={experience.id}
-                        {...experience}
-                      />
+                      <FadeInAnimate key={experience.id}>
+                        <ExperienceItem
+                          {...experience}
+                        />
+                      </FadeInAnimate>
                     )) 
                   }
                 </Accordion>

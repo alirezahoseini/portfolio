@@ -47,7 +47,11 @@ const SocialIcons = ({ className }: Props) => {
     >
       {
         socialLinks.map((item, index) => (
-          <FadeInAnimate key={index} delay={Number(0.0 + `0.${index}`+ 50)} >
+          <FadeInAnimate 
+            infinite 
+            key={index} 
+            delay={Number(0.0 + `0.${index}`+ 50)}
+          >
             <Link
               className="opacity-container-child"
               key={item.name}

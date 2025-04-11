@@ -32,12 +32,12 @@ const MainFooter = () => {
             `
           }
         >
-          <FadeInAnimate>
+          <FadeInAnimate infinite>
             <AvailableBadge />
           </FadeInAnimate>
 
           <div className="m-auto mt-2 mb-6 max-w-screen-sm text-balance text-center">
-            <FadeInAnimate>
+            <FadeInAnimate infinite>
               <SplitText
                 text={t("footer_title")}
                 className="text-4xl md:text-5xl rtl:font-semibold text-center
@@ -53,7 +53,7 @@ const MainFooter = () => {
             </FadeInAnimate>
           </div>
             
-          <FadeInAnimate>
+          <FadeInAnimate infinite>
             <Button className="rounded-full px-8 py-6 font-semibold mt-2">
               <Link href="/contact">
                 {t("footer_btn")}

@@ -1,6 +1,7 @@
 import React from "react"
 import ShimmerTitle from "./shimmer-title/ShimmerTitle"
 import SplitText from "../ui/split-text"
+import FadeInAnimate from "../HOC/FadeInAnimate"
 
 type Props = {
   subtitle: string
@@ -36,12 +37,14 @@ const SectionTitle = (props: Props) => {
     
       {
         description && (
-          <span
-            className="text-custom-secondary-light dark:text-custom-secondary-dark
+          <FadeInAnimate>
+            <span
+              className="text-custom-secondary-light dark:text-custom-secondary-dark
               text-base mt-6 text-balance inline-block w-full"
-          >
-            {description}
-          </span>
+            >
+              {description}
+            </span>
+          </FadeInAnimate>
         )
       }
     </>

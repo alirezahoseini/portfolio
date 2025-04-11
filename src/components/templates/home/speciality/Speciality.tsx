@@ -9,6 +9,7 @@ import { ISelectedImage, ISpeciality } from "@/app/[locale]/types"
 import { getSpeciality } from "@/lib/services"
 import TechsSlider from "@/components/modules/techs-slider/TechsSlider"
 import SectionTitle from "@/components/modules/SectionTitle"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 
 const Speciality = () => {
@@ -47,40 +48,48 @@ const Speciality = () => {
         {
           isLoading && !isError
             ? (
-              <SpecialitySkeleton />
+              <FadeInAnimate>
+                <SpecialitySkeleton />
+              </FadeInAnimate>
             )
             : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
-                <SpecialityAccordion 
-                  specialtiesList={data}
-                  setSelectedImage={setSelectedImage}
-                />
+                <FadeInAnimate>
+                  <SpecialityAccordion 
+                    specialtiesList={data}
+                    setSelectedImage={setSelectedImage}
+                  />
+                </FadeInAnimate>
 
-                <div className="relative w-full h-full aspect-video rounded-3xl overflow-hidden">
-                  {
-                    data.map((item: ISpeciality) => (
-                      <Image 
-                        key={item.id}
-                        src={item.image} 
-                        alt="Speciality image"
-                        width={640}
-                        height={426}
-                        className={
-                          `absolute top-0 right-0 h-full w-full object-cover
+                <FadeInAnimate>
+                  <div className="relative w-full h-full aspect-video rounded-3xl overflow-hidden">
+                    {
+                      data.map((item: ISpeciality) => (
+                        <Image 
+                          key={item.id}
+                          src={item.image} 
+                          alt="Speciality image"
+                          width={640}
+                          height={426}
+                          className={
+                            `absolute top-0 right-0 h-full w-full object-cover
                            transition-all duration-500 
                            ${selectedImage === item.id ? "opacity-100" : "opacity-0"}`
-                        }
-                      />
-                    ))
-                  }
-                </div>
+                          }
+                        />
+                      ))
+                    }
+                  </div>
+                </FadeInAnimate>
               </div>
             )
         }
       </div>
 
       <div className="py-9">
-        <TechsSlider />
+        <FadeInAnimate>
+          <TechsSlider />
+        </FadeInAnimate>
       </div>
     </section>
   )

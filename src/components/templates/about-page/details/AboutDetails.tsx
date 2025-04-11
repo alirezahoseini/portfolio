@@ -3,6 +3,7 @@ import React from "react"
 import { useTranslations } from "next-intl"
 import PersonalInfoList from "./PersonalInfoList"
 import SectionTitle from "@/components/modules/SectionTitle"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 const AboutDetails = () => {
   const t = useTranslations("AboutPage")
@@ -18,7 +19,9 @@ const AboutDetails = () => {
 
       <div className="flex flex-col lg:flex-row gap-12">
         <p className="w-full lg:w-1/2 text-justify">
-          {t("details_description")}
+          <FadeInAnimate>
+            {t("details_description")}
+          </FadeInAnimate>
         </p>
 
         <PersonalInfoList />

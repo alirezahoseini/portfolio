@@ -6,6 +6,7 @@ import TestimonialsCarousel from "../../../modules/testimonials-carousel/Testimo
 import { getTestimonials } from "@/lib/services"
 import { Skeleton } from "@/components/ui/skeleton"
 import SectionTitle from "@/components/modules/SectionTitle"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 
 const Testimonials = () => {
@@ -33,9 +34,11 @@ const Testimonials = () => {
         {
           isLoading
             ? (
-              <Skeleton 
-                className="w-full min-h-64 rounded-3xl"
-              />
+              <FadeInAnimate>
+                <Skeleton 
+                  className="w-full min-h-64 rounded-3xl"
+                />
+              </FadeInAnimate>
             )
             : (
               <TestimonialsCarousel testimonials={data} />

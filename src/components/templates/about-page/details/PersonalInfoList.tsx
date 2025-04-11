@@ -5,6 +5,7 @@ import PersonalInfoSkeleton from "./PersonalInfoSkeleton"
 import { getPersonalInfo } from "@/lib/services"
 import { IContact } from "@/app/[locale]/types"
 import DynamicIcon from "@/components/modules/DynamicIcon"
+import FadeInAnimate from "@/components/HOC/FadeInAnimate"
 
 const PersonalInfoList = () => {
   const locale = useLocale()
@@ -31,7 +32,9 @@ const PersonalInfoList = () => {
           : (
             isLoading
               ? (
-                <PersonalInfoSkeleton />
+                <FadeInAnimate>
+                  <PersonalInfoSkeleton />
+                </FadeInAnimate>
               )
               : (
                 <ul className="w-full lg:w-1/2 grid grid-cols-1 lg:grid-cols-2 gap-3">
