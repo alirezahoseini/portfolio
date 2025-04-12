@@ -142,6 +142,42 @@ export const projects = {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://weather.a-hosseini.ir/"
       }
+    },
+    {
+      id: "nextmovie",
+      title: "Next Movie",
+      date: 2024,
+      backgroundColor: "#ff1a1a",
+      description: `In this app, you can explore the latest movies and TV series and get complete
+      information about them. There's also a search feature to find your favorite titles. This project
+      is built using Next.js version 14 and Tailwind CSS, and it fetches data from the TMDB API. It 
+      also uses SWR for optimized data fetching and caching. I gained valuable experience with SSR and
+      SSG during this project, especially in managing content rendering and search functionality.`,
+      coverImage: {
+        url: "/projects/nextmovie/cover.png",
+        alt: "cover nextmovie"
+      },
+      heroImage: {
+        url: "/projects/nextmovie/hero.png",
+        alt: "hero nextmovie"
+      },
+      technologies: [
+        "Next.js",
+        "Tailwind",
+        "JavaScript",
+        "React",
+        "SWR",
+        "TMDB"
+      ],
+      screenshots: [
+        "/projects/nextmovie/1.png",
+        "/projects/nextmovie/2.png",
+        "/projects/nextmovie/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/next-movie",
+        live: "https://nextmovie.a-hosseini.ir/"
+      }
     }
   ],
 
@@ -292,6 +328,43 @@ export const projects = {
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://weather.a-hosseini.ir/"
+      }
+    },
+    {
+      id: "nextmovie",
+      title: "Next Movie",
+      date: 2024,
+      backgroundColor: "#ff1a1a",
+      description: `در این اپلیکیشن می‌تونی جدیدترین فیلم‌ها
+      و سریال‌های روز رو ببینی و اطلاعات کاملی درباره‌شون داشته باشی.
+      امکان جستجو هم برای پیدا کردن فیلم یا سریال مورد علاقه‌ات وجود داره. این پروژه با استفاده از 
+      Next.js نسخه ۱۴ و Tailwind CSS ساخته شده و دیتا از طریق API سایت TMDB دریافت می‌شه.
+      همچنین با استفاده از SWR دیتا به‌صورت بهینه دریافت و کش می‌شه.
+      تجربه‌ی خوبی از کار با SSR و SSG توی این پروژه داشتم، مخصوصاً در مدیریت رندر شدن محتوا و جستجو.`,
+      coverImage: {
+        url: "/projects/nextmovie/cover.png",
+        alt: "تصویر کاور پروژه nextmovie"
+      },
+      heroImage: {
+        url: "/projects/nextmovie/hero.png",
+        alt: "تصویر هدر پروژه nextmovie"
+      },
+      technologies: [
+        "Next.js",
+        "Tailwind",
+        "JavaScript",
+        "React",
+        "SWR",
+        "TMDB"
+      ],
+      screenshots: [
+        "/projects/nextmovie/1.png",
+        "/projects/nextmovie/2.png",
+        "/projects/nextmovie/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/next-movie",
+        live: "https://nextmovie.a-hosseini.ir/"
       }
     }
   ]
