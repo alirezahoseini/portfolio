@@ -1,124 +1,69 @@
 export const projects = {
   en: [
     {
-      id: "next-movie", 
-      title: "Next-Movie",
-      date: 2024,
-      backgroundColor: "#fafada",
-      description: `A modern movie streaming platform built with Next.js. Features include responsive design, 
-      user authentication, and a seamless watching experience.`,
+      id: "banimode",
+      title: "Banimode Landing",
+      date: 2021,
+      backgroundColor: "#99ffb4",
+      description: `In my first experience with React, I made a completely static version 
+      of the Banimode landing page. </br>The main goal of this project was to practice 
+      basic concepts like structuring components, using</br> props, and organizing code
+      better. I tried to rebuild the UI using components to understand how React works.`,
       coverImage: {
-        url: "/projects/next-movie/cover.jpg",
-        alt: "Cover image of Next-Movie project"
+        url: "/projects/banimode/cover.png",
+        alt: "banimode cover"
       },
       heroImage: {
-        url: "/projects/next-movie/hero.jpg",
-        alt: "Hero image of Next-Movie project"
+        url: "/projects/banimode/hero.png",
+        alt: "banimode hero"
       },
       technologies: [
-        "Next.js",
+        "Bootstrap",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Redux Toolkit"
+        "JavaScript",
+        "Sass"
       ],
       screenshots: [
-        "/projects/next-movie/1.png"
+        "/projects/banimode/1.png"
       ],
       links: {
-        github: "https://github.com/yourusername/next-movie",
-        live: "https://next-movie-demo.vercel.app"
-      }
-    },
-    {
-      id: "next-movie2", 
-      title: "Next-Movie",
-      date: 2024,
-      backgroundColor: "#fafada",
-      description: `A modern movie streaming platform built with Next.js. Features include responsive design, 
-      user authentication, and a seamless watching experience.`,
-      coverImage: {
-        url: "/projects/next-movie/cover.jpg",
-        alt: "Cover image of Next-Movie project"
-      },
-      heroImage: {
-        url: "/projects/next-movie/hero.jpg",
-        alt: "Hero image of Next-Movie project"
-      },
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Redux Toolkit"
-      ],
-      screenshots: [
-        "/projects/next-movie/1.png"
-      ],
-      links: {
-        github: "https://github.com/yourusername/next-movie",
-        live: "https://next-movie-demo.vercel.app"
+        github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
+        live: "https://banimode.a-hosseini.ir/"
       }
     }
   ],
 
   fa: [
     {
-      id: "next-movie",
-      title: "Next movie fa",
-      date: 2024,
-      backgroundColor: "#fafada",
-      description: `یک پلتفرم مدرن استریم فیلم که با Next.js ساخته شده است. 
-      ویژگی‌های آن شامل طراحی واکنش‌گرا، احراز هویت کاربران و تجربه تماشای روان است.`,
+      id: "banimode",
+      title: "Banimode Landing",
+      date: 2021,
+      backgroundColor: "#99ffb4",
+      description: `در اولین تجربه‌ام با React، یک نسخه‌ی کاملاً استاتیک از لندینگ پیج
+       بانی‌مد پیاده‌سازی کردم. هدف اصلی این پروژه،
+      </br> تمرین مفاهیم پایه‌ای مانند ساختاردهی کامپوننت‌ها، مدیریت props و سازماندهی بهتر کد بود. در این پروژه
+       تلاش کردم</br> 
+      رابط کاربری را به صورت component-based بازسازی کنم تا بهتر با طرز فکر React آشنا شوم.`,
       coverImage: {
-        url: "/projects/next-movie/cover.jpg",
-        alt: "تصویر کاور پروژه نکست مووی"
+        url: "/projects/banimode/cover.png",
+        alt: "تصویر کاور پروژه بانی مد"
       },
       heroImage: {
-        url: "/projects/next-movie/hero.jpg",
-        alt: "تصویر هدر پروژه نکست مووی"
+        url: "/projects/banimode/hero.png",
+        alt: "تصویر هدر پروژه بانی مد"
       },
       technologies: [
-        "Next.js",
+        "Bootstrap",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Redux Toolkit"
+        "Js",
+        "Sass"
       ],
       screenshots: [
-        "/projects/next-movie/1.png"
+        "/projects/banimode/1.png"
       ],
       links: {
-        github: "https://github.com/yourusername/next-movie",
-        live: "https://next-movie-demo.vercel.app"
-      }
-    },
-    {
-      id: "next-movie2",
-      title: "Next movie fa",
-      date: 2024,
-      backgroundColor: "#fafada",
-      description: `یک پلتفرم مدرن استریم فیلم که با Next.js ساخته شده است. 
-      ویژگی‌های آن شامل طراحی واکنش‌گرا، احراز هویت کاربران و تجربه تماشای روان است.`,
-      coverImage: {
-        url: "/projects/next-movie/cover.jpg",
-        alt: "تصویر کاور پروژه نکست مووی"
-      },
-      heroImage: {
-        url: "/projects/next-movie/hero.jpg",
-        alt: "تصویر هدر پروژه نکست مووی"
-      },
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Redux Toolkit"
-      ],
-      screenshots: [
-        "/projects/next-movie/1.png"
-      ],
-      links: {
-        github: "https://github.com/yourusername/next-movie",
-        live: "https://next-movie-demo.vercel.app"
+        github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
+        live: "https://banimode.a-hosseini.ir/"
       }
     }
   ]
