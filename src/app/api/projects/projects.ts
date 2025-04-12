@@ -30,6 +30,45 @@ export const projects = {
         github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
         live: "https://banimode.a-hosseini.ir/"
       }
+    },
+    {
+      id: "todojs",
+      title: "TODO",
+      date: 2021,
+      backgroundColor: "#b0daff",
+      description: `
+      This is one of the most complete todo apps I’ve built using plain JavaScript.
+      Main features include:
+      Task search,
+      Task categorization,
+      Priority levels,
+      Data saved with localStorage,
+      Sound effects for better user interaction.
+      I built this project as a serious practice to improve my JavaScript skills, 
+      DOM manipulation, and front-end architecture.
+      `,
+      coverImage: {
+        url: "/projects/todojs/cover.png",
+        alt: "todo app cover"
+      },
+      heroImage: {
+        url: "/projects/todojs/hero.png",
+        alt: "todo app hero"
+      },
+      technologies: [
+        "Bootstrap",
+        "JavaScript",
+        "Sass"
+      ],
+      screenshots: [
+        "/projects/todojs/1.png",
+        "/projects/todojs/2.png",
+        "/projects/todojs/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/Todo-App-Js",
+        live: "https://alirezahoseini.github.io/Todo-App-Js/"
+      }
     }
   ],
 
@@ -55,7 +94,7 @@ export const projects = {
       technologies: [
         "Bootstrap",
         "React",
-        "Js",
+        "JavaScript",
         "Sass"
       ],
       screenshots: [
@@ -64,6 +103,45 @@ export const projects = {
       links: {
         github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
         live: "https://banimode.a-hosseini.ir/"
+      }
+    },
+    {
+      id: "todojs",
+      title: "TODO",
+      date: 2021,
+      backgroundColor: "#b0daff",
+      description: `
+      این برنامه یکی از کامل‌ترین Todo Appهایی هست که با جاوااسکریپت Vanilla طراحی کردم.
+      ویژگی‌های اصلی برنامه شامل موارد زیرهست:
+      جستجوی کارها،
+      دسته‌بندی وظایف،
+      اولویت‌ بندی کارها،
+      ذخیره‌سازی داده‌ها با استفاده از localStorage،
+      استفاده از افکت‌های صوتی برای تعامل بهتر با کاربر.
+      این پروژه رو به عنوان یک تمرین جدی برای تسلط بیشتر روی جاوااسکریپت، مدیریت DOM،
+      و معماری سمت فرانت پیاده‌سازی کردم.
+      `,
+      coverImage: {
+        url: "/projects/todojs/cover.png",
+        alt: "تصویر کاور پروژه تودو"
+      },
+      heroImage: {
+        url: "/projects/todojs/hero.png",
+        alt: "تصویر هدر پروژه تودو"
+      },
+      technologies: [
+        "Bootstrap",
+        "JavaScript",
+        "Sass"
+      ],
+      screenshots: [
+        "/projects/todojs/1.png",
+        "/projects/todojs/2.png",
+        "/projects/todojs/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/Todo-App-Js",
+        live: "https://alirezahoseini.github.io/Todo-App-Js/"
       }
     }
   ]

@@ -71,7 +71,7 @@ const Faq = () => {
                               {`0${item.id}.`}
                             </span>
 
-                            <span>{item.title}</span>
+                            <span className="rtl:text-right rtl:ml-1">{item.title}</span>
                           </h3>
                         </AccordionTrigger>
 
