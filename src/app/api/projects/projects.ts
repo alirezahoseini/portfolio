@@ -6,8 +6,8 @@ export const projects = {
       date: 2021,
       backgroundColor: "#99ffb4",
       description: `In my first experience with React, I made a completely static version 
-      of the Banimode landing page. </br>The main goal of this project was to practice 
-      basic concepts like structuring components, using</br> props, and organizing code
+      of the Banimode landing page. The main goal of this project was to practice 
+      basic concepts like structuring components, using props, and organizing code
       better. I tried to rebuild the UI using components to understand how React works.`,
       coverImage: {
         url: "/projects/banimode/cover.png",
@@ -41,8 +41,8 @@ export const projects = {
       backgroundColor: "#99ffb4",
       description: `در اولین تجربه‌ام با React، یک نسخه‌ی کاملاً استاتیک از لندینگ پیج
        بانی‌مد پیاده‌سازی کردم. هدف اصلی این پروژه،
-      </br> تمرین مفاهیم پایه‌ای مانند ساختاردهی کامپوننت‌ها، مدیریت props و سازماندهی بهتر کد بود. در این پروژه
-       تلاش کردم</br> 
+       تمرین مفاهیم پایه‌ای مانند ساختاردهی کامپوننت‌ها، مدیریت props و سازماندهی بهتر کد بود. در این پروژه
+       تلاش کردم 
       رابط کاربری را به صورت component-based بازسازی کنم تا بهتر با طرز فکر React آشنا شوم.`,
       coverImage: {
         url: "/projects/banimode/cover.png",
