@@ -105,6 +105,43 @@ export const projects = {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://alirezahoseini.github.io/E-shop/pages/home.html"
       }
+    },
+    {
+      id: "weather",
+      title: "Weather app",
+      date: 2022,
+      backgroundColor: "#d7b8ff",
+      description: `With this web app, you can check the weather in your city or any other place 🌦️
+      I built this project to learn how to work with APIs in JavaScript and improve my front-end skills.
+      The app has a clean and simple design, and the user interface is made with Tailwind CSS. It shows 
+      the weather for the full day, the local time of each city, and can detect your location using your IP. 
+      You can also view the weather of two cities at the same time. I used an open-source weather API that 
+      even provides special icons for day and night.`,
+      coverImage: {
+        url: "/projects/weather/cover.png",
+        alt: "cover weather"
+      },
+      heroImage: {
+        url: "/projects/weather/hero.png",
+        alt: "hero weather"
+      },
+      technologies: [
+        "JavaScript",
+        "Tailwind",
+        "Sass"
+      ],
+      screenshots: [
+        "/projects/weather/1.png",
+        "/projects/weather/2.png",
+        "/projects/weather/3.png",
+        "/projects/weather/4.png",
+        "/projects/weather/5.png",
+        "/projects/weather/6.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/E-shop",
+        live: "https://weather.a-hosseini.ir/"
+      }
     }
   ],
 
@@ -217,6 +254,44 @@ export const projects = {
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://alirezahoseini.github.io/E-shop/pages/home.html"
+      }
+    },
+    {
+      id: "weather",
+      title: "Weather app",
+      date: 2022,
+      backgroundColor: "#d7b8ff",
+      description: `با استفاده از این وب‌اپلیکیشن می‌تونید اطلاعات دقیقی درباره‌ی 
+      وضعیت آب‌وهوای شهر یا منطقه‌ی خودتون دریافت کنید 🌦️
+      این پروژه رو برای یادگیری و تسلط بیشتر روی استفاده از APIها در جاوااسکریپت و توسعه‌ی فرانت‌اند پیاده‌سازی کردم.
+      از جمله امکانات پروژه می‌تونم به طراحی مینیمال، رابط کاربری ساخته‌شده با Tailwind CSS،
+      نمایش وضعیت آب‌وهوا برای یک روز کامل، نمایش ساعت محلی هر شهر، تشخیص موقعیت کاربر با استفاده از 
+      IP Geolocation و همچنین امکان مشاهده هم‌زمان اطلاعات دو شهر مختلف اشاره کنم. برای دریافت داده‌ها
+      از یک وب‌سرویس آب‌وهوایی اوپن سورس استفاده شده که آیکون اختصاصی روز و شب هم ارائه می‌ده.`,
+      coverImage: {
+        url: "/projects/weather/cover.png",
+        alt: "تصویر کاور پروژه weather"
+      },
+      heroImage: {
+        url: "/projects/weather/hero.png",
+        alt: "تصویر هدر پروژه weather"
+      },
+      technologies: [
+        "JavaScript",
+        "Tailwind",
+        "Sass"
+      ],
+      screenshots: [
+        "/projects/weather/1.png",
+        "/projects/weather/2.png",
+        "/projects/weather/3.png",
+        "/projects/weather/4.png",
+        "/projects/weather/5.png",
+        "/projects/weather/6.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/E-shop",
+        live: "https://weather.a-hosseini.ir/"
       }
     }
   ]
