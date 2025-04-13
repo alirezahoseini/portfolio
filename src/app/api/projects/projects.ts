@@ -107,6 +107,39 @@ export const projects = {
       }
     },
     {
+      id: "musicplayer",
+      title: "Music Player",
+      date: 2023,
+      backgroundColor: "#d3d3d3",
+      description: `Music Player is a simple and light project made with plain JavaScript and CSS.
+      I built it to practice working with audio files, designing without any frameworks, and 
+      creating a smooth user experience. It has features like dark mode, volume control, favorites
+      list, repeat track, and playlist.`,
+      coverImage: {
+        url: "/projects/musicplayer/cover.png",
+        alt: "cover musicplayer"
+      },
+      heroImage: {
+        url: "/projects/musicplayer/hero.png",
+        alt: "hero musicplayer"
+      },
+      technologies: [
+        "JavaScript",
+        "Css",
+        "Html"
+      ],
+      screenshots: [
+        "/projects/musicplayer/1.png",
+        "/projects/musicplayer/2.png",
+        "/projects/musicplayer/3.png",
+        "/projects/musicplayer/4.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/music-player",
+        live: "https://alirezahoseini.github.io/music-player/"
+      }
+    },
+    {
       id: "weather",
       title: "Weather app",
       date: 2022,
@@ -290,6 +323,39 @@ export const projects = {
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://alirezahoseini.github.io/E-shop/pages/home.html"
+      }
+    },
+    {
+      id: "musicplayer",
+      title: "Music Player",
+      date: 2023,
+      backgroundColor: "#d3d3d3",
+      description: `موزیک پلیر یک پروژه تمرینی ساده و سبک هست که با جاوااسکریپت و CSS 
+      خالص ساخته شده. هدفم از ساخت این پروژه، تمرین مدیریت فایل‌های صوتی، طراحی رابط کاربری بدون فریم‌ورک 
+      و ایجاد یک تجربه کاربری روان و کاربردی بود.
+      این پلیر امکاناتی مثل حالت تاریک، کنترل صدا، لیست علاقه‌مندی، تکرار ترک و لیست پخش داره.`,
+      coverImage: {
+        url: "/projects/musicplayer/cover.png",
+        alt: "تصویر کاور پروژه musicplayer"
+      },
+      heroImage: {
+        url: "/projects/musicplayer/hero.png",
+        alt: "تصویر هدر پروژه musicplayer"
+      },
+      technologies: [
+        "JavaScript",
+        "Css",
+        "Html"
+      ],
+      screenshots: [
+        "/projects/musicplayer/1.png",
+        "/projects/musicplayer/2.png",
+        "/projects/musicplayer/3.png",
+        "/projects/musicplayer/4.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/music-player",
+        live: "https://alirezahoseini.github.io/music-player/"
       }
     },
     {
