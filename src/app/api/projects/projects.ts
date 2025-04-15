@@ -139,7 +139,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://alirezahoseini.github.io/E-shop/pages/home.html"
+        live: "https://eshop.a-hosseini.ir/"
       }
     },
     {
@@ -178,7 +178,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Todo-App-Js",
-        live: "https://alirezahoseini.github.io/Todo-App-Js/"
+        live: "https://todo.a-hosseini.ir/"
       }
     },
     {
@@ -359,7 +359,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://alirezahoseini.github.io/E-shop/pages/home.html"
+        live: "https://eshop.a-hosseini.ir/"
       }
     },
     {
@@ -398,7 +398,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Todo-App-Js",
-        live: "https://alirezahoseini.github.io/Todo-App-Js/"
+        live: "https://todo.a-hosseini.ir/"
       }
     },
     {
