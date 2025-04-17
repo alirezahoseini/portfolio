@@ -6,7 +6,7 @@ type ResponseData = IFaq[] | IFaq
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
-  const locale = url.searchParams.get("lang") || "fa"
+  const locale = url.searchParams.get("lang") || "en"
 
   // Get faqs with locale
   const faqsList: ResponseData = locale === "en" ? faqs.en : faqs.fa

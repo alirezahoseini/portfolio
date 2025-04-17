@@ -3,9 +3,13 @@ import API from "./axiosConfig"
 import { IGetProjectsProps, IGetSingleProjectProps, ILocaleProps } from "./types"
 
 // All projects
-const getProjects = async ({ locale, limit }: IGetProjectsProps) => {
+const getProjects = async ({
+  locale,
+  limit,
+  sort
+}: IGetProjectsProps) => {
   try {
-    const url = `projects?lang=${locale}${limit ? `&limit=${limit}` : ""}`
+    const url = `projects?lang=${locale}${limit ? `&limit=${limit}` : ""}${sort ? `&sort=${sort}` : ""}`
     const { status, data: projects } = await API.get(url)
 
     if (status === 200) {

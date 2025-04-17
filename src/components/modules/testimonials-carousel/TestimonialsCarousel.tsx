@@ -30,8 +30,8 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
 
   return (
     <section className={styles.embla}>
-      <div className={styles.embla__viewport} ref={emblaRef}>
-        <FadeInAnimate>
+      <FadeInAnimate>
+        <div className={styles.embla__viewport} ref={emblaRef}>
           <div className={styles.embla__container}>
             {
               testimonials.map(item => (
@@ -39,8 +39,8 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
               ))
             }
           </div>
-        </FadeInAnimate>
-      </div>
+        </div>
+      </FadeInAnimate>
 
       <div className="flex justify-between items-center mt-5 rtl:flex-row-reverse">
         <FadeInAnimate>

@@ -6,7 +6,7 @@ type ResponseData = IExperience[] | IExperience
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
-  const locale = url.searchParams.get("lang") || "fa"
+  const locale = url.searchParams.get("lang") || "en"
 
   // Get experience with locale
   const experienceList: ResponseData = locale === "en" ? experiences.en : experiences.fa

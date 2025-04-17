@@ -6,9 +6,10 @@ type ResponseData = IProject[]
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url)
-  const locale = url.searchParams.get("lang") || "fa"
+  const locale = url.searchParams.get("lang") || "en"
   const limit = url.searchParams.get("limit")
   const projectId = url.searchParams.get("id")
+  const sort = url.searchParams.get("sort") || "asc"
 
   // Get projects with locale
   const projectList: ResponseData = locale === "en" ? projects.en : projects.fa
@@ -28,8 +29,17 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
 
   // Return limited projects
   if (limit) {
-    const limitedProjects = projectList.slice(-Number(limit))
-    return NextResponse.json(limitedProjects)
+    // Return DESC projects
+    if(sort === "desc") {
+      const startPoint = projectList.length - Number(limit)
+      const limitedProjects = projectList.slice(startPoint, )
+      return NextResponse.json(limitedProjects)
+    }
+    if(sort === "asc") {
+    // Return ASC projects
+      const limitedProjects = projectList.slice(0, Number(limit))
+      return NextResponse.json(limitedProjects)
+    }
   }
 
   // Return all projects

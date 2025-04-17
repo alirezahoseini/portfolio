@@ -16,7 +16,7 @@ const ProjectsGrid = () => {
 
   const { isLoading, data } = useQuery({ 
     queryKey: ["projects", locale],
-    queryFn: () => getProjects({ locale }),
+    queryFn: () => getProjects({ locale, limit: 4 }),
     staleTime: 5 * 60 * 2000, // 10 min
     refetchOnWindowFocus: false
   })
