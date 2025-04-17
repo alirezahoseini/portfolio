@@ -54,12 +54,10 @@ const Speciality = () => {
             )
             : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-10">
-                <FadeInAnimate>
-                  <SpecialityAccordion 
-                    specialtiesList={data}
-                    setSelectedImage={setSelectedImage}
-                  />
-                </FadeInAnimate>
+                <SpecialityAccordion 
+                  specialtiesList={data}
+                  setSelectedImage={setSelectedImage}
+                />
 
                 <FadeInAnimate>
                   <div className="relative w-full h-full aspect-video rounded-3xl overflow-hidden">
