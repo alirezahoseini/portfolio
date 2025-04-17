@@ -20,26 +20,26 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
   const t = useTranslations("HomePage")
   const s = useTranslations("Socials")
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    direction: locale === "fa" ? "rtl" : "ltr"
-  }, [Autoplay({ stopOnInteraction: true, stopOnMouseEnter: true })])
-
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      direction: locale === "fa" ? "rtl" : "ltr"
+    },
+    [Autoplay({ stopOnInteraction: true, stopOnMouseEnter: true })]
+  )
 
   return (
     <section className={styles.embla}>
       <div className={styles.embla__viewport} ref={emblaRef}>
-        <div className={styles.embla__container}>
-          {
-            testimonials.map(item => (
-              <FadeInAnimate key={item.id}>
-                <TestimonialsCarouselItem
-                  {...item}
-                />
-              </FadeInAnimate>
-            ))
-          }
-        </div>
+        <FadeInAnimate>
+          <div className={styles.embla__container}>
+            {
+              testimonials.map(item => (
+                <TestimonialsCarouselItem key={item.id} {...item} />
+              ))
+            }
+          </div>
+        </FadeInAnimate>
       </div>
 
       <div className="flex justify-between items-center mt-5 rtl:flex-row-reverse">
@@ -51,10 +51,7 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
           >
             <span>{t("check_linkedin")}</span>
 
-            <ArrowUpRight 
-              size={16} 
-              className="rtl:-rotate-90"
-            />
+            <ArrowUpRight size={16} className="rtl:-rotate-90" />
           </Link>
         </FadeInAnimate>
 
@@ -62,7 +59,6 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
           <TestimonialsCarouselButtons emblaApi={emblaApi} />
         </FadeInAnimate>
       </div>
-
     </section>
   )
 }

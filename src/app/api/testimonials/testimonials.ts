@@ -5,11 +5,18 @@ export const testimonials = {
       author: "Maryam Sajjadi",
       job_title: "Content specialist @Wooden",
       image: "/testimonials/ms.jpg",
-      message: `Since I have been working with Devraj for quite a while, I can assure you that
-       the UI/UX designing skills are way more professional and intriguing as compared to the 
-       other developers I've seen. I m lucky to have this person as the leader as his leadership
-        skills are really well developed and people hiring this person would be really lucky to 
-        have him a part of the team.`
+      message: `Alireza pays a lot of attention to details, and you can see that in every step
+      of his work. He’s always organized and hardworking, and nothing he does feels rushed or careless.
+      Working with him is really easy and smooth because he listens well and communicates clearly.
+      For me, it was a positive and reliable experience to work with him.`
+    },
+    {
+      id: 2,
+      author: "Mohammad Bahadori",
+      job_title: "Freelance UI/UX Designer",
+      image: "/testimonials/mmreza.jpg",
+      message: `Alireza is precise and responsible in his work. He always has a clear understanding
+      of the overall process, while also paying attention to details. Working with him was a great experience.`
     }
   ],
   
@@ -19,11 +26,17 @@ export const testimonials = {
       author: "مریم سجادی",
       job_title: "Content specialist @Wooden",
       image: "/testimonials/ms.jpg",
-      message: `از آنجایی که مدت زیادی است با دوراج کار می‌کنم، می‌توانم به شما اطمینان 
-      دهم که مهارت‌های طراحی رابط کاربری/تجربه کاربری او بسیار حرفه‌ای‌تر و جذاب‌تر نسبت به سایر
-       توسعه‌دهندگانی است که دیده‌ام. من خوش‌شانس هستم که این فرد را به عنوان رهبر دارم زیرا مهارت‌های رهبری 
-      او واقعاً به خوبی توسعه یافته‌اند و افرادی که او را استخدام می‌کنند،
-       واقعاً خوش‌شانس خواهند بود که او را به عنوان بخشی از تیم خود داشته باشند.`
+      message: `علیرضا توجه خیلی زیادی به جزئیات داره و اینو توی هر مرحله از کار می‌شه دید.
+      همیشه با نظم و پشتکار پیش می‌ره و توی کاراش هیچ چیز الکی یا سرسری نیست. ارتباط باهاش خیلی راحت و بدون حاشیه‌ست،
+      چون خوب گوش می‌ده و دقیق حرف می‌زنه. همکاری باهاش برام یه تجربه‌ خوب و قابل اعتماد بود.`
+    },
+    {
+      id: 2,
+      author: "محمد بهادری",
+      job_title: "Content specialist @Wooden",
+      image: "/testimonials/mmreza.jpg",
+      message: `علیرضا توی کارش دقیق و مسئولیت‌پذیره. همیشه یه دید کامل نسبت به روند پروژه داره
+      و در عین حال به جزئیات هم توجه می‌کنه. همکاری باهاش تجربه‌ی خوبی بود.`
     }
   ]
   
