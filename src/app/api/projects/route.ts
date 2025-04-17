@@ -29,17 +29,22 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
 
   // Return limited projects
   if (limit) {
-    // Return DESC projects
+    // Return DESC limited projects
     if(sort === "desc") {
-      const startPoint = projectList.length - Number(limit)
-      const limitedProjects = projectList.slice(startPoint, )
+      const limitedProjects = projectList.reverse().slice(-Number(limit))
       return NextResponse.json(limitedProjects)
     }
     if(sort === "asc") {
-    // Return ASC projects
+    // Return ASC limited projects
       const limitedProjects = projectList.slice(0, Number(limit))
       return NextResponse.json(limitedProjects)
     }
+  }
+
+  // Return Desc projects
+  if(sort === "desc") {
+    return NextResponse.json(projectList.reverse())
+    
   }
 
   // Return all projects
