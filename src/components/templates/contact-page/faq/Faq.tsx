@@ -52,9 +52,8 @@ const Faq = () => {
                 >
                   {
                     data?.map(item => (
-                      <FadeInAnimate delay={0.7}>
+                      <FadeInAnimate delay={0.7} key={item.id}>
                         <AccordionItem 
-                          key={item.id}
                           value={item.title}
                           className="!bg-bg800-light dark:!bg-bg800-dark rounded-2xl px-4
                         mb-4 border border-solid border-bg700-light dark:border-bg700-dark"

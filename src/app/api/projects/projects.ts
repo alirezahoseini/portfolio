@@ -1,6 +1,53 @@
 export const projects = {
   en: [
     {
+      id: "portfolio",
+      title: "Portfolio",
+      date: 2025,
+      backgroundColor: "#bae889",
+      description: `This is my personal portfolio and one of the most important projects
+       I’ve ever worked on. From the beginning, my goal was to create a website that works 
+       perfectly for years — both in terms of performance and a clean, modern look. <br/>
+      The website is fully bilingual (Persian and English), and I used a mix of SSR and 
+      SSG to make sure each page loads in the best way possible depending on its needs. <br/>
+      I paid a lot of attention to the performance of the components to make sure they 
+      are fast, lightweight, and reusable. The design is minimal and focused, so users 
+      can easily find what matters without distractions. <br/>
+      Every part of the site is built with care and precision to show how much I value 
+      structure, detail, and a good user experience. This isn’t just a portfolio — 
+      it’s a reflection of how I think and work as a developer.`,
+      coverImage: {
+        url: "/projects/portfolio/cover.png",
+        alt: "cover portfolio"
+      },
+      heroImage: {
+        url: "/projects/portfolio/hero.png",
+        alt: "hero portfolio"
+      },
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Next-intl",
+        "Tailwind",
+        "React Query",
+        "Shadcn",
+        "React Hook Form",
+        "Farmer Motion",
+        "Axios",
+        "Zod"
+      ],
+      screenshots: [
+        "/projects/portfolio/1.png",
+        "/projects/portfolio/2.png",
+        "/projects/portfolio/3.png",
+        "/projects/portfolio/4.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/portfolio",
+        live: "https://a-hosseini.ir/"
+      }
+    },
+    {
       id: "nextmovie",
       title: "Next Movie",
       date: 2024,
@@ -22,7 +69,6 @@ export const projects = {
         "Next.js",
         "Tailwind",
         "JavaScript",
-        "React",
         "SWR",
         "TMDB"
       ],
@@ -216,6 +262,54 @@ export const projects = {
 
   fa: [
     {
+      id: "portfolio",
+      title: "Portfolio",
+      date: 2025,
+      backgroundColor: "#bae889",
+      description: `این پروژه، پورتفولیوی شخصی منه و یکی از مهم‌ترین کارهایی بود که تا حالا انجام دادم.
+      از همون اول تصمیم داشتم سایتی طراحی کنم که سال‌ها بدون مشکل کار کنه،
+      هم از نظر فنی پایدار باشه و هم از نظر ظاهری ساده و مدرن باقی بمونه. <br/>
+      طراحی سایت به‌صورت دو زبانه انجام شده (فارسی و انگلیسی) و برای داشتن بهترین عملکرد، از ترکیب 
+      SSR و SSG استفاده کردم تا هر صفحه بسته به نیازش، بهینه‌ترین حالت ممکن رو داشته باشه. <br/>
+      تمرکز زیادی روی performance کامپوننت‌ها داشتم تا سریع، سبک و قابل استفاده مجدد باشن. 
+      طراحی مینیمال و خلوت انجام شده تا توجه مخاطب روی چیزهای مهم
+      باقی بمونه و تجربه‌ای راحت و دلچسب از مرور سایت بهش منتقل بشه. <br/>
+      همه چیز با دقت و وسواس ساخته شده تا نشون بده چقدر به نظم، جزئیات و تجربه کاربری اهمیت می‌دم. 
+      این سایت فقط یه پورتفولیو نیست، بلکه نماینده‌ی طرز فکر و سبک کاری منه. <br/>
+
+`,
+      coverImage: {
+        url: "/projects/portfolio/cover.png",
+        alt: "cover portfolio"
+      },
+      heroImage: {
+        url: "/projects/portfolio/hero.png",
+        alt: "hero portfolio"
+      },
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Next-intl",
+        "Tailwind",
+        "React Query",
+        "Shadcn",
+        "React Hook Form",
+        "Farmer Motion",
+        "Axios",
+        "Zod"
+      ],
+      screenshots: [
+        "/projects/portfolio/1.png",
+        "/projects/portfolio/2.png",
+        "/projects/portfolio/3.png",
+        "/projects/portfolio/4.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/portfolio",
+        live: "https://a-hosseini.ir/"
+      }
+    },
+    {
       id: "nextmovie",
       title: "Next Movie",
       date: 2024,
@@ -237,9 +331,8 @@ export const projects = {
       technologies: [
         "Next.js",
         "Tailwind",
-        "JavaScript",
-        "React",
         "SWR",
+        "JavaScript",
         "TMDB"
       ],
       screenshots: [
