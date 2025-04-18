@@ -33,7 +33,7 @@ export const testimonials = {
     {
       id: 2,
       author: "محمد بهادری",
-      job_title: "Content specialist @Wooden",
+      job_title: "Freelance UI/UX Designer",
       image: "/testimonials/mmreza.jpg",
       message: `علیرضا توی کارش دقیق و مسئولیت‌پذیره. همیشه یه دید کامل نسبت به روند پروژه داره
       و در عین حال به جزئیات هم توجه می‌کنه. همکاری باهاش تجربه‌ی خوبی بود.`
