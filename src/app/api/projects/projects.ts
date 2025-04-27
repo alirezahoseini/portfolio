@@ -153,6 +153,39 @@ export const projects = {
       }
     },
     {
+      id: "yumify",
+      title: "Yumify",
+      date: 2025,
+      backgroundColor: "#cdff71",
+      description: `l`,
+      coverImage: {
+        url: "/projects/yumify/cover.png",
+        alt: "cover yumify"
+      },
+      heroImage: {
+        url: "/projects/yumify/hero.png",
+        alt: "hero yumify"
+      },
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Redux Toolkit",
+        "Tailwind",
+        "React Query",
+        "SSR",
+        "Shadcn"
+      ],
+      screenshots: [
+        "/projects/yumify/1.png",
+        "/projects/yumify/2.png",
+        "/projects/yumify/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/yumify",
+        live: "https://yumify-beta.vercel.app"
+      }
+    },
+    {
       id: "eshop",
       title: "E-Shop",
       date: 2021,
@@ -277,7 +310,7 @@ export const projects = {
       همه چیز با دقت و وسواس ساخته شده تا نشون بده چقدر به نظم، جزئیات و تجربه کاربری اهمیت می‌دم. 
       این سایت فقط یه پورتفولیو نیست، بلکه نماینده‌ی طرز فکر و سبک کاری منه. <br/>
 
-`,
+    `,
       coverImage: {
         url: "/projects/portfolio/cover.png",
         alt: "cover portfolio"
@@ -414,6 +447,39 @@ export const projects = {
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
         live: "https://weather.a-hosseini.ir/"
+      }
+    },
+    {
+      id: "yumify",
+      title: "Yumify",
+      date: 2025,
+      backgroundColor: "#cdff71",
+      description: `l`,
+      coverImage: {
+        url: "/projects/yumify/cover.png",
+        alt: "cover yumify"
+      },
+      heroImage: {
+        url: "/projects/yumify/hero.png",
+        alt: "hero yumify"
+      },
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "Redux Toolkit",
+        "Tailwind",
+        "React Query",
+        "SSR",
+        "Shadcn"
+      ],
+      screenshots: [
+        "/projects/yumify/1.png",
+        "/projects/yumify/2.png",
+        "/projects/yumify/3.png"
+      ],
+      links: {
+        github: "https://github.com/alirezahoseini/yumify",
+        live: "https://yumify-beta.vercel.app"
       }
     },
     {
