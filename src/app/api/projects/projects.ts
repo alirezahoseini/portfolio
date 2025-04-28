@@ -157,7 +157,10 @@ export const projects = {
       title: "Yumify",
       date: 2025,
       backgroundColor: "#cdff71",
-      description: `l`,
+      description: `Yumify is a small project where you get a random food suggestion every time ,
+      it’s a fun way to get surprised!  <br/> I built it using Next.js. The food data comes from an API
+      using React Query, and I manage the favorites list with Redux Toolkit.  <br/>
+      For the design, I used Tailwind CSS and components from shadcn to keep everything clean and simple.`,
       coverImage: {
         url: "/projects/yumify/cover.png",
         alt: "cover yumify"
@@ -182,7 +185,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/yumify",
-        live: "https://yumify-beta.vercel.app"
+        live: "https://yumify.a-hosseini.ir/"
       }
     },
     {
@@ -454,7 +457,10 @@ export const projects = {
       title: "Yumify",
       date: 2025,
       backgroundColor: "#cdff71",
-      description: `l`,
+      description: `Yumify مینی پروژه دریافت غذا و خوراکی های رندوم هست که میتونه سورپرایزتون کنه.  <br/>
+      توی این پروژه از nextjs استفاده کردم دیتا هم از api با react query  گرفته 
+      میشه و علاقه مندی ها هم با redux toolkit هندل شده.  <br/>
+      برای استایل دهی هم از tailwind و کامپوننت های shadcn استفاده کردم.`,
       coverImage: {
         url: "/projects/yumify/cover.png",
         alt: "cover yumify"
@@ -479,7 +485,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/yumify",
-        live: "https://yumify-beta.vercel.app"
+        live: "https://yumify.a-hosseini.ir/"
       }
     },
     {
