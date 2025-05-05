@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Portfolio Poster](https://s6.uupload.ir/files/hero_d5dq.png)
+
+# Personal Portfolio Website
+
+A modern, responsive portfolio website built with Next.js 15, featuring internationalization, animations, and a clean design.
+
+## Features
+
+- 🌐 **Multilingual Support**: Full support for English and Persian languages
+- 🎨 **Modern UI/UX**: Built with Tailwind CSS and Shadcn UI components
+- ✨ **Animations**: Smooth animations using Framer Motion
+- 📱 **Fully Responsive**: Optimized for all device sizes
+- 📧 **Contact Form**: Integrated email functionality
+- 🌙 **Dark/Light Mode**: Theme switching capability
+- ⚡ **Fast Loading**: Optimized performance with Next.js 14
+- 🔍 **SEO Friendly**: Built with SEO best practices
+
+## Tech Stack
+
+- Next.js 15
+- React.js 19
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Framer Motion
+- React Query
+- Axios
+- Eslint
+- React Hook forms & zod
+- Next-intl
+- SSR & SSG
+
+
+## Project Structure
+
+```
+├── src/
+│   ├── app/               # Next.js app router and pages
+│   ├── components/        # React components
+│   │   ├── HOC/          # Higher Order Components
+│   │   ├── modules/      # Reusable module components
+│   │   ├── templates/    # Page templates
+│   │   └── ui/          # UI components
+│   ├── i18n/            # Internationalization setup
+│   └── lib/             # Utilities and services
+├── public/              # Static assets
+│   ├── experiences/     # Experience-related images
+│   ├── logos/          # Technology logos
+│   └── projects/       # Project screenshots
+└── messages/           # Translation files
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view the website
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root directory and add the following variables:
+```
+NEXT_PUBLIC_API_URL=http://localhost:3000/api/
+RESEND_API_KEY=your_resend.com_api_key
+```
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+# or
+yarn build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the MIT License.
