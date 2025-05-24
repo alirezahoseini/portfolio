@@ -79,7 +79,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/next-movie",
-        live: "https://nextmovie.a-hosseini.ir/"
+        live: "https://next-movie-dun.vercel.app/"
       }
     },
     {
@@ -148,8 +148,8 @@ export const projects = {
         "/projects/weather/6.png"
       ],
       links: {
-        github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://weather.a-hosseini.ir/"
+        github: "https://github.com/alirezahoseini/Weather-App-JS",
+        live: "https://new-weather-appp.vercel.app/"
       }
     },
     {
@@ -185,7 +185,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/yumify",
-        live: "https://yumify.a-hosseini.ir/"
+        live: "https://yumifyapp.vercel.app/"
       }
     },
     {
@@ -221,7 +221,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://eshop.a-hosseini.ir/"
+        live: "https://new-e-shop.vercel.app/"
       }
     },
     {
@@ -260,7 +260,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Todo-App-Js",
-        live: "https://todo.a-hosseini.ir/"
+        live: "https://maxtodoo-app.vercel.app"
       }
     },
     {
@@ -291,7 +291,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
-        live: "https://banimode.a-hosseini.ir/"
+        live: "https://banimodeee.vercel.app/"
       }
     }
   ],
@@ -378,7 +378,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/next-movie",
-        live: "https://nextmovie.a-hosseini.ir/"
+        live: "https://next-movie-dun.vercel.app/"
       }
     },
     {
@@ -448,8 +448,8 @@ export const projects = {
         "/projects/weather/6.png"
       ],
       links: {
-        github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://weather.a-hosseini.ir/"
+        github: "https://github.com/alirezahoseini/Weather-App-JS",
+        live: "https://new-weather-appp.vercel.app/"
       }
     },
     {
@@ -485,7 +485,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/yumify",
-        live: "https://yumify.a-hosseini.ir/"
+        live: "https://yumifyapp.vercel.app/"
       }
     },
     {
@@ -524,7 +524,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/E-shop",
-        live: "https://eshop.a-hosseini.ir/"
+        live: "https://new-e-shop.vercel.app/"
       }
     },
     {
@@ -563,7 +563,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Todo-App-Js",
-        live: "https://todo.a-hosseini.ir/"
+        live: "https://maxtodoo-app.vercel.app"
       }
     },
     {
@@ -595,7 +595,7 @@ export const projects = {
       ],
       links: {
         github: "https://github.com/alirezahoseini/Banimode-Landing-Page",
-        live: "https://banimode.a-hosseini.ir/"
+        live: "https://banimodeee.vercel.app/"
       }
     }
   ]
