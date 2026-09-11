@@ -28,6 +28,7 @@ const TechsSlider = () => {
                 alt={tech.title}
                 width={18}
                 height={18}
+                className="h-[18px] w-auto"
                 loading="lazy"
               />     
 

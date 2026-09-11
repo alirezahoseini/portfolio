@@ -12,7 +12,7 @@ const ScrollToTopButton = () => {
       setIsVisible(scrollY.get() > 300)
     }
 
-    const unsubscribe = scrollY.onChange(updateButtonVisibility)
+    const unsubscribe = scrollY.on("change", updateButtonVisibility)
     return () => unsubscribe()
   }, [scrollY])
 

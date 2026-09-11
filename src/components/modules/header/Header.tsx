@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { Moon, Sun } from "lucide-react"
 import Image from "next/image"
@@ -11,9 +12,14 @@ import { Button } from "@/components/ui/button"
 
 function Header() {
   const { setTheme, theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
   const locale = useLocale()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const themeChangeHandler = () => {
     if (theme === "light") {
@@ -54,7 +60,11 @@ function Header() {
          text-sm transition-all outline-none active:scale-90 active:bg-accent"
             onClick={themeChangeHandler}
           >
-            {theme === "dark" ? <Sun size="18px" /> : <Moon size="18px" />}
+            {mounted ? (
+              theme === "dark" ? <Sun size="18px" /> : <Moon size="18px" />
+            ) : (
+              <span className="h-[18px] w-[18px]" aria-hidden="true" />
+            )}
           </button>
 
           <Separator orientation="vertical" className="h-5" />

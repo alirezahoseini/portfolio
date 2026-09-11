@@ -36,16 +36,18 @@ const DoranFont = localFont({
 
 type Props = {
   children: React.ReactNode
-  params: Promise<{ locale: ILocales }>
+  params: Promise<{ locale: string }>
 }
 
 
 export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params
+  const { locale: localeParam } = await params
 
-  if (!routing.locales.includes(locale)) {
+  if (!routing.locales.includes(localeParam as ILocales)) {
     notFound()
   }
+
+  const locale = localeParam as ILocales
 
   const dir = locale === "fa" ? "rtl" : "ltr"
 

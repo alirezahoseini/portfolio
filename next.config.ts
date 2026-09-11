@@ -1,8 +1,17 @@
 import createNextIntlPlugin from "next-intl/plugin"
+import type { NextConfig } from "next"
 
 const withNextIntl = createNextIntlPlugin()
 
-/** @type {import('next').NextConfig} */
-const nextConfig = { images: { domains: ["picsum.photos"] } }
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "picsum.photos"
+      }
+    ]
+  }
+} satisfies NextConfig
 
 export default withNextIntl(nextConfig)
